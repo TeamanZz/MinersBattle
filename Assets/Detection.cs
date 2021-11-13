@@ -2,38 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 
 public class Detection : MonoBehaviour
 {
-    [Range(0, 360)] public float ViewAngle = 90f;
-    public float ViewDistance = 15f;
-    public Transform eye;
-    public Transform Target;
+    public Transform axeTransform;
 
-    private bool IsInView() // true если цель видна
+    Tween doOneScale;
+    Tween doZeroScale;
+
+    private void OnTriggerEnter(Collider other)
     {
-        float realAngle = Vector3.Angle(eye.forward, Target.position - eye.position);
-        RaycastHit hit;
-        if (Physics.Raycast(eye.transform.position, Target.position - eye.position, out hit, ViewDistance))
+        MiningRock miningRock;
+        if (other.TryGetComponent<MiningRock>(out miningRock))
         {
-            if (realAngle < ViewAngle / 2f && Vector3.Distance(eye.position, Target.position) <= ViewDistance && hit.transform == Target.transform)
-            {
-                return true;
-            }
+            transform.parent.GetComponent<Animator>().SetBool("IsAttacking", true);
+            doZeroScale.Kill();
+            doOneScale = axeTransform.DOScale(Vector3.one, 0.9f);
         }
-        return false;
     }
 
-    private void Update()
+    private void OnTriggerExit(Collider other)
     {
-        DrawViewState();
-    }
-
-    private void DrawViewState()
-    {
-        Vector3 left = eye.position + Quaternion.Euler(new Vector3(0, ViewAngle / 2f, 0)) * (eye.forward * ViewDistance);
-        Vector3 right = eye.position + Quaternion.Euler(-new Vector3(0, ViewAngle / 2f, 0)) * (eye.forward * ViewDistance);
-        Debug.DrawLine(eye.position, left, Color.yellow);
-        Debug.DrawLine(eye.position, right, Color.yellow);
+        MiningRock miningRock;
+        if (other.TryGetComponent<MiningRock>(out miningRock))
+        {
+            transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
+            doOneScale.Kill();
+            doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
+        }
     }
 }

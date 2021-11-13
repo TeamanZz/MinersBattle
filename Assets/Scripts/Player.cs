@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("IsRunning", false);
+            rb.velocity = (Vector3.zero);
+
         }
     }
 }
