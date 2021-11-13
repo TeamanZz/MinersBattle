@@ -20,10 +20,8 @@ public class MinerPlate : MonoBehaviour
         Player player;
         if (other.TryGetComponent<Player>(out player))
         {
-            // plateImage.localScale = new Vector3(newScale, newScale, 1);
             plateImage.DOScale(newScale, 0.5f);
         }
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -32,7 +30,6 @@ public class MinerPlate : MonoBehaviour
         if (other.TryGetComponent<Player>(out player))
         {
             plateImage.DOScale(defaultScale, 0.5f);
-            // plateImage.localScale = new Vector3(defaultScale, defaultScale, 1);
         }
     }
 }

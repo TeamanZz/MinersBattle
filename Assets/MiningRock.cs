@@ -19,40 +19,6 @@ public class MiningRock : MonoBehaviour
     // public List<RockState> rockStates = new List<RockState>();
     public int currentStateID = 0;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Pickaxe pickaxe;
-        if (other.TryGetComponent<Pickaxe>(out pickaxe))
-            if (currentDelayValue <= 0)
-            {
-                Debug.Log("Ай");
-                transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
-                currentDelayValue = delayToNextHit;
-                currentHp--;
-                if (currentHp <= 0)
-                {
-                    RocksHandler.Instance.SpawnNewRock(currentStateID, transform);
-                    RocksHandler.Instance.RemoveRockFromUnitArrays(this);
-                    Destroy(gameObject);
-                    // currentStateID++;
-                    // ChangeRockState();
-                }
-            }
-    }
-
-    // private void ChangeRockState()
-    // {
-    //     transform.localScale = rockStates[currentStateID].scale;
-    //     GetComponent<MeshFilter>().mesh = rockStates[currentStateID].mesh;
-    //     currentHp = rockStates[currentStateID].hp;
-    // }
 
     private void FixedUpdate()
     {
@@ -61,6 +27,35 @@ public class MiningRock : MonoBehaviour
             currentDelayValue -= Time.deltaTime;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Pickaxe pickaxe;
+        if (other.TryGetComponent<Pickaxe>(out pickaxe))
+        {
+            if (currentDelayValue > 0)
+                return;
+
+            transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
+            currentDelayValue = delayToNextHit;
+            RocksHandler.Instance.SpawnHitParticles(transform);
+
+            if (pickaxe.backPack.rocksCount < pickaxe.backPack.freeSpineRocksTransforms.Count)
+            {
+                RocksHandler.Instance.SpawnSpineRocks(transform);
+                currentHp--;
+            }
+
+            if (currentHp <= 0)
+            {
+                RocksHandler.Instance.SpawnNewRock(currentStateID, transform);
+                RocksHandler.Instance.RemoveRockFromUnitArrays(this);
+                Destroy(gameObject);
+            }
+
+        }
+    }
+
 
     [System.Serializable]
     public class RockState
