@@ -11,9 +11,22 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private Animator animator;
 
+    public MeleeWeaponTrail weaponTrail;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+
+    public void distrail()
+    {
+        weaponTrail.Emit = false;
+    }
+
+    public void entrail()
+    {
+        weaponTrail.Emit = true;
+        weaponTrail._emitTime = 0.2f;
     }
 
     public void FixedUpdate()
@@ -31,8 +44,7 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("IsRunning", false);
-            rb.velocity = (Vector3.zero);
-
+            rb.velocity /= 1.1f;
         }
     }
 }

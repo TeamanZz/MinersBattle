@@ -18,7 +18,7 @@ public class Detection : MonoBehaviour
         {
             transform.parent.GetComponent<Animator>().SetBool("IsAttacking", true);
             doZeroScale.Kill();
-            doOneScale = axeTransform.DOScale(Vector3.one, 0.9f);
+            doOneScale = axeTransform.DOScale(Vector3.one * 1.3f, 0.9f);
         }
     }
 
