@@ -12,19 +12,24 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     public MeleeWeaponTrail weaponTrail;
+    public Collider pickaxeCollider;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    public void distrail()
+    //Animation event
+    public void EndHit()
     {
+        pickaxeCollider.enabled = false;
         weaponTrail.Emit = false;
     }
 
-    public void entrail()
+    //Animation event
+    public void StartHit()
     {
+        pickaxeCollider.enabled = true;
         weaponTrail.Emit = true;
         weaponTrail._emitTime = 0.2f;
     }
