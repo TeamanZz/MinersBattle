@@ -95,4 +95,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
+  goingToMine: 0
   flySpeed: 12
+  scaleRestored: 0
+  flyYCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.000000059604645
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.0071765184
+      value: 0.48120344
+      inSlope: 0.26494202
+      outSlope: 0.26494202
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11642352
+      outWeight: 0.18833645
+    - serializedVersion: 3
+      time: 0.011961758
+      value: 0.041001733
+      inSlope: 0.14768848
+      outSlope: 0.14768848
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22503386
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

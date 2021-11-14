@@ -52,6 +52,7 @@ public class RocksHandler : MonoBehaviour
         for (int i = 0; i < rocksCount; i++)
         {
             var newRockParent = Instantiate(spineRockParentPrefab, miningRock.position, Quaternion.identity);
+            Destroy(newRockParent, 2);
             var newRock = Instantiate(spineRockPrefab, newRockParent.transform);
 
             Vector3 targetPosition = new Vector3(newRock.transform.position.x + Random.Range(-2, 2), newRock.transform.position.y + 2, newRock.transform.position.z + Random.Range(-2, 2));
@@ -69,7 +70,8 @@ public class RocksHandler : MonoBehaviour
 
             sequence.AppendCallback(() =>
             {
-                newRock.GetComponent<SpineRock>().targetTransform = backPack.freeSpineRocksTransforms[backPack.rocksCount];
+                // newRock.transform.parent = backPack.generalRocksHolder.GetChild(backPack.rocksCount);
+                newRock.GetComponent<SpineRock>().targetTransform = backPack.generalSpineRocksTransforms[backPack.rocksCount];
                 backPack.rocksCount++;
             });
         }

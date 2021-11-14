@@ -21,6 +21,7 @@ public class MinerPlate : MonoBehaviour
         if (other.TryGetComponent<Player>(out player))
         {
             plateImage.DOScale(newScale, 0.5f);
+            other.GetComponent<BackPack>().StartBackPackReset();
         }
     }
 
@@ -30,6 +31,7 @@ public class MinerPlate : MonoBehaviour
         if (other.TryGetComponent<Player>(out player))
         {
             plateImage.DOScale(defaultScale, 0.5f);
+            other.GetComponent<BackPack>().StopBackPackReset();
         }
     }
 }

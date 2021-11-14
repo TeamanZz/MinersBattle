@@ -5,13 +5,55 @@ using UnityEngine;
 public class BackPack : MonoBehaviour
 {
     public List<Transform> generalSpineRocksTransforms = new List<Transform>();
-    public List<Transform> freeSpineRocksTransforms = new List<Transform>();
 
+
+    public int maxRocksCount = 32;
     public int rocksCount = 0;
 
-    private void Start()
+    public Transform mineTransform;
+
+    public Transform generalRocksHolder;
+
+    public Coroutine flyCoroutine;
+
+    private void Update()
     {
-        freeSpineRocksTransforms = generalSpineRocksTransforms;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            flyCoroutine = StartCoroutine(FlyToPoint());
+        }
     }
 
+    public void StartBackPackReset()
+    {
+        flyCoroutine = StartCoroutine(FlyToPoint());
+    }
+
+    public void StopBackPackReset()
+    {
+        if (flyCoroutine != null)
+            StopCoroutine(flyCoroutine);
+    }
+
+    public IEnumerator FlyToPoint()
+    {
+        int index = rocksCount - 1;
+        // int index = rocksCount;
+        while (true)
+        {
+            if (index >= 0 && generalRocksHolder.GetChild(index).childCount != 0)
+            {
+                Transform rock = generalRocksHolder.GetChild(index).GetChild(0);
+                rock.parent = mineTransform;
+                rock.GetComponent<SpineRock>().targetTransform = mineTransform;
+                rock.GetComponent<SpineRock>().goingToMine = true;
+                index--;
+                rocksCount--;
+            }
+            else
+                break;
+
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
 }

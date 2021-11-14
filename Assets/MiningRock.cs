@@ -13,6 +13,7 @@ public class MiningRock : MonoBehaviour
     private int vibrato = 10;
     private float elastic = 1;
 
+
     // public int maxHp;
     public int currentHp;
 
@@ -40,7 +41,7 @@ public class MiningRock : MonoBehaviour
             currentDelayValue = delayToNextHit;
             RocksHandler.Instance.SpawnHitParticles(transform);
 
-            if (pickaxe.backPack.rocksCount < pickaxe.backPack.freeSpineRocksTransforms.Count)
+            if (pickaxe.backPack.rocksCount < pickaxe.backPack.maxRocksCount)
             {
                 RocksHandler.Instance.SpawnSpineRocks(transform);
                 currentHp--;
@@ -52,7 +53,6 @@ public class MiningRock : MonoBehaviour
                 RocksHandler.Instance.RemoveRockFromUnitArrays(this);
                 Destroy(gameObject);
             }
-
         }
     }
 
