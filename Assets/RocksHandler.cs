@@ -59,6 +59,7 @@ public class RocksHandler : MonoBehaviour
             Sequence sequence = DOTween.Sequence();
             sequence.AppendCallback(() =>
             {
+                // newRock.transform.DOLocalMove(targetPosition - newRock.transform.position, flyDuration);
                 newRock.transform.DOLocalMove(targetPosition - newRock.transform.position, flyDuration);
                 newRock.transform.DOShakeRotation(rotateDuration, stregn, randomness: randomness);
                 newRock.transform.DOScale(0.22f, flyDuration);
