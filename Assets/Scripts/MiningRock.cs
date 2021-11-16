@@ -13,13 +13,24 @@ public class MiningRock : MonoBehaviour
     private int vibrato = 10;
     private float elastic = 1;
 
+    public Miner currentMiner;
 
-    // public int maxHp;
     public int currentHp;
 
-    // public List<RockState> rockStates = new List<RockState>();
     public int currentStateID = 0;
 
+    public bool CanSetMiner(Miner miner)
+    {
+        if (currentMiner == null)
+        {
+            currentMiner = miner;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -49,13 +60,12 @@ public class MiningRock : MonoBehaviour
 
             if (currentHp <= 0)
             {
-                RocksHandler.Instance.SpawnNewRock(currentStateID, transform);
+                RocksHandler.Instance.SpawnNewRock(currentStateID, this);
                 RocksHandler.Instance.RemoveRockFromUnitArrays(this);
                 Destroy(gameObject);
             }
         }
     }
-
 
     [System.Serializable]
     public class RockState

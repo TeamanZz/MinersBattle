@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 127259335407068576}
   - component: {fileID: 127259335408264964}
   - component: {fileID: 4653183237260847927}
+  - component: {fileID: 3553597179491639927}
   m_Layer: 0
   m_Name: Spine Rock
   m_TagString: Untagged
@@ -97,37 +98,18 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   goingToMine: 0
   flySpeed: 12
+  hasNoParent: 1
   scaleRestored: 0
-  flyYCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.000000059604645
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.0071765184
-      value: 0.48120344
-      inSlope: 0.26494202
-      outSlope: 0.26494202
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.11642352
-      outWeight: 0.18833645
-    - serializedVersion: 3
-      time: 0.011961758
-      value: 0.041001733
-      inSlope: 0.14768848
-      outSlope: 0.14768848
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.22503386
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+--- !u!65 &3553597179491639927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127259335410140144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6895578, y: 1.8855692, z: 2.6228256}
+  m_Center: {x: -0.062401112, y: 0.6453329, z: 0.23742114}

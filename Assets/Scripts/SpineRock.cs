@@ -12,9 +12,6 @@ public class SpineRock : MonoBehaviour
     public bool hasNoParent = true;
     public bool scaleRestored;
 
-    // public AnimationCurve flyYCurve;
-    // float currentTime, totalTime;
-
     private void Start()
     {
         StartCoroutine(CheckOnMoveBack());
@@ -37,14 +34,16 @@ public class SpineRock : MonoBehaviour
         if (targetTransform != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, Time.deltaTime * flySpeed);
-            if (goingToMine)
-            {
-                // transform.position = new Vector3(transform.position.x, transform.position.y + flyYCurve.Evaluate(currentTime), transform.position.z);
-                // currentTime += Time.deltaTime;
-            }
             if (Vector3.Distance(transform.position, targetTransform.position) < 0.5f)
             {
                 transform.parent = targetTransform;
+
+                if (goingToMine)
+                {
+                    transform.parent.GetComponent<MineCart>().DecreaseRemainingRocks();
+                    goingToMine = false;
+                    Destroy(gameObject, 3);
+                }
             }
             if (!scaleRestored)
             {
@@ -52,12 +51,6 @@ public class SpineRock : MonoBehaviour
                 RestoreScale();
             }
         }
-        else
-        {
-            // if (currentTime != 0)
-            //     currentTime = 0;
-        }
-
     }
 
     public void RestoreScale()

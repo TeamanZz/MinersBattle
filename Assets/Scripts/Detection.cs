@@ -38,6 +38,11 @@ public class Detection : MonoBehaviour
                 doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
             }
         }
+        Miner miner;
+        if (transform.parent.TryGetComponent<Miner>(out miner))
+        {
+
+        }
     }
 
     public void RemoveFromNearbyArray(MiningRock rock)
@@ -49,5 +54,13 @@ public class Detection : MonoBehaviour
             doOneScale.Kill();
             doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
         }
+    }
+
+    public void ClearAll()
+    {
+        rocksNearby.Clear();
+        transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
+        doOneScale.Kill();
+        doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
     }
 }

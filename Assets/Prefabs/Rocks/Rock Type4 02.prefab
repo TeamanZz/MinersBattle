@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayToNextHit: 0.3
   currentDelayValue: 0.3
+  currentMiner: {fileID: 0}
   currentHp: 3
   currentStateID: 1
 --- !u!135 &322959210639872852
@@ -110,5 +111,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.2691662
+  m_Radius: 2.4
   m_Center: {x: 0.110595815, y: 0.307543, z: 0.056118008}

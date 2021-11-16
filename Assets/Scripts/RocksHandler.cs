@@ -7,9 +7,11 @@ public class RocksHandler : MonoBehaviour
 {
     public static RocksHandler Instance;
 
+    public List<MiningRock> miningRocks = new List<MiningRock>();
+
     public List<GameObject> rockParticles = new List<GameObject>();
 
-    public Detection player;
+    public List<Detection> minersDetections = new List<Detection>();
 
     public List<GameObject> rocksStates = new List<GameObject>();
 
@@ -26,18 +28,34 @@ public class RocksHandler : MonoBehaviour
     public float stregn;
     public float randomness;
 
-
     private void Awake()
     {
         Instance = this;
     }
 
-    public void SpawnNewRock(int currentRockStateID, Transform oldRockTransform)
+    public void SpawnNewRock(int currentRockStateID, MiningRock oldRock)
     {
-        var newRock = Instantiate(rocksStates[currentRockStateID + 1], oldRockTransform.position, oldRockTransform.rotation);
+        var newRock = Instantiate(rocksStates[currentRockStateID + 1], oldRock.transform.position, oldRock.transform.rotation);
+
         for (int i = 0; i < rockParticles.Count; i++)
         {
-            var newParticle = Instantiate(rockParticles[i], oldRockTransform.position, Quaternion.Euler(-90, 0, 0));
+            var newParticle = Instantiate(rockParticles[i], oldRock.transform.position, Quaternion.Euler(-90, 0, 0));
+        }
+
+        //Если камень истощается
+        if (currentRockStateID == rocksStates.Count - 2 && oldRock.currentMiner != null)
+        {
+            oldRock.currentMiner.OnRockDestroyed();
+        }
+        else
+        {
+            //Указываем свежепоявившийся камень как цель
+            //Если камень был чьей то целью, переопределяем значения 
+            if (oldRock.currentMiner != null)
+            {
+                newRock.GetComponent<MiningRock>().currentMiner = oldRock.currentMiner;
+                newRock.GetComponent<MiningRock>().currentMiner.targetRock = newRock.GetComponent<MiningRock>();
+            }
         }
     }
 
@@ -79,6 +97,11 @@ public class RocksHandler : MonoBehaviour
 
     public void RemoveRockFromUnitArrays(MiningRock miningRock)
     {
-        player.RemoveFromNearbyArray(miningRock);
+        for (int i = 0; i < minersDetections.Count; i++)
+        {
+            minersDetections[i].RemoveFromNearbyArray(miningRock);
+        }
+
+        miningRocks.Remove(miningRock);
     }
 }
