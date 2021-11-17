@@ -10,12 +10,13 @@ public class Player : MonoBehaviour
 
     private bool isRunning;
     private Animator animator;
+    public BackPack backPack;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        backPack = GetComponent<BackPack>();
     }
-
 
     public void FixedUpdate()
     {

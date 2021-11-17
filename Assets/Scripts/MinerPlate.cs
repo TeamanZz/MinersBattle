@@ -50,7 +50,6 @@ public class MinerPlate : MonoBehaviour
                 rocksRemaining = minersCosts[lastSpawnedMinerIndex];
 
             Instantiate(minerPrefab, minersSpawnPoint.position, Quaternion.identity);
-            Debug.Log("spawn unit");
         }
 
         rocksRemainingText.text = rocksRemaining.ToString();
