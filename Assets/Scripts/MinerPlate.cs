@@ -21,6 +21,10 @@ public class MinerPlate : MonoBehaviour
     public List<int> minersCosts = new List<int>();
     public int lastSpawnedMinerIndex;
 
+    public GameObject minerPrefab;
+    public Transform minersSpawnPoint;
+    public Transform mineCart;
+
     private void Awake()
     {
         defaultScale = plateImage.localScale.x;
@@ -45,6 +49,7 @@ public class MinerPlate : MonoBehaviour
             else
                 rocksRemaining = minersCosts[lastSpawnedMinerIndex];
 
+            Instantiate(minerPrefab, minersSpawnPoint.position, Quaternion.identity);
             Debug.Log("spawn unit");
         }
 
@@ -56,6 +61,8 @@ public class MinerPlate : MonoBehaviour
         Player player;
         if (other.TryGetComponent<Player>(out player))
         {
+            BackPack backPack = other.GetComponent<BackPack>();
+            backPack.rocksFlyTarget = mineCart;
             plateImage.DOScale(newScale, 0.5f);
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
             other.GetComponent<BackPack>().StartBackPackReset();

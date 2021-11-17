@@ -6,7 +6,7 @@ using DG.Tweening;
 public class SpineRock : MonoBehaviour
 {
     public Transform targetTransform;
-    public bool goingToMine;
+    public bool isFlyingToBuild;
     public float flySpeed;
 
     public bool hasNoParent = true;
@@ -14,10 +14,10 @@ public class SpineRock : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(CheckOnMoveBack());
+        StartCoroutine(CheckFallOnGround());
     }
 
-    public IEnumerator CheckOnMoveBack()
+    public IEnumerator CheckFallOnGround()
     {
         yield return new WaitForSeconds(1);
         if (hasNoParent)
@@ -38,10 +38,10 @@ public class SpineRock : MonoBehaviour
             {
                 transform.parent = targetTransform;
 
-                if (goingToMine)
+                if (isFlyingToBuild)
                 {
-                    transform.parent.GetComponent<MineCart>().DecreaseRemainingRocks();
-                    goingToMine = false;
+                    transform.parent.GetComponent<IResourceReciever>().RecieveResources();
+                    isFlyingToBuild = false;
                     Destroy(gameObject, 3);
                 }
             }
@@ -58,4 +58,9 @@ public class SpineRock : MonoBehaviour
         transform.DOScale(new Vector3(0.11f, 0.11f, 0.11f), 0.5f);
         scaleRestored = true;
     }
+}
+
+public interface IResourceReciever
+{
+    void RecieveResources();
 }

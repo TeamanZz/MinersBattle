@@ -9,9 +9,11 @@ public class BackPack : MonoBehaviour
     public int maxRocksCount = 32;
     public int rocksCount = 0;
 
-    public Transform mineCartTransform;
+    public Transform rocksFlyTarget;
     public Transform generalRocksHolder;
     public Coroutine flyCoroutine;
+
+    public bool isUnloading;
 
     private void Update()
     {
@@ -23,13 +25,21 @@ public class BackPack : MonoBehaviour
 
     public void StartBackPackReset()
     {
+        isUnloading = true;
         flyCoroutine = StartCoroutine(FlyToPoint());
+        Miner miner;
+        if (TryGetComponent<Miner>(out miner))
+        {
+            miner.isMovingToStorage = false;
+        }
     }
 
     public void StopBackPackReset()
     {
         if (flyCoroutine != null)
+        {
             StopCoroutine(flyCoroutine);
+        }
     }
 
     public IEnumerator FlyToPoint()
@@ -41,14 +51,16 @@ public class BackPack : MonoBehaviour
             if (index >= 0 && generalRocksHolder.GetChild(index).childCount != 0)
             {
                 Transform rock = generalRocksHolder.GetChild(index).GetChild(0);
-                rock.parent = mineCartTransform;
-                rock.GetComponent<SpineRock>().targetTransform = mineCartTransform;
-                rock.GetComponent<SpineRock>().goingToMine = true;
+                rock.parent = rocksFlyTarget;
+                rock.GetComponent<SpineRock>().targetTransform = rocksFlyTarget;
+                rock.GetComponent<SpineRock>().isFlyingToBuild = true;
                 index--;
                 rocksCount--;
             }
             else
             {
+                isUnloading = false;
+                StopBackPackReset();
                 break;
             }
 

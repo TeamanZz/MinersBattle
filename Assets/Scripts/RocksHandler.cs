@@ -64,7 +64,7 @@ public class RocksHandler : MonoBehaviour
         var newParticle = Instantiate(rockParticles[0], miningRock.position, Quaternion.Euler(-90, 0, 0));
     }
 
-    public void SpawnSpineRocks(Transform miningRock)
+    public void SpawnSpineRocks(Transform miningRock, BackPack backPack)
     {
         int rocksCount = Random.Range(1, 2);
         for (int i = 0; i < rocksCount; i++)
@@ -78,7 +78,6 @@ public class RocksHandler : MonoBehaviour
             Sequence sequence = DOTween.Sequence();
             sequence.AppendCallback(() =>
             {
-                // newRock.transform.DOLocalMove(targetPosition - newRock.transform.position, flyDuration);
                 newRock.transform.DOLocalMove(targetPosition - newRock.transform.position, flyDuration);
                 newRock.transform.DOShakeRotation(rotateDuration, stregn, randomness: randomness);
                 newRock.transform.DOScale(0.22f, flyDuration);
@@ -88,9 +87,17 @@ public class RocksHandler : MonoBehaviour
 
             sequence.AppendCallback(() =>
             {
-                // newRock.transform.parent = backPack.generalRocksHolder.GetChild(backPack.rocksCount);
                 newRock.GetComponent<SpineRock>().targetTransform = backPack.generalSpineRocksTransforms[backPack.rocksCount];
                 backPack.rocksCount++;
+                if (backPack.rocksCount >= backPack.maxRocksCount)
+                {
+                    Miner miner;
+                    if (backPack.TryGetComponent<Miner>(out miner))
+                    {
+                        Debug.Log("Need Move To Storage");
+                        miner.MoveToStorage();
+                    }
+                }
             });
         }
     }

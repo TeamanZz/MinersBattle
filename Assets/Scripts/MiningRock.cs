@@ -19,6 +19,8 @@ public class MiningRock : MonoBehaviour
 
     public int currentStateID = 0;
 
+    public BackPack lastHitFromBackpack;
+
     public bool CanSetMiner(Miner miner)
     {
         if (currentMiner == null)
@@ -48,13 +50,15 @@ public class MiningRock : MonoBehaviour
             if (currentDelayValue > 0)
                 return;
 
+
+            lastHitFromBackpack = pickaxe.backPack;
             transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
             currentDelayValue = delayToNextHit;
             RocksHandler.Instance.SpawnHitParticles(transform);
 
             if (pickaxe.backPack.rocksCount < pickaxe.backPack.maxRocksCount)
             {
-                RocksHandler.Instance.SpawnSpineRocks(transform);
+                RocksHandler.Instance.SpawnSpineRocks(transform, lastHitFromBackpack);
                 currentHp--;
             }
 

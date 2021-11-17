@@ -6,7 +6,7 @@ using System.Linq;
 
 public class Miner : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    [HideInInspector] public NavMeshAgent agent;
 
     public float minX;
     public float maxX;
@@ -18,25 +18,39 @@ public class Miner : MonoBehaviour
     public Detection detectionCollider;
 
     public RocksHandler rocksHandler;
+    public BackPack backPack;
+
+    public bool isMovingToStorage;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        rocksHandler.minersDetections.Add(detectionCollider);
+        backPack = GetComponent<BackPack>();
     }
 
     void Start()
     {
+        rocksHandler = RocksHandler.Instance;
+        rocksHandler.minersDetections.Add(detectionCollider);
         InvokeRepeating("SetNewDestination", 0.5f, 1);
     }
 
+    public void MoveToStorage()
+    {
+        isMovingToStorage = true;
+        targetRock = null;
 
+        agent.SetDestination(Storage.Instance.transform.position);
+        agent.isStopped = false;
+    }
 
     private void SetNewDestination()
     {
         if (detectionCollider.rocksNearby.Count != 0)
             return;
-        Debug.Log(rocksHandler.miningRocks.Min(x => x.transform.position.z));
+
+        if (isMovingToStorage || backPack.isUnloading)
+            return;
 
         var newTarget = rocksHandler.miningRocks.Find(x => Vector3.Distance(x.transform.position, transform.position) <= rocksHandler.miningRocks.Min(x => Vector3.Distance(x.transform.position, transform.position)));
         newTarget.gameObject.SetActive(true);
@@ -45,14 +59,10 @@ public class Miner : MonoBehaviour
         targetRock.currentMiner = this;
         agent.SetDestination(newDestination);
         agent.isStopped = false;
-
-        // Vector3 newDestination = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
-        // agent.SetDestination(newDestination);
     }
 
     public void OnRockDestroyed()
     {
-        // detectionCollider.ClearAll();
         SetNewDestination();
     }
 
@@ -63,18 +73,6 @@ public class Miner : MonoBehaviour
         {
             if (miningRock == targetRock)
                 agent.isStopped = true;
-
         }
     }
-
-    // private void OnCollisionExit(Collision other)
-    // {
-    //     MiningRock miningRock;
-    //     if (other.gameObject.TryGetComponent<MiningRock>(out miningRock))
-    //     {
-    //         SetNewDestination();
-    //         agent.isStopped = false;
-    //     }
-    // }
-
 }
