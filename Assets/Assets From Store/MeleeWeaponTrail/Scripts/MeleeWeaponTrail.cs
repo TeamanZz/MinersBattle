@@ -55,9 +55,9 @@ public class MeleeWeaponTrail : MonoBehaviour
 #endif
 
     [SerializeField]
-    Transform _base;
+    public Transform _base;
     [SerializeField]
-    Transform _tip;
+    public Transform _tip;
 
     List<Point> _points = new List<Point>();
 #if USE_INTERPOLATION
