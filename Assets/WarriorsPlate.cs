@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using DG.Tweening;
-using TMPro;
 
-public class MinerPlate : MonoBehaviour
+public class WarriorsPlate : MonoBehaviour
 {
     public float costPopupNewScale;
     private float costPopupDefaultScale;
@@ -18,22 +18,16 @@ public class MinerPlate : MonoBehaviour
     public Transform plateImage;
     public Transform costPopupImage;
 
-    public List<int> minersCosts = new List<int>();
-    public int lastSpawnedMinerIndex;
+    public List<int> warriorsCosts = new List<int>();
+    public int lastSpawnedWarriorIndex;
 
-    public GameObject minerPrefab;
-    public Transform minersSpawnPoint;
+    public GameObject warriorPrefab;
+    public Transform warriorsSpawnPoint;
     public Transform rocksFlyTarget;
-
-    private void Awake()
-    {
-        defaultScale = plateImage.localScale.x;
-        costPopupDefaultScale = costPopupImage.localScale.x;
-    }
 
     private void Start()
     {
-        rocksRemaining = minersCosts[lastSpawnedMinerIndex];
+        rocksRemaining = warriorsCosts[lastSpawnedWarriorIndex];
         rocksRemainingText.text = rocksRemaining.ToString();
     }
 
@@ -43,13 +37,13 @@ public class MinerPlate : MonoBehaviour
 
         if (rocksRemaining <= 0)
         {
-            lastSpawnedMinerIndex++;
-            if (lastSpawnedMinerIndex >= minersCosts.Count)
+            lastSpawnedWarriorIndex++;
+            if (lastSpawnedWarriorIndex >= warriorsCosts.Count)
                 rocksRemaining = Random.Range(30, 100);
             else
-                rocksRemaining = minersCosts[lastSpawnedMinerIndex];
+                rocksRemaining = warriorsCosts[lastSpawnedWarriorIndex];
 
-            Instantiate(minerPrefab, minersSpawnPoint.position, Quaternion.identity);
+            Instantiate(warriorPrefab, warriorsSpawnPoint.position, Quaternion.identity);
         }
 
         rocksRemainingText.text = rocksRemaining.ToString();
