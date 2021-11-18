@@ -1,34 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using DG.Tweening;
 
-public class WarriorsPlate : MonoBehaviour
+public class ArchersPlate : MonoBehaviour, IResourceReciever
 {
     public float costPopupNewScale;
     private float costPopupDefaultScale;
 
-    public float newScale;
-    private float defaultScale;
+    public float plateNewScale;
+    private float plateDefaultScale;
 
-    public int rocksRemaining;
+    [HideInInspector] public int rocksRemaining;
     public TextMeshPro rocksRemainingText;
 
     public Transform plateImage;
     public Transform costPopupImage;
 
-    public List<int> warriorsCosts = new List<int>();
-    public int lastSpawnedWarriorIndex;
+    public List<int> unitsCosts = new List<int>();
+    public int lastSpawnedUnitIndex;
 
-    public GameObject warriorPrefab;
-    public Transform warriorsSpawnPoint;
+    public GameObject unitPrefab;
+    public Transform unitsSpawnPoint;
     public Transform rocksFlyTarget;
 
     private void Start()
     {
-        rocksRemaining = warriorsCosts[lastSpawnedWarriorIndex];
+        rocksRemaining = unitsCosts[lastSpawnedUnitIndex];
         rocksRemainingText.text = rocksRemaining.ToString();
+
+        costPopupDefaultScale = costPopupImage.localScale.x;
+        plateDefaultScale = plateImage.localScale.x;
     }
 
     public void DecreaseRemainingRocks()
@@ -37,13 +40,13 @@ public class WarriorsPlate : MonoBehaviour
 
         if (rocksRemaining <= 0)
         {
-            lastSpawnedWarriorIndex++;
-            if (lastSpawnedWarriorIndex >= warriorsCosts.Count)
+            lastSpawnedUnitIndex++;
+            if (lastSpawnedUnitIndex >= unitsCosts.Count)
                 rocksRemaining = Random.Range(30, 100);
             else
-                rocksRemaining = warriorsCosts[lastSpawnedWarriorIndex];
+                rocksRemaining = unitsCosts[lastSpawnedUnitIndex];
 
-            Instantiate(warriorPrefab, warriorsSpawnPoint.position, Quaternion.identity);
+            Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
         }
 
         rocksRemainingText.text = rocksRemaining.ToString();
@@ -56,7 +59,7 @@ public class WarriorsPlate : MonoBehaviour
         {
             BackPack backPack = other.GetComponent<BackPack>();
             backPack.rocksFlyTarget = rocksFlyTarget;
-            plateImage.DOScale(newScale, 0.5f);
+            plateImage.DOScale(plateNewScale, 0.5f);
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
             other.GetComponent<BackPack>().StartBackPackReset();
         }
@@ -67,9 +70,13 @@ public class WarriorsPlate : MonoBehaviour
         Player player;
         if (other.TryGetComponent<Player>(out player))
         {
-            plateImage.DOScale(defaultScale, 0.5f);
+            plateImage.DOScale(plateDefaultScale, 0.5f);
             costPopupImage.DOScale(costPopupDefaultScale, 0.5f);
             other.GetComponent<BackPack>().StopBackPackReset();
         }
+    }
+
+    public void RecieveResources()
+    {
     }
 }

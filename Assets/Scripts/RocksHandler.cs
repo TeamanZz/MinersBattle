@@ -107,7 +107,6 @@ public class RocksHandler : MonoBehaviour
                     Miner miner;
                     if (backPack.TryGetComponent<Miner>(out miner))
                     {
-                        Debug.Log("Need Move To Storage");
                         miner.MoveToStorage();
                     }
                 }

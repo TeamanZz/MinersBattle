@@ -8,14 +8,14 @@ public class Archer : MonoBehaviour
     public Transform arrowSpawnPoint;
 
     public Transform shootTarget;
-    // public float shootPower;
     public float torque;
 
     public Coroutine shootCoroutine;
 
     private void Update()
     {
-        transform.LookAt(shootTarget);
+        if (shootTarget != null)
+            transform.LookAt(new Vector3(shootTarget.position.x, this.transform.position.y, shootTarget.position.z));
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
@@ -30,7 +30,6 @@ public class Archer : MonoBehaviour
             if (shootTarget != null)
                 return;
 
-            Debug.Log("New Target");
             shootTarget = enemyUnit.transform;
             GetComponent<Animator>().SetBool("HaveTarget", true);
         }
@@ -43,7 +42,6 @@ public class Archer : MonoBehaviour
         {
             if (enemyUnit == shootTarget.GetComponent<EnemyUnitBase>())
             {
-                Debug.Log("Вышел");
                 shootTarget = null;
                 GetComponent<Animator>().SetBool("HaveTarget", false);
             }
