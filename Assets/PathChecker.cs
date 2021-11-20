@@ -15,11 +15,11 @@ public class PathChecker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MeshCheck();
+            CheckPathExist();
         }
     }
 
-    public bool MeshCheck()
+    public bool CheckPathExist()
     {
         var path = new NavMeshPath();
         pathAgent.CalculatePath(endPoint.position, path);
