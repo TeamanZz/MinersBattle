@@ -5,7 +5,13 @@ using UnityEngine.AI;
 
 public class PathChecker : MonoBehaviour
 {
-    [Header("Check mesh")]
+    public static PathChecker Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public NavMeshAgent pathAgent;
     public NavMeshPath navMeshPath;
 
@@ -32,7 +38,7 @@ public class PathChecker : MonoBehaviour
         else
         {
             Debug.Log("Path exist");
-            pathAgent.SetDestination(endPoint.position);
+            // pathAgent.SetDestination(endPoint.position);
             return true;
         }
     }

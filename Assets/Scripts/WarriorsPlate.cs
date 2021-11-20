@@ -25,6 +25,8 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
     public Transform unitsSpawnPoint;
     public Transform rocksFlyTarget;
 
+    public BattleCrowdController crowdController;
+
     private void Start()
     {
         costPopupDefaultScale = costPopupImage.localScale.x;
@@ -46,7 +48,8 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
             else
                 rocksRemaining = unitsCosts[lastSpawnedUnitIndex];
 
-            Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
+            var newWarrior = Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
+            crowdController.crowdTransforms.Add(newWarrior.transform);
         }
 
         rocksRemainingText.text = rocksRemaining.ToString();

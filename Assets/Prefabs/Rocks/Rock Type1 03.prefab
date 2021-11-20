@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8045309669568952619}
   - component: {fileID: 8045309669566699158}
   - component: {fileID: 8045309669566699159}
+  - component: {fileID: 4000362475173460005}
   m_Layer: 0
   m_Name: Rock Type1 03
   m_TagString: Untagged
@@ -97,8 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayToNextHit: 0.3
   currentDelayValue: 0.3
+  currentMiner: {fileID: 0}
   currentHp: 3
   currentStateID: 0
+  lastHitFromBackpack: {fileID: 0}
 --- !u!135 &8045309669566699159
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -112,3 +115,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.3758423
   m_Center: {x: 0.026370961, y: 0.69875073, z: -0.01}
+--- !u!208 &4000362475173460005
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8045309669566699157}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 1.172, y: 0.536, z: 1.172}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.026, y: 0.49500003, z: 0.086}
+  m_TimeToStationary: 0.5
