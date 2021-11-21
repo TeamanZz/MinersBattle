@@ -66,10 +66,9 @@ public class MiningRock : MonoBehaviour
             {
                 RocksHandler.Instance.SpawnNewRock(currentStateID, this);
                 RocksHandler.Instance.RemoveRockFromUnitArrays(this);
-                if (currentStateID == 1 && PathChecker.Instance.CheckPathExist())
-                {
-                    BattleCrowdController.Instance.SendUnitsToEndPoint();
-                }
+
+                if (currentStateID == 1)
+                    BattleCrowdController.Instance.CheckPAth();
                 Destroy(gameObject);
             }
         }

@@ -36,6 +36,15 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
         rocksRemainingText.text = rocksRemaining.ToString();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            var newWarrior = Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
+            crowdController.playerCrowdTransforms.Add(newWarrior.transform);
+        }
+    }
+
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
@@ -49,7 +58,7 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
                 rocksRemaining = unitsCosts[lastSpawnedUnitIndex];
 
             var newWarrior = Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
-            crowdController.crowdTransforms.Add(newWarrior.transform);
+            crowdController.playerCrowdTransforms.Add(newWarrior.transform);
         }
 
         rocksRemainingText.text = rocksRemaining.ToString();

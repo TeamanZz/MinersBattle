@@ -6,6 +6,7 @@ public class Arrow : MonoBehaviour
 {
     private Rigidbody arrowRB;
     private MeleeWeaponTrail arrowTrail;
+    public int teamIndex;
 
     private void Awake()
     {
@@ -15,14 +16,16 @@ public class Arrow : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        EnemyUnitBase enemyUnit;
-        if (other.TryGetComponent<EnemyUnitBase>(out enemyUnit))
+        ICrowdUnit enemyUnit;
+        if (other.TryGetComponent<ICrowdUnit>(out enemyUnit))
         {
-            transform.SetParent(enemyUnit.transform);
-            Destroy(arrowRB);
-            Destroy(arrowTrail);
-            // arrowRB.isKinematic = true;
-            // arrowRB.useGravity = false;
+            if (enemyUnit.TeamIndex != teamIndex)
+            {
+                enemyUnit.DecreaseHP(1);
+                transform.SetParent(other.transform);
+                Destroy(arrowRB);
+                Destroy(arrowTrail);
+            }
         }
     }
 }
