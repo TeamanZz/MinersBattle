@@ -8,18 +8,17 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     [HideInInspector] public Animator animator;
     [HideInInspector] public NavMeshAgent agent;
     public Transform opponentTarget;
-    public Transform enemyCastle;
     public WarriorEnemyDetection enemyDetection;
     public WarriorAttackDetection enemyAttackDetection;
 
     [Space]
     public int teamIndex;
     public int TeamIndex { get => teamIndex; set => teamIndex = value; }
-    [Space]
-
-    public bool isRunningToMeetingPlace;
+    public int hp;
+    public Transform OpponentTarget { get => opponentTarget; set => opponentTarget = value; }
     public bool isRuninngToCastle;
-    public bool isFighting;
+    public bool isRunningToMeetingPlace;
+    public bool meetingPlaceReached;
 
     [Header("Meeting place range")]
     public float minX;
@@ -29,12 +28,12 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public float delayToNextHit;
     public float currentDelayValue;
-    public int hp;
 
     public GameObject deathParticles;
     public Vector3 meetingPlacePosition;
+    public List<Transform> whoAttackThisUnit = new List<Transform>();
+    private Coroutine deathCoroutine;
 
-    public List<Warrior> whoAttackThisWarrior = new List<Warrior>();
 
     private void Awake()
     {
@@ -46,8 +45,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     {
         AddUnitToUnitsArray();
 
-        // MoveToMeetingPlace();
-        SendToOpponentCastle();
+        MoveToMeetingPlace();
     }
 
     private void AddUnitToUnitsArray()
@@ -104,18 +102,21 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     //Бег на плац
     private void MeetingPlaceReachedCheck()
     {
-        if (isRunningToMeetingPlace == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
+        if (BattleCrowdController.Instance.canRunToCastle)
+            return;
+        if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
         {
             agent.isStopped = true;
             animator.SetBool("IsRunning", false);
+            meetingPlaceReached = true;
+            isRunningToMeetingPlace = false;
         }
     }
 
     public void GiveDamageToEnemy()
     {
-        if (currentDelayValue > 0)
+        if (currentDelayValue > 0 || opponentTarget == null)
             return;
-
         opponentTarget.GetComponent<ICrowdUnit>().DecreaseHP(1);
 
         currentDelayValue = delayToNextHit;
@@ -123,18 +124,22 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public void MoveToMeetingPlace()
     {
-        if (isRunningToMeetingPlace)
+        if (isRunningToMeetingPlace || meetingPlaceReached)
             return;
-
+        Debug.Log("start Run");
+        isRunningToMeetingPlace = true;
         var destinationPosition = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
         meetingPlacePosition = destinationPosition;
         agent.SetDestination(destinationPosition);
         animator.SetBool("IsRunning", true);
-        isRunningToMeetingPlace = true;
     }
 
     public void SendToOpponentCastle()
     {
+
+        if (!BattleCrowdController.Instance.canRunToCastle)
+            return;
+
         var opponentCastle = BattleCrowdController.Instance.GetOpponentCastleTransform(teamIndex);
         GetComponent<NavMeshAgent>().isStopped = false;
         GetComponent<NavMeshAgent>().SetDestination(opponentCastle.position);
@@ -146,26 +151,35 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public void DecreaseHP(int value)
     {
+        if (deathCoroutine != null)
+            return;
         hp -= value;
         if (hp <= 0)
         {
-            StartCoroutine(IEDeath());
+            deathCoroutine = StartCoroutine(IEDeath());
         }
     }
 
     private IEnumerator IEDeath()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         BattleCrowdController.Instance.enemyCrowdTransforms.Remove(this.transform);
-        for (int i = 0; i < whoAttackThisWarrior.Count; i++)
+        BattleCrowdController.Instance.playerCrowdTransforms.Remove(this.transform);
+        for (int i = 0; i < whoAttackThisUnit.Count; i++)
         {
-            whoAttackThisWarrior[i].opponentTarget = null;
+            if (whoAttackThisUnit[i] != null)
+                whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
             // var opponentCastle = BattleCrowdController.Instance.GetOpponentCastleTransform(teamIndex);
             // whoAttackThisWarrior[i].SendToOpponentCastle(opponentCastle.position);
         }
-        whoAttackThisWarrior.Clear();
+        whoAttackThisUnit.Clear();
         Destroy(gameObject);
+    }
+
+    public void AddAttackerUnit(Transform unit)
+    {
+        whoAttackThisUnit.Add(unit);
     }
 }
 
@@ -173,6 +187,7 @@ public interface ICrowdUnit
 {
     void SendToOpponentCastle();
     void DecreaseHP(int value);
-
+    Transform OpponentTarget { get; set; }
+    void AddAttackerUnit(Transform unit);
     int TeamIndex { get; set; }
 }

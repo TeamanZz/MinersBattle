@@ -7738,7 +7738,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8002445831675355267}
   m_Material: {fileID: 13400000, guid: daa249ef962309b428beab9d1352ecba, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.6892303
@@ -7753,7 +7753,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8002445831675355267}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.1
+  m_Radius: 0.2
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -7799,19 +7799,20 @@ MonoBehaviour:
   enemyDetection: {fileID: 8773184069252923941}
   enemyAttackDetection: {fileID: 8773184068757472839}
   teamIndex: 0
+  canRunToCastle: 0
   isRunningToMeetingPlace: 0
   isRuninngToCastle: 0
-  isFighting: 0
   minX: -3
   maxX: 3
-  minZ: -14.5
-  maxZ: -12
+  minZ: -13
+  maxZ: -11.5
   delayToNextHit: 0.3
   currentDelayValue: 0.3
-  hp: 8
+  hp: 2
   deathParticles: {fileID: 119968, guid: 01d54b7c52c8f834d8787bb0c0aeef7c, type: 3}
   meetingPlacePosition: {x: 0, y: 0, z: 0}
-  whoAttackThisWarrior: []
+  whoAttackThisUnit: []
+  meetingPlaceReached: 0
 --- !u!1 &8002445831677887966
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class WarriorEnemyDetection : MonoBehaviour
         if (newTarget != null)
         {
             warrior.opponentTarget = newTarget;
-            newTarget.GetComponent<Warrior>().whoAttackThisWarrior.Add(warrior);
+            newTarget.GetComponent<ICrowdUnit>().AddAttackerUnit(warrior.transform);
             warrior.isRuninngToCastle = false;
         }
     }

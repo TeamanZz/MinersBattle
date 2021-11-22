@@ -21,11 +21,20 @@ public class Arrow : MonoBehaviour
         {
             if (enemyUnit.TeamIndex != teamIndex)
             {
-                enemyUnit.DecreaseHP(1);
-                transform.SetParent(other.transform);
-                Destroy(arrowRB);
-                Destroy(arrowTrail);
+                StartCoroutine(CollideArrowAfterDelay(enemyUnit, other));
             }
+        }
+    }
+
+    private IEnumerator CollideArrowAfterDelay(ICrowdUnit enemyUnit, Collider other)
+    {
+        yield return new WaitForSeconds(0.02f);
+        if (other != null)
+        {
+            enemyUnit.DecreaseHP(1);
+            transform.SetParent(other.transform);
+            Destroy(arrowRB);
+            Destroy(arrowTrail);
         }
     }
 }

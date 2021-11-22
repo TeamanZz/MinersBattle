@@ -35,13 +35,10 @@ public class Detection : MonoBehaviour
             {
                 transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
                 doOneScale.Kill();
+                doZeroScale.Kill();
+
                 doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
             }
-        }
-        Miner miner;
-        if (transform.parent.TryGetComponent<Miner>(out miner))
-        {
-
         }
     }
 
@@ -52,6 +49,8 @@ public class Detection : MonoBehaviour
         {
             transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
             doOneScale.Kill();
+            doZeroScale.Kill();
+
             doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
         }
     }

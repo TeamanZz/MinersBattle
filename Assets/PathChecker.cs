@@ -13,7 +13,6 @@ public class PathChecker : MonoBehaviour
     }
 
     public NavMeshAgent pathAgent;
-    public NavMeshPath navMeshPath;
 
     public Transform endPoint;
 

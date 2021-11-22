@@ -15,6 +15,8 @@ public class BattleCrowdController : MonoBehaviour
 
     public static BattleCrowdController Instance;
 
+    public bool canRunToCastle;
+
     private void Awake()
     {
         Instance = this;
@@ -29,9 +31,17 @@ public class BattleCrowdController : MonoBehaviour
             playerCastle;
     }
 
-    public Transform GetNearestOpponent(Warrior warrior, Vector3 currentPosition, float detectionRange)
+    private void Update()
     {
-        if (warrior.TeamIndex == 0)
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            CheckPath();
+        }
+    }
+
+    public Transform GetNearestOpponent(ICrowdUnit crowdUnit, Vector3 currentPosition, float detectionRange)
+    {
+        if (crowdUnit.TeamIndex == 0)
         {
             if (enemyCrowdTransforms.Count == 0)
                 return null;
@@ -49,7 +59,7 @@ public class BattleCrowdController : MonoBehaviour
             if (playerCrowdTransforms.Count == 0)
                 return null;
 
-            var newTargetPos = playerCrowdTransforms.Find(x => Vector3.Distance(x.transform.position, currentPosition) <= playerCrowdTransforms.Min(x => Vector3.Distance(x.transform.position, currentPosition)));
+            var newTargetPos = playerCrowdTransforms.Find(x => Vector3.Distance(x.position, currentPosition) <= playerCrowdTransforms.Min(x => Vector3.Distance(x.position, currentPosition)));
             if (Vector3.Distance(newTargetPos.position, currentPosition) <= detectionRange)
             {
                 return newTargetPos;
@@ -64,12 +74,13 @@ public class BattleCrowdController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (PathChecker.Instance.CheckPathExist())
         {
+            canRunToCastle = true;
             SendPlayerUnitsToEnemyCastle();
             SendEnemyUnitsToPlayerCastle();
         }
     }
 
-    public void CheckPAth()
+    public void CheckPath()
     {
         StartCoroutine(CheckPathAfterDelay());
     }
@@ -84,7 +95,7 @@ public class BattleCrowdController : MonoBehaviour
 
     public void SendEnemyUnitsToPlayerCastle()
     {
-        for (int i = 0; i < playerCrowdTransforms.Count; i++)
+        for (int i = 0; i < enemyCrowdTransforms.Count; i++)
         {
             enemyCrowdTransforms[i].GetComponent<ICrowdUnit>().SendToOpponentCastle();
         }

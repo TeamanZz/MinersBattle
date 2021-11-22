@@ -15,7 +15,7 @@ public class WarriorAttackDetection : MonoBehaviour
             if (crowdUnit.TeamIndex != warrior.teamIndex)
             {
                 warrior.opponentTarget = other.transform;
-                other.GetComponent<Warrior>().whoAttackThisWarrior.Add(warrior);
+                crowdUnit.AddAttackerUnit(warrior.transform);
                 warrior.agent.isStopped = true;
                 warrior.isRuninngToCastle = false;
                 warrior.animator.SetBool("EnemyIsNearby", true);
@@ -28,13 +28,6 @@ public class WarriorAttackDetection : MonoBehaviour
         ICrowdUnit crowdUnit;
         if (other.TryGetComponent<ICrowdUnit>(out crowdUnit))
         {
-            // //Если таргет умер
-            // if (warrior.enemyTarget == null)
-            // {
-            //     warrior.animator.SetBool("EnemyIsNearby", false);
-            //     return;
-            // }
-            //Если таргет просто решил побежать за другим
             if (crowdUnit.TeamIndex != warrior.teamIndex && other.transform == warrior.opponentTarget)
             {
                 warrior.animator.SetBool("EnemyIsNearby", false);
