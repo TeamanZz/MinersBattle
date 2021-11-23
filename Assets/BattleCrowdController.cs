@@ -71,12 +71,15 @@ public class BattleCrowdController : MonoBehaviour
 
     private IEnumerator CheckPathAfterDelay()
     {
-        yield return new WaitForSeconds(0.5f);
-        if (PathChecker.Instance.CheckPathExist())
+        if (!canRunToCastle)
         {
-            canRunToCastle = true;
-            SendPlayerUnitsToEnemyCastle();
-            SendEnemyUnitsToPlayerCastle();
+            yield return new WaitForSeconds(0.1f);
+            if (PathChecker.Instance.CheckPathExist())
+            {
+                canRunToCastle = true;
+                SendPlayerUnitsToEnemyCastle();
+                SendEnemyUnitsToPlayerCastle();
+            }
         }
     }
 
