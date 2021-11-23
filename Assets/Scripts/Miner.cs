@@ -35,6 +35,15 @@ public class Miner : MonoBehaviour
         InvokeRepeating("SetNewDestination", 0.5f, 1);
     }
 
+    //Animation event
+    public void HitRocksNearby()
+    {
+        for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+        {
+            detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
+        }
+    }
+
     public void MoveToStorage()
     {
         isMovingToStorage = true;
@@ -52,8 +61,11 @@ public class Miner : MonoBehaviour
         if (isMovingToStorage || backPack.isUnloading)
             return;
 
+        if (rocksHandler.miningRocks.Count <= 0)
+            return;
+
         var newTarget = rocksHandler.miningRocks.Find(x => Vector3.Distance(x.transform.position, transform.position) <= rocksHandler.miningRocks.Min(x => Vector3.Distance(x.transform.position, transform.position)));
-        newTarget.gameObject.SetActive(true);
+        // newTarget.gameObject.SetActive(true);
         var newDestination = newTarget.transform.position;
         targetRock = newTarget.GetComponent<MiningRock>();
         targetRock.currentMiner = this;

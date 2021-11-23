@@ -42,37 +42,64 @@ public class MiningRock : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void HitRock(Pickaxe pickaxe)
     {
-        Pickaxe pickaxe;
-        if (other.TryGetComponent<Pickaxe>(out pickaxe))
+        if (currentDelayValue > 0)
+            return;
+
+        lastHitFromBackpack = pickaxe.backPack;
+        transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
+        currentDelayValue = delayToNextHit;
+        RocksHandler.Instance.SpawnHitParticles(transform);
+
+        if (pickaxe.backPack.rocksCount < pickaxe.backPack.maxRocksCount)
         {
-            if (currentDelayValue > 0)
-                return;
+            RocksHandler.Instance.SpawnSpineRocks(transform, lastHitFromBackpack);
+            currentHp--;
+        }
 
+        if (currentHp <= 0)
+        {
+            RocksHandler.Instance.SpawnNewRock(currentStateID, this);
+            RocksHandler.Instance.RemoveRockFromUnitArrays(this);
 
-            lastHitFromBackpack = pickaxe.backPack;
-            transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
-            currentDelayValue = delayToNextHit;
-            RocksHandler.Instance.SpawnHitParticles(transform);
-
-            if (pickaxe.backPack.rocksCount < pickaxe.backPack.maxRocksCount)
-            {
-                RocksHandler.Instance.SpawnSpineRocks(transform, lastHitFromBackpack);
-                currentHp--;
-            }
-
-            if (currentHp <= 0)
-            {
-                RocksHandler.Instance.SpawnNewRock(currentStateID, this);
-                RocksHandler.Instance.RemoveRockFromUnitArrays(this);
-
-                if (currentStateID == 1)
-                    BattleCrowdController.Instance.CheckPath();
-                Destroy(gameObject);
-            }
+            if (currentStateID == 1)
+                BattleCrowdController.Instance.CheckPath();
+            Destroy(gameObject);
         }
     }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     Pickaxe pickaxe;
+    //     if (other.TryGetComponent<Pickaxe>(out pickaxe))
+    //     {
+    //         if (currentDelayValue > 0)
+    //             return;
+
+
+    //         lastHitFromBackpack = pickaxe.backPack;
+    //         transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
+    //         currentDelayValue = delayToNextHit;
+    //         RocksHandler.Instance.SpawnHitParticles(transform);
+
+    //         if (pickaxe.backPack.rocksCount < pickaxe.backPack.maxRocksCount)
+    //         {
+    //             RocksHandler.Instance.SpawnSpineRocks(transform, lastHitFromBackpack);
+    //             currentHp--;
+    //         }
+
+    //         if (currentHp <= 0)
+    //         {
+    //             RocksHandler.Instance.SpawnNewRock(currentStateID, this);
+    //             RocksHandler.Instance.RemoveRockFromUnitArrays(this);
+
+    //             if (currentStateID == 1)
+    //                 BattleCrowdController.Instance.CheckPath();
+    //             Destroy(gameObject);
+    //         }
+    //     }
+    // }
 
     [System.Serializable]
     public class RockState

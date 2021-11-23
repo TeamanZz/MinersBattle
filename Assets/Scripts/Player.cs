@@ -11,11 +11,20 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private Animator animator;
     public BackPack backPack;
-
+    public Detection detectionCollider;
     private void Awake()
     {
         animator = GetComponent<Animator>();
         backPack = GetComponent<BackPack>();
+    }
+
+    //Animation event
+    public void HitRocksNearby()
+    {
+        for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+        {
+            detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
+        }
     }
 
     public void FixedUpdate()

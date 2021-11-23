@@ -7,11 +7,20 @@ using DG.Tweening;
 public class Detection : MonoBehaviour
 {
     public Transform axeTransform;
-
+    public Pickaxe pickaxe;
     Tween doOneScale;
     Tween doZeroScale;
 
     public List<MiningRock> rocksNearby = new List<MiningRock>();
+
+    // //Animation event
+    // public void HitRocksNearby()
+    // {
+    //     for (int i = 0; i < rocksNearby.Count; i++)
+    //     {
+    //         rocksNearby[i].HitRock(pickaxe);
+    //     }
+    // }
 
     private void OnTriggerEnter(Collider other)
     {

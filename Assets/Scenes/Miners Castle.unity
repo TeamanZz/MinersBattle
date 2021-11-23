@@ -15387,6 +15387,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dc7b6ac473731714494f7b587432b5cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
+--- !u!114 &1081579634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4418763590420170687, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+  m_PrefabInstance: {fileID: 8330157651725765233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d59bff408917a64b875f764e6c20e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1084248727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 144651443045549746, guid: 018d5723469232e4da8dcb22eaf19e4c, type: 3}
@@ -32715,6 +32726,10 @@ PrefabInstance:
       propertyPath: mineCartTransform
       value: 
       objectReference: {fileID: 3112145865218570412}
+    - target: {fileID: 7438984682781579777, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7438984682781579804, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -32727,6 +32742,10 @@ PrefabInstance:
       propertyPath: floatingJoystick
       value: 
       objectReference: {fileID: 8170153792128034250}
+    - target: {fileID: 7438984682781579806, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+      propertyPath: detectionCollider
+      value: 
+      objectReference: {fileID: 1920425627}
     - target: {fileID: 7815792142843166886, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -32770,6 +32789,18 @@ PrefabInstance:
     - target: {fileID: 7815792142843166886, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330157651428807914, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+      propertyPath: pickaxe
+      value: 
+      objectReference: {fileID: 1081579634}
+    - target: {fileID: 8330157651428807915, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+      propertyPath: m_Height
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330157651428807915, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+      propertyPath: m_Radius
+      value: 0.61
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8330157652598420989, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
