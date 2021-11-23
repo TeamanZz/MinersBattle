@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 
-public class Miner : MonoBehaviour
+public class Miner : MonoBehaviour, IAIMiner
 {
     [HideInInspector] public NavMeshAgent agent;
 
@@ -21,6 +21,8 @@ public class Miner : MonoBehaviour
     public BackPack backPack;
 
     public bool isMovingToStorage;
+
+    public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
 
     private void Awake()
     {

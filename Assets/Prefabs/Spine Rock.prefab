@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f40632f0ecafeea4c9c159de447f66aa, type: 2}
+  - {fileID: 2100000, guid: 60285ec4e88781e499578e2928e52f8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
-  goingToMine: 0
+  isFlyingToBuild: 0
   flySpeed: 12
   hasNoParent: 1
   scaleRestored: 0

@@ -67,7 +67,7 @@ public class RocksHandler : MonoBehaviour
             if (oldRock.currentMiner != null)
             {
                 newRock.GetComponent<MiningRock>().currentMiner = oldRock.currentMiner;
-                newRock.GetComponent<MiningRock>().currentMiner.targetRock = newRock.GetComponent<MiningRock>();
+                newRock.GetComponent<MiningRock>().currentMiner.TargetRock = newRock.GetComponent<MiningRock>();
             }
         }
     }

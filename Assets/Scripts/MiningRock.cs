@@ -13,7 +13,7 @@ public class MiningRock : MonoBehaviour
     private int vibrato = 10;
     private float elastic = 1;
 
-    public Miner currentMiner;
+    public IAIMiner currentMiner;
 
     public int currentHp;
 
@@ -68,38 +68,6 @@ public class MiningRock : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     Pickaxe pickaxe;
-    //     if (other.TryGetComponent<Pickaxe>(out pickaxe))
-    //     {
-    //         if (currentDelayValue > 0)
-    //             return;
-
-
-    //         lastHitFromBackpack = pickaxe.backPack;
-    //         transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);
-    //         currentDelayValue = delayToNextHit;
-    //         RocksHandler.Instance.SpawnHitParticles(transform);
-
-    //         if (pickaxe.backPack.rocksCount < pickaxe.backPack.maxRocksCount)
-    //         {
-    //             RocksHandler.Instance.SpawnSpineRocks(transform, lastHitFromBackpack);
-    //             currentHp--;
-    //         }
-
-    //         if (currentHp <= 0)
-    //         {
-    //             RocksHandler.Instance.SpawnNewRock(currentStateID, this);
-    //             RocksHandler.Instance.RemoveRockFromUnitArrays(this);
-
-    //             if (currentStateID == 1)
-    //                 BattleCrowdController.Instance.CheckPath();
-    //             Destroy(gameObject);
-    //         }
-    //     }
-    // }
 
     [System.Serializable]
     public class RockState

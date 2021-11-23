@@ -8,10 +8,10 @@ public class Player : MonoBehaviour
     public FloatingJoystick floatingJoystick;
     public Rigidbody rb;
 
-    private bool isRunning;
     private Animator animator;
     public BackPack backPack;
     public Detection detectionCollider;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();

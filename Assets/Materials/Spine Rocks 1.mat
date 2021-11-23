@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interactive Rocks
+  m_Name: Spine Rocks 1
   m_Shader: {fileID: 4800000, guid: 73d75a8acbc09f644aaed8f015d61c8b, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -79,7 +79,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 1
+    - _Outline: 2
     - _Parallax: 0.02
     - _RampSmooth: 0.1
     - _RampSmoothOtherLights: 0.5
@@ -97,7 +97,7 @@ Material:
     - __dummy__: 0
     - __outline_gui_dummy__: 0
     m_Colors:
-    - _Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    - _Color: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 0.785, g: 0.785, b: 0.785, a: 1}
