@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using DG.Tweening;
+using TMPro;
+using UnityEngine;
 
-public class Storage : MonoBehaviour, IResourceReciever
+public class StorageOpponent : MonoBehaviour, IResourceReciever
 {
-    public static Storage Instance;
+    public static StorageOpponent Instance;
 
     public int currentRocksCount;
 
@@ -56,14 +56,16 @@ public class Storage : MonoBehaviour, IResourceReciever
         Instance = this;
     }
 
-    private IEnumerator StartFlyToPlayer(Player player)
+    private IEnumerator StartFlyToPlayer(PlayerOpponent player)
     {
         while (playerInStorage)
         {
             yield return new WaitForSeconds(0.1f);
-
+            Debug.Log("started2");
             if ((player.backPack.rocksCount < player.backPack.maxRocksCount) && currentRocksCount > 0)
             {
+                Debug.Log("started3");
+
                 var flyingRock = Instantiate(flyingRockPrefab, transform.position, Quaternion.identity, player.backPack.generalSpineRocksTransforms[player.backPack.rocksCount]);
                 flyingRock.GetComponent<SpineRock>().targetTransform = player.backPack.generalSpineRocksTransforms[player.backPack.rocksCount];
                 GiveResources();
@@ -85,15 +87,15 @@ public class Storage : MonoBehaviour, IResourceReciever
             backPack.StartBackPackReset();
             miner.agent.isStopped = true;
         }
-        Player player;
+        PlayerOpponent player;
 
-        if (other.TryGetComponent<Player>(out player))
+        if (other.TryGetComponent<PlayerOpponent>(out player))
         {
             plateImage.DOScale(plateNewScale, 0.5f);
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
             playerInStorage = true;
-
+            Debug.Log("started1");
             flyToPlayer = StartCoroutine(StartFlyToPlayer(player));
         }
     }
@@ -110,8 +112,8 @@ public class Storage : MonoBehaviour, IResourceReciever
                 popupImage.DOScale(popupDefaultScale, 0.5f);
             }
         }
-        Player player;
-        if (other.TryGetComponent<Player>(out player))
+        PlayerOpponent player;
+        if (other.TryGetComponent<PlayerOpponent>(out player))
         {
             plateImage.DOScale(plateDefaultScale, 0.5f);
             if (minersNearby.Count == 0)

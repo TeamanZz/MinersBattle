@@ -33,22 +33,11 @@ public class RocksHandler : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        for (int i = 0; i < miningRocks.Count; i++)
-        {
-            // miningRocks[i].transform.rotation = Quaternion.Euler(0, miningRocks[i].transform.rotation.y + Random.Range(0, 361), 0);
-
-            // float xOffset = miningRocks[i].transform.position.x + Random.Range(-0.3f, 0.3f);
-            // float yOffset = miningRocks[i].transform.position.y + Random.Range(-0.6f, 0f);
-            // float zOffset = miningRocks[i].transform.position.z + Random.Range(-0.3f, 0.3f);
-            // miningRocks[i].transform.position = new Vector3(xOffset, yOffset, zOffset);
-        }
-    }
-
     public void SpawnNewRock(int currentRockStateID, MiningRock oldRock)
     {
         var newRock = Instantiate(rocksStates[currentRockStateID + 1], oldRock.transform.position, oldRock.transform.rotation);
+        if (currentRockStateID <= 0)
+            miningRocks.Add(newRock.GetComponent<MiningRock>());
 
         for (int i = 0; i < rockParticles.Count; i++)
         {
@@ -109,6 +98,12 @@ public class RocksHandler : MonoBehaviour
                     {
                         miner.MoveToStorage();
                     }
+
+                    PlayerOpponent playerOpponent;
+                    if (backPack.TryGetComponent<PlayerOpponent>(out playerOpponent))
+                    {
+                        playerOpponent.OnRocksFull();
+                    }
                 }
             });
         }
@@ -120,7 +115,6 @@ public class RocksHandler : MonoBehaviour
         {
             minersDetections[i].RemoveFromNearbyArray(miningRock);
         }
-
         miningRocks.Remove(miningRock);
     }
 }

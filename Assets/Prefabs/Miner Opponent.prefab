@@ -915,7 +915,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4338c11c7796b9419efac500515db92, type: 2}
+  - {fileID: 2100000, guid: e28489ec231aead488ad314b496c16c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4509,7 +4509,7 @@ GameObject:
   - component: {fileID: 8684716598029737485}
   - component: {fileID: 8684716598029737480}
   m_Layer: 8
-  m_Name: Miner
+  m_Name: Miner Opponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4627,7 +4627,7 @@ MonoBehaviour:
   - {fileID: 8684716597926835419}
   - {fileID: 8684716597093117670}
   - {fileID: 8684716596458653345}
-  maxRocksCount: 6
+  maxRocksCount: 5
   rocksCount: 0
   rocksFlyTarget: {fileID: 0}
   generalRocksHolder: {fileID: 8684716596920708204}
@@ -4654,7 +4654,7 @@ MonoBehaviour:
   rocksHandler: {fileID: 0}
   backPack: {fileID: 0}
   isMovingToStorage: 0
-  teamIndex: 0
+  teamIndex: 1
 --- !u!195 &8684716598029737488
 NavMeshAgent:
   m_ObjectHideFlags: 0

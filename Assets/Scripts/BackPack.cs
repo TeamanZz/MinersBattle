@@ -40,6 +40,13 @@ public class BackPack : MonoBehaviour
         {
             StopCoroutine(flyCoroutine);
         }
+
+        PlayerOpponent playerOpponent;
+        if (TryGetComponent<PlayerOpponent>(out playerOpponent))
+        {
+            playerOpponent.ChangeState(PlayerOpponentState.Mining);
+        }
+
     }
 
     public IEnumerator FlyToPoint()

@@ -8,17 +8,23 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 {
     private NavMeshAgent agent;
     public Detection detectionCollider;
+    public Transform minerPlatePosition;
 
     public RocksHandler rocksHandler;
     public Transform defaultPosition;
 
     public PlayerOpponentState currentState = PlayerOpponentState.Idle;
-    public MiningRock targetRock;
+    [HideInInspector] public MiningRock targetRock;
 
     private Animator animator;
-    private BackPack backPack;
+    [HideInInspector] public BackPack backPack;
 
     public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
+
+    public void OnRocksFull()
+    {
+        ChangeState(PlayerOpponentState.RunningToMiners);
+    }
 
     private void Start()
     {
@@ -67,7 +73,33 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         if (newState == PlayerOpponentState.Mining)
         {
             animator.SetBool("IsRunning", true);
+            SetNewDestination();
             currentState = PlayerOpponentState.Mining;
+        }
+
+        if (newState == PlayerOpponentState.RunningToStorage)
+        {
+            animator.SetBool("IsRunning", true);
+            targetRock = null;
+            agent.SetDestination(StorageOpponent.Instance.transform.position);
+            agent.isStopped = false;
+            currentState = PlayerOpponentState.RunningToStorage;
+        }
+
+        if (newState == PlayerOpponentState.Unloading)
+        {
+            animator.SetBool("IsRunning", false);
+            agent.isStopped = true;
+            currentState = PlayerOpponentState.Unloading;
+        }
+
+        if (newState == PlayerOpponentState.RunningToMiners)
+        {
+            animator.SetBool("IsRunning", true);
+            agent.isStopped = false;
+            targetRock = null;
+            agent.SetDestination(minerPlatePosition.position);
+            currentState = PlayerOpponentState.RunningToMiners;
         }
     }
 
@@ -109,6 +141,7 @@ public enum PlayerOpponentState
 {
     Idle,
     Mining,
+    Unloading,
     RunningToMiners,
     RunningToStorage,
     RunningToWarriors,

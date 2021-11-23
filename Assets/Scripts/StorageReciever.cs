@@ -5,9 +5,14 @@ using UnityEngine;
 public class StorageReciever : MonoBehaviour, IResourceReciever
 {
     public Storage storage;
+    public StorageOpponent storageOpponent;
 
     public void RecieveResources()
     {
-        storage.RecieveResources();
+        if (storageOpponent != null)
+            storageOpponent.RecieveResources();
+
+        else
+            storage.RecieveResources();
     }
 }

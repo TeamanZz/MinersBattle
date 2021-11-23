@@ -5,14 +5,21 @@ using UnityEngine;
 public class MineCart : MonoBehaviour, IResourceReciever
 {
     public MinerPlate minerPlate;
+    public MinerPlateOpponent minerPlateOpponent;
 
-    public void DecreaseRemainingRocks()
-    {
-        minerPlate.DecreaseRemainingRocks();
-    }
+    // public void DecreaseRemainingRocks()
+    // {
+    //     if (minerPlateOpponent != null)
+    //         minerPlateOpponent.DecreaseRemainingRocks();
+    //     else
+    //         minerPlate.DecreaseRemainingRocks();
+    // }
 
     public void RecieveResources()
     {
-        minerPlate.DecreaseRemainingRocks();
+        if (minerPlateOpponent != null)
+            minerPlateOpponent.DecreaseRemainingRocks();
+        else
+            minerPlate.DecreaseRemainingRocks();
     }
 }

@@ -24,6 +24,8 @@ public class Miner : MonoBehaviour, IAIMiner
 
     public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
 
+    public int teamIndex;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -51,7 +53,11 @@ public class Miner : MonoBehaviour, IAIMiner
         isMovingToStorage = true;
         targetRock = null;
 
-        agent.SetDestination(Storage.Instance.transform.position);
+        if (teamIndex == 0)
+            agent.SetDestination(Storage.Instance.transform.position);
+        else
+            agent.SetDestination(StorageOpponent.Instance.transform.position);
+
         agent.isStopped = false;
     }
 
