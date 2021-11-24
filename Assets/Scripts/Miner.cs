@@ -42,9 +42,10 @@ public class Miner : MonoBehaviour, IAIMiner
     //Animation event
     public void HitRocksNearby()
     {
-        for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+        List<MiningRock> rocksNearbyCopy = new List<MiningRock>(detectionCollider.rocksNearby);
+        for (int i = 0; i < rocksNearbyCopy.Count; i++)
         {
-            detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
+            rocksNearbyCopy[i].HitRock(detectionCollider.pickaxe);
         }
     }
 
@@ -81,7 +82,7 @@ public class Miner : MonoBehaviour, IAIMiner
         agent.isStopped = false;
     }
 
-    public void OnRockDestroyed()
+    public void OnTargetRockDestroyed()
     {
         SetNewDestination();
     }

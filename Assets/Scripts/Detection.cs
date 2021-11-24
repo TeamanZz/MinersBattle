@@ -13,15 +13,6 @@ public class Detection : MonoBehaviour
 
     public List<MiningRock> rocksNearby = new List<MiningRock>();
 
-    // //Animation event
-    // public void HitRocksNearby()
-    // {
-    //     for (int i = 0; i < rocksNearby.Count; i++)
-    //     {
-    //         rocksNearby[i].HitRock(pickaxe);
-    //     }
-    // }
-
     private void OnTriggerEnter(Collider other)
     {
         MiningRock miningRock;
@@ -62,13 +53,5 @@ public class Detection : MonoBehaviour
 
             doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
         }
-    }
-
-    public void ClearAll()
-    {
-        rocksNearby.Clear();
-        transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
-        doOneScale.Kill();
-        doZeroScale = axeTransform.DOScale(Vector3.zero, 0.6f);
     }
 }

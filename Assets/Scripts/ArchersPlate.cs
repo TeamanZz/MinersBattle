@@ -61,7 +61,7 @@ public class ArchersPlate : MonoBehaviour, IResourceReciever
             backPack.rocksFlyTarget = rocksFlyTarget;
             plateImage.DOScale(plateNewScale, 0.5f);
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
-            other.GetComponent<BackPack>().StartBackPackReset();
+            other.GetComponent<BackPack>().StartBackPackUnloading();
         }
     }
 
@@ -72,7 +72,7 @@ public class ArchersPlate : MonoBehaviour, IResourceReciever
         {
             plateImage.DOScale(plateDefaultScale, 0.5f);
             costPopupImage.DOScale(costPopupDefaultScale, 0.5f);
-            other.GetComponent<BackPack>().StopBackPackReset();
+            other.GetComponent<BackPack>().StopBackPackUnload();
         }
     }
 

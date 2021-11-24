@@ -47,7 +47,7 @@ public class RocksHandler : MonoBehaviour
         //Если камень истощается
         if (currentRockStateID == rocksStates.Count - 2 && oldRock.currentMiner != null)
         {
-            oldRock.currentMiner.OnRockDestroyed();
+            oldRock.currentMiner.OnTargetRockDestroyed();
         }
         else
         {
@@ -91,13 +91,11 @@ public class RocksHandler : MonoBehaviour
             {
                 newRock.GetComponent<SpineRock>().targetTransform = backPack.generalSpineRocksTransforms[backPack.rocksCount];
                 backPack.rocksCount++;
+
+                //Если рюкзак полон
                 if (backPack.rocksCount >= backPack.maxRocksCount)
                 {
-                    Miner miner;
-                    if (backPack.TryGetComponent<Miner>(out miner))
-                    {
-                        miner.MoveToStorage();
-                    }
+                    SendMinerToStorage(backPack);
 
                     PlayerOpponent playerOpponent;
                     if (backPack.TryGetComponent<PlayerOpponent>(out playerOpponent))
@@ -106,6 +104,15 @@ public class RocksHandler : MonoBehaviour
                     }
                 }
             });
+        }
+    }
+
+    private static void SendMinerToStorage(BackPack backPack)
+    {
+        Miner miner;
+        if (backPack.TryGetComponent<Miner>(out miner))
+        {
+            miner.MoveToStorage();
         }
     }
 

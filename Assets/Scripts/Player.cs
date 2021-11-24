@@ -21,17 +21,17 @@ public class Player : MonoBehaviour
     //Animation event
     public void HitRocksNearby()
     {
-        for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+        List<MiningRock> rocksNearbyCopy = new List<MiningRock>(detectionCollider.rocksNearby);
+        for (int i = 0; i < rocksNearbyCopy.Count; i++)
         {
-            detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
+            rocksNearbyCopy[i].HitRock(detectionCollider.pickaxe);
         }
     }
 
     public void FixedUpdate()
     {
         Vector3 direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
-        // rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
-        if (floatingJoystick.Horizontal != 0 || floatingJoystick.Vertical != 0)
+        if (Mathf.Abs(floatingJoystick.Horizontal) >= 0.025f || Mathf.Abs(floatingJoystick.Vertical) >= 0.025f)
         {
             rb.velocity = (direction.normalized * speed);
             var angle = Mathf.Atan2(-floatingJoystick.Horizontal, floatingJoystick.Vertical) * Mathf.Rad2Deg;

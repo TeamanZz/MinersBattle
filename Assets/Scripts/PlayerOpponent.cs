@@ -21,9 +21,11 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
 
-    public void OnRocksFull()
+    private void Awake()
     {
-        ChangeState(PlayerOpponentState.RunningToMiners);
+        animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        backPack = GetComponent<BackPack>();
     }
 
     private void Start()
@@ -36,11 +38,17 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         InvokeRepeating("SetNewDestination", 0.5f, 1);
     }
 
-    private void Awake()
+
+    private void FixedUpdate()
     {
-        animator = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
-        backPack = GetComponent<BackPack>();
+        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null) || currentState == PlayerOpponentState.RunningToMinersPlate)
+        {
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -53,13 +61,25 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         }
     }
 
+    public void OnRocksFull()
+    {
+        ChangeState(PlayerOpponentState.RunningToMinersPlate);
+    }
+
     //Animation event
     public void HitRocksNearby()
     {
-        for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+        List<MiningRock> rocksNearbyCopy = new List<MiningRock>(detectionCollider.rocksNearby);
+        for (int i = 0; i < rocksNearbyCopy.Count; i++)
         {
-            detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
+            rocksNearbyCopy[i].HitRock(detectionCollider.pickaxe);
         }
+
+        // for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+        // {
+        //     detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
+        //     Debug.Log(detectionCollider.rocksNearby[i]);
+        // }
     }
 
     public void ChangeState(PlayerOpponentState newState)
@@ -72,18 +92,19 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
         if (newState == PlayerOpponentState.Mining)
         {
-            animator.SetBool("IsRunning", true);
+            // StartCoroutine(IEStartRunningAnimationAfterDelay());
+            // animator.SetBool("IsRunning", true);
             SetNewDestination();
             currentState = PlayerOpponentState.Mining;
         }
 
-        if (newState == PlayerOpponentState.RunningToStorage)
+        if (newState == PlayerOpponentState.RunningToStoragePlate)
         {
             animator.SetBool("IsRunning", true);
             targetRock = null;
             agent.SetDestination(StorageOpponent.Instance.transform.position);
             agent.isStopped = false;
-            currentState = PlayerOpponentState.RunningToStorage;
+            currentState = PlayerOpponentState.RunningToStoragePlate;
         }
 
         if (newState == PlayerOpponentState.Unloading)
@@ -93,14 +114,20 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             currentState = PlayerOpponentState.Unloading;
         }
 
-        if (newState == PlayerOpponentState.RunningToMiners)
+        if (newState == PlayerOpponentState.RunningToMinersPlate)
         {
             animator.SetBool("IsRunning", true);
             agent.isStopped = false;
             targetRock = null;
             agent.SetDestination(minerPlatePosition.position);
-            currentState = PlayerOpponentState.RunningToMiners;
+            currentState = PlayerOpponentState.RunningToMinersPlate;
         }
+    }
+
+    private IEnumerator IEStartRunningAnimationAfterDelay()
+    {
+        yield return new WaitForSeconds(0.75f);
+        animator.SetBool("IsRunning", true);
     }
 
     private void SetNewDestination()
@@ -111,7 +138,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         if (detectionCollider.rocksNearby.Count != 0)
             return;
 
-        if (currentState == PlayerOpponentState.RunningToStorage || backPack.isUnloading)
+        if (currentState == PlayerOpponentState.RunningToStoragePlate || backPack.isUnloading)
             return;
 
         if (rocksHandler.miningRocks.Count <= 0)
@@ -125,7 +152,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         agent.isStopped = false;
     }
 
-    public void OnRockDestroyed()
+    public void OnTargetRockDestroyed()
     {
         SetNewDestination();
     }
@@ -133,7 +160,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
 public interface IAIMiner
 {
-    void OnRockDestroyed();
+    void OnTargetRockDestroyed();
     MiningRock TargetRock { get; set; }
 }
 
@@ -142,8 +169,8 @@ public enum PlayerOpponentState
     Idle,
     Mining,
     Unloading,
-    RunningToMiners,
-    RunningToStorage,
-    RunningToWarriors,
-    RunningToArchers,
+    RunningToMinersPlate,
+    RunningToStoragePlate,
+    RunningToWarriorsPlate,
+    RunningToArchersPlate,
 }

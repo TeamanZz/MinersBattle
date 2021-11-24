@@ -19,14 +19,14 @@ public class BackPack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            flyCoroutine = StartCoroutine(FlyToPoint());
+            flyCoroutine = StartCoroutine(IERocksStartFlyToTargetPoint());
         }
     }
 
-    public void StartBackPackReset()
+    public void StartBackPackUnloading()
     {
         isUnloading = true;
-        flyCoroutine = StartCoroutine(FlyToPoint());
+        flyCoroutine = StartCoroutine(IERocksStartFlyToTargetPoint());
         Miner miner;
         if (TryGetComponent<Miner>(out miner))
         {
@@ -34,44 +34,52 @@ public class BackPack : MonoBehaviour
         }
     }
 
-    public void StopBackPackReset()
+    public void StopBackPackUnload()
     {
         if (flyCoroutine != null)
         {
             StopCoroutine(flyCoroutine);
         }
 
+        SendPlayerOpponentToMining();
+    }
+
+    private void SendPlayerOpponentToMining()
+    {
         PlayerOpponent playerOpponent;
         if (TryGetComponent<PlayerOpponent>(out playerOpponent))
         {
             playerOpponent.ChangeState(PlayerOpponentState.Mining);
         }
-
     }
 
-    public IEnumerator FlyToPoint()
+    public IEnumerator IERocksStartFlyToTargetPoint()
     {
-        int index = rocksCount - 1;
-        // int index = rocksCount;
+        int lastRockIndex = rocksCount - 1;
         while (true)
         {
-            if (index >= 0 && generalRocksHolder.GetChild(index).childCount != 0)
+            if (IsHaveRocksInBackpack(lastRockIndex))
             {
-                Transform rock = generalRocksHolder.GetChild(index).GetChild(0);
+                Transform rock = generalRocksHolder.GetChild(lastRockIndex).GetChild(0);
                 rock.parent = rocksFlyTarget;
                 rock.GetComponent<SpineRock>().targetTransform = rocksFlyTarget;
                 rock.GetComponent<SpineRock>().isFlyingToBuild = true;
-                index--;
+                lastRockIndex--;
                 rocksCount--;
             }
             else
             {
                 isUnloading = false;
-                StopBackPackReset();
+                StopBackPackUnload();
                 break;
             }
 
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    private bool IsHaveRocksInBackpack(int index)
+    {
+        return index >= 0 && generalRocksHolder.GetChild(index).childCount != 0;
     }
 }

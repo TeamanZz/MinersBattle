@@ -84,7 +84,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             backPack.rocksFlyTarget = chest;
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
-            backPack.StartBackPackReset();
+            backPack.StartBackPackUnloading();
             miner.agent.isStopped = true;
         }
         PlayerOpponent player;
