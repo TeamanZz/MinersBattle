@@ -97,7 +97,7 @@ public class Archer : MonoBehaviour, ICrowdUnit
             return;
         Debug.Log("AASAS");
         isRunningToMeetingPlace = true;
-        var destinationPosition = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
+        var destinationPosition = new Vector3(Random.Range(minX, maxX), 1.5f, Random.Range(minZ, maxZ));
         meetingPlacePosition = destinationPosition;
         agent.SetDestination(destinationPosition);
         animator.SetBool("IsRunning", true);

@@ -91,7 +91,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void SetNewRandomActivityAfterLoading()
     {
-        int newRandomActivityIndex = Random.Range(1, 2);
+        int newRandomActivityIndex = Random.Range(0, 3);
         if (newRandomActivityIndex == 0)
         {
             ChangeState(PlayerOpponentState.RunningToMinersPlate);

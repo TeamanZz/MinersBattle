@@ -71,7 +71,6 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         DecreaseInvulnerabilityTime();
     }
 
-    //НУЖНО УДАЛИТЬ ПОСЛЕ ТОГО КАК ОТДЕБАЖИШЬ и использовать метод BattleCrowdController'a
     private void MoveToEnemyCastle()
     {
         if (opponentTarget == null && !isRuninngToCastle)
@@ -106,6 +105,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         //     return;
         if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
         {
+            Debug.Log("MeetengPlaceReached");
             agent.isStopped = true;
             animator.SetBool("IsRunning", false);
             meetingPlaceReached = true;
@@ -126,9 +126,8 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     {
         if (isRunningToMeetingPlace || meetingPlaceReached)
             return;
-        Debug.Log("start Run");
         isRunningToMeetingPlace = true;
-        var destinationPosition = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
+        var destinationPosition = new Vector3(Random.Range(minX, maxX), 1.5f, Random.Range(minZ, maxZ));
         meetingPlacePosition = destinationPosition;
         agent.SetDestination(destinationPosition);
         animator.SetBool("IsRunning", true);
@@ -136,7 +135,6 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public void SendToOpponentCastle()
     {
-
         if (!BattleCrowdController.Instance.canRunToCastle)
             return;
 
@@ -170,8 +168,6 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         {
             if (whoAttackThisUnit[i] != null)
                 whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
-            // var opponentCastle = BattleCrowdController.Instance.GetOpponentCastleTransform(teamIndex);
-            // whoAttackThisWarrior[i].SendToOpponentCastle(opponentCastle.position);
         }
         whoAttackThisUnit.Clear();
         Destroy(gameObject);

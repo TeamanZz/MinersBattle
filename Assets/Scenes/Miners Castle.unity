@@ -16242,7 +16242,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 537720209}
   plateImage: {fileID: 1717007096}
   costPopupImage: {fileID: 1852622864}
-  unitsCosts: 03000000
+  unitsCosts: 0f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f000000
   lastSpawnedUnitIndex: 0
   unitPrefab: {fileID: 8002445831675355267, guid: dec3ee1bdca6d8347b0acaed8e11c9aa, type: 3}
   unitsSpawnPoint: {fileID: 173387743}
@@ -16488,7 +16488,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 1620654321}
   plateImage: {fileID: 1703374826}
   costPopupImage: {fileID: 786793938}
-  minersCosts: 6400000008000000060000000600000006000000
+  minersCosts: 0a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
   lastSpawnedMinerIndex: 0
   minerPrefab: {fileID: 8684716598029737491, guid: d47ba4eb12ca1c34ab48545ded76c60a, type: 3}
   minersSpawnPoint: {fileID: 1342076101}
@@ -17560,7 +17560,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 554638495}
   plateImage: {fileID: 224878280}
   costPopupImage: {fileID: 1716526683}
-  unitsCosts: 010000000100000001000000010000000100000001000000
+  unitsCosts: 0f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f000000
   lastSpawnedUnitIndex: 0
   unitPrefab: {fileID: 5420283357684369443, guid: 29ec34ad665fd0f49a3025777b54daff, type: 3}
   unitsSpawnPoint: {fileID: 173387743}
@@ -23716,7 +23716,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 265110815}
   plateImage: {fileID: 1284552162}
   costPopupImage: {fileID: 423741583}
-  unitsCosts: 0500000063000000050000000500000005000000
+  unitsCosts: 0f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f000000
   lastSpawnedUnitIndex: 0
   unitPrefab: {fileID: 4876786604254497578, guid: 75100234f0bd8b947a758695ba161146, type: 3}
   unitsSpawnPoint: {fileID: 1342076101}
@@ -24736,7 +24736,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 2100963318}
   plateImage: {fileID: 1148440083}
   costPopupImage: {fileID: 141123606}
-  unitsCosts: 0500000005000000050000000500000005000000
+  unitsCosts: 0f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f000000
   lastSpawnedUnitIndex: 0
   unitPrefab: {fileID: 995243081091445165, guid: d8164cc6cffe97942abe9e6fc2ccdf87, type: 3}
   unitsSpawnPoint: {fileID: 1342076101}
@@ -27203,7 +27203,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 479496193}
   plateImage: {fileID: 903701983}
   costPopupImage: {fileID: 1695656356}
-  minersCosts: 0600000006000000060000000600000006000000060000000600000006000000
+  minersCosts: 0a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
   lastSpawnedMinerIndex: 0
   minerPrefab: {fileID: 8684716598029737491, guid: 71dba3f1222da144f9b3749c4a5598cc, type: 3}
   minersSpawnPoint: {fileID: 173387743}
@@ -29568,6 +29568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577250833}
     m_Modifications:
+    - target: {fileID: 2762483275344671574, guid: 26dcdb4eb4822664c8eeb1121d70859b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2791120608349329387, guid: 26dcdb4eb4822664c8eeb1121d70859b, type: 3}
       propertyPath: m_Name
       value: Gate Wall 3
@@ -38733,7 +38737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f440f21580aa64eac3086fff90f14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRocksCount: 40
+  currentRocksCount: 0
   rocksRemainingText: {fileID: 1781496735}
   popupImage: {fileID: 584290064}
   popupNewScale: 1.6
@@ -41071,7 +41075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7310775422375394299, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7310775422375394301, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: rocksHandler
@@ -41099,7 +41103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7944005800256020801, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7944005800256020801, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: m_LocalPosition.y
