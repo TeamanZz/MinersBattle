@@ -44,7 +44,6 @@ public class MiningRock : MonoBehaviour
 
     public void HitRock(Pickaxe pickaxe)
     {
-        Debug.Log("hitted");
         if (currentDelayValue > 0)
             return;
 

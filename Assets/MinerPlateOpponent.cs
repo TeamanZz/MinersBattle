@@ -58,7 +58,7 @@ public class MinerPlateOpponent : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerOpponent player;
-        if (other.TryGetComponent<PlayerOpponent>(out player))
+        if (other.TryGetComponent<PlayerOpponent>(out player) && player.currentState == PlayerOpponentState.RunningToMinersPlate)
         {
             BackPack backPack = other.GetComponent<BackPack>();
             backPack.rocksFlyTarget = rocksFlyTarget;

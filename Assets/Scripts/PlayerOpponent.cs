@@ -32,10 +32,9 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     {
         rocksHandler = RocksHandler.Instance;
         rocksHandler.minersDetections.Add(detectionCollider);
-        ChangeState(PlayerOpponentState.Idle);
+        // ChangeState(PlayerOpponentState.Idle);
         ChangeState(PlayerOpponentState.Mining);
-
-        InvokeRepeating("SetNewDestination", 0.5f, 1);
+        InvokeRepeating("SetNewMiningRockDestination", 0.5f, 1);
     }
 
 
@@ -74,12 +73,31 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         {
             rocksNearbyCopy[i].HitRock(detectionCollider.pickaxe);
         }
+    }
 
-        // for (int i = 0; i < detectionCollider.rocksNearby.Count; i++)
+    //После того как помайнил, рандомится место, в которое он побежит. После того как он прибежал в Plate и сбросил ресы, рандомится, побежит он майнить или к хранилищу
+    public void SetNewRandomActivityAfterUnloading()
+    {
+        int newRandomActivityIndex = Random.Range(0, 1);
+        if (newRandomActivityIndex == 0 && StorageOpponent.Instance.currentRocksCount != 0)
+        {
+            ChangeState(PlayerOpponentState.RunningToStoragePlate);
+        }
+        else
+        {
+            ChangeState(PlayerOpponentState.Mining);
+        }
+    }
+
+    public void SetNewRandomActivityAfterLoading()
+    {
+        // int newRandomActivityIndex = Random.Range(0, 1);
+        // if (newRandomActivityIndex == 0 && StorageOpponent.Instance.currentRocksCount != 0)
         // {
-        //     detectionCollider.rocksNearby[i].HitRock(detectionCollider.pickaxe);
-        //     Debug.Log(detectionCollider.rocksNearby[i]);
+
         // }
+
+        ChangeState(PlayerOpponentState.RunningToMinersPlate);
     }
 
     public void ChangeState(PlayerOpponentState newState)
@@ -94,8 +112,8 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         {
             // StartCoroutine(IEStartRunningAnimationAfterDelay());
             // animator.SetBool("IsRunning", true);
-            SetNewDestination();
             currentState = PlayerOpponentState.Mining;
+            SetNewMiningRockDestination();
         }
 
         if (newState == PlayerOpponentState.RunningToStoragePlate)
@@ -130,16 +148,16 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         animator.SetBool("IsRunning", true);
     }
 
-    private void SetNewDestination()
+    private void SetNewMiningRockDestination()
     {
         if (currentState != PlayerOpponentState.Mining)
             return;
 
-        if (detectionCollider.rocksNearby.Count != 0)
-            return;
+        // if (detectionCollider.rocksNearby.Count != 0)
+        //     return;
 
-        if (currentState == PlayerOpponentState.RunningToStoragePlate || backPack.isUnloading)
-            return;
+        // if (currentState == PlayerOpponentState.RunningToStoragePlate || backPack.isUnloading)
+        //     return;
 
         if (rocksHandler.miningRocks.Count <= 0)
             return;
@@ -154,7 +172,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void OnTargetRockDestroyed()
     {
-        SetNewDestination();
+        SetNewMiningRockDestination();
     }
 }
 

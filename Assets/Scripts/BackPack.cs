@@ -41,15 +41,15 @@ public class BackPack : MonoBehaviour
             StopCoroutine(flyCoroutine);
         }
 
-        SendPlayerOpponentToMining();
+        RandomNewActivityForOpponent();
     }
 
-    private void SendPlayerOpponentToMining()
+    private void RandomNewActivityForOpponent()
     {
         PlayerOpponent playerOpponent;
         if (TryGetComponent<PlayerOpponent>(out playerOpponent))
         {
-            playerOpponent.ChangeState(PlayerOpponentState.Mining);
+            playerOpponent.SetNewRandomActivityAfterUnloading();
         }
     }
 

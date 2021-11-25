@@ -35,6 +35,8 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
     {
         popupDefaultScale = popupImage.localScale.x;
         plateDefaultScale = plateImage.localScale.x;
+        rocksRemainingText.text = currentRocksCount.ToString();
+
     }
 
     public void RecieveResources()
@@ -61,15 +63,17 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
         while (playerInStorage)
         {
             yield return new WaitForSeconds(0.1f);
-            Debug.Log("started2");
             if ((player.backPack.rocksCount < player.backPack.maxRocksCount) && currentRocksCount > 0)
             {
-                Debug.Log("started3");
-
                 var flyingRock = Instantiate(flyingRockPrefab, transform.position, Quaternion.identity, player.backPack.generalSpineRocksTransforms[player.backPack.rocksCount]);
                 flyingRock.GetComponent<SpineRock>().targetTransform = player.backPack.generalSpineRocksTransforms[player.backPack.rocksCount];
                 GiveResources();
                 player.backPack.rocksCount++;
+            }
+            else
+            {
+                player.SetNewRandomActivityAfterLoading();
+                break;
             }
         }
     }
@@ -95,7 +99,6 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
             playerInStorage = true;
-            Debug.Log("started1");
             flyToPlayer = StartCoroutine(StartFlyToPlayer(player));
         }
     }
