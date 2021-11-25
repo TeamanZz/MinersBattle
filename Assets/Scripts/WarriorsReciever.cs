@@ -5,9 +5,15 @@ using UnityEngine;
 public class WarriorsReciever : MonoBehaviour, IResourceReciever
 {
     public WarriorsPlate warriorsPlate;
+    public WarriorsPlateOpponent warriorsPlateOpponent;
 
     public void RecieveResources()
     {
-        warriorsPlate.DecreaseRemainingRocks();
+        if (warriorsPlateOpponent != null)
+            warriorsPlateOpponent.DecreaseRemainingRocks();
+        else
+            warriorsPlate.RecieveResources();
+
     }
+
 }

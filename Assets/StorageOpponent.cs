@@ -90,6 +90,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             popupImage.DOScale(popupNewScale, 0.5f);
             backPack.StartBackPackUnloading();
             miner.agent.isStopped = true;
+
         }
         PlayerOpponent player;
 
@@ -99,6 +100,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
             playerInStorage = true;
+            player.ChangeState(PlayerOpponentState.Unloading);
             flyToPlayer = StartCoroutine(StartFlyToPlayer(player));
         }
     }

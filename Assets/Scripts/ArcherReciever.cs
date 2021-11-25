@@ -5,9 +5,13 @@ using UnityEngine;
 public class ArcherReciever : MonoBehaviour, IResourceReciever
 {
     public ArchersPlate archersPlate;
+    public ArchersOpponentPlate archersOpponentPlate;
 
     public void RecieveResources()
     {
-        archersPlate.DecreaseRemainingRocks();
+        if (archersOpponentPlate != null)
+            archersOpponentPlate.DecreaseRemainingRocks();
+        else
+            archersPlate.DecreaseRemainingRocks();
     }
 }

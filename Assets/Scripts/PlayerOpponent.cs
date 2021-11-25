@@ -9,6 +9,8 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     private NavMeshAgent agent;
     public Detection detectionCollider;
     public Transform minerPlatePosition;
+    public Transform warriorsPlatePosition;
+    public Transform archersPlatePosition;
 
     public RocksHandler rocksHandler;
     public Transform defaultPosition;
@@ -32,15 +34,13 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     {
         rocksHandler = RocksHandler.Instance;
         rocksHandler.minersDetections.Add(detectionCollider);
-        // ChangeState(PlayerOpponentState.Idle);
         ChangeState(PlayerOpponentState.Mining);
         InvokeRepeating("SetNewMiningRockDestination", 0.5f, 1);
     }
 
-
     private void FixedUpdate()
     {
-        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null) || currentState == PlayerOpponentState.RunningToMinersPlate)
+        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null) || currentState == PlayerOpponentState.RunningToMinersPlate || currentState == PlayerOpponentState.RunningToWarriorsPlate || currentState == PlayerOpponentState.RunningToStoragePlate)
         {
             animator.SetBool("IsRunning", true);
         }
@@ -91,27 +91,28 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void SetNewRandomActivityAfterLoading()
     {
-        // int newRandomActivityIndex = Random.Range(0, 1);
-        // if (newRandomActivityIndex == 0 && StorageOpponent.Instance.currentRocksCount != 0)
-        // {
-
-        // }
-
-        ChangeState(PlayerOpponentState.RunningToMinersPlate);
+        int newRandomActivityIndex = Random.Range(1, 2);
+        if (newRandomActivityIndex == 0)
+        {
+            ChangeState(PlayerOpponentState.RunningToMinersPlate);
+            return;
+        }
+        if (newRandomActivityIndex == 1)
+        {
+            ChangeState(PlayerOpponentState.RunningToWarriorsPlate);
+        }
     }
 
     public void ChangeState(PlayerOpponentState newState)
     {
         if (newState == PlayerOpponentState.Idle)
         {
-            animator.SetBool("IsRunning", false);
             currentState = PlayerOpponentState.Idle;
+            animator.SetBool("IsRunning", false);
         }
 
         if (newState == PlayerOpponentState.Mining)
         {
-            // StartCoroutine(IEStartRunningAnimationAfterDelay());
-            // animator.SetBool("IsRunning", true);
             currentState = PlayerOpponentState.Mining;
             SetNewMiningRockDestination();
         }
@@ -139,6 +140,15 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             targetRock = null;
             agent.SetDestination(minerPlatePosition.position);
             currentState = PlayerOpponentState.RunningToMinersPlate;
+        }
+
+        if (newState == PlayerOpponentState.RunningToWarriorsPlate)
+        {
+            animator.SetBool("IsRunning", true);
+            targetRock = null;
+            agent.SetDestination(warriorsPlatePosition.position);
+            agent.isStopped = false;
+            currentState = PlayerOpponentState.RunningToWarriorsPlate;
         }
     }
 
