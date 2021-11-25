@@ -51,8 +51,8 @@ public class Archer : MonoBehaviour, ICrowdUnit
     //Бег на плац
     private void MeetingPlaceReachedCheck()
     {
-        if (BattleCrowdController.Instance.canRunToCastle)
-            return;
+        // if (BattleCrowdController.Instance.canRunToCastle)
+        //     return;
         if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
         {
             agent.isStopped = true;
@@ -95,13 +95,12 @@ public class Archer : MonoBehaviour, ICrowdUnit
     {
         if (isRunningToMeetingPlace || meetingPlaceReached)
             return;
+        Debug.Log("AASAS");
         isRunningToMeetingPlace = true;
         var destinationPosition = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
         meetingPlacePosition = destinationPosition;
         agent.SetDestination(destinationPosition);
         animator.SetBool("IsRunning", true);
-        isRunningToMeetingPlace = false;
-        meetingPlaceReached = false;
     }
 
     private void AddUnitToUnitsArray()

@@ -58,6 +58,7 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
                 rocksRemaining = unitsCosts[lastSpawnedUnitIndex];
 
             var newWarrior = Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
+            Debug.Log("AAS");
             // crowdController.playerCrowdTransforms.Add(newWarrior.transform);
         }
 

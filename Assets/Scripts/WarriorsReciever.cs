@@ -12,7 +12,7 @@ public class WarriorsReciever : MonoBehaviour, IResourceReciever
         if (warriorsPlateOpponent != null)
             warriorsPlateOpponent.DecreaseRemainingRocks();
         else
-            warriorsPlate.RecieveResources();
+            warriorsPlate.DecreaseRemainingRocks();
 
     }
 

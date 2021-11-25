@@ -1462,7 +1462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7438984682781579804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.564876, z: -12.75}
+  m_LocalPosition: {x: 0, y: 1.564876, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9207340346144738188}
@@ -1506,6 +1506,8 @@ MonoBehaviour:
   speed: 4
   floatingJoystick: {fileID: 0}
   rb: {fileID: 7438984682781579807}
+  backPack: {fileID: 0}
+  detectionCollider: {fileID: 0}
 --- !u!54 &7438984682781579807
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1583,8 +1585,9 @@ MonoBehaviour:
   - {fileID: 8330157652598420990}
   maxRocksCount: 32
   rocksCount: 0
-  mineCartTransform: {fileID: 0}
+  rocksFlyTarget: {fileID: 0}
   generalRocksHolder: {fileID: 8330157651168307991}
+  isUnloading: 0
 --- !u!114 &7438984682781579779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3191,6 +3194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axeTransform: {fileID: 4418763590420077466}
+  pickaxe: {fileID: 0}
   rocksNearby: []
 --- !u!136 &8330157651428807915
 CapsuleCollider:

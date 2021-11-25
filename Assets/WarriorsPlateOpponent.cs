@@ -77,8 +77,6 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
             plateImage.DOScale(plateDefaultScale, 0.5f);
             costPopupImage.DOScale(costPopupDefaultScale, 0.5f);
             other.GetComponent<BackPack>().StopBackPackUnload();
-            // player.animator.SetBool("IsRunning", true);
-
         }
     }
 

@@ -7683,7 +7683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8002445831675355267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.08533, y: 1.5060587, z: -11.11}
+  m_LocalPosition: {x: 0, y: 1.5060587, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8002445831458763037}
@@ -7795,24 +7795,22 @@ MonoBehaviour:
   animator: {fileID: 0}
   agent: {fileID: 0}
   opponentTarget: {fileID: 0}
-  enemyCastle: {fileID: 0}
   enemyDetection: {fileID: 8773184069252923941}
   enemyAttackDetection: {fileID: 8773184068757472839}
   teamIndex: 0
-  canRunToCastle: 0
-  isRunningToMeetingPlace: 0
+  hp: 2
   isRuninngToCastle: 0
+  isRunningToMeetingPlace: 0
+  meetingPlaceReached: 0
   minX: -3
   maxX: 3
   minZ: -13
   maxZ: -11.5
   delayToNextHit: 0.3
   currentDelayValue: 0.3
-  hp: 2
   deathParticles: {fileID: 119968, guid: 01d54b7c52c8f834d8787bb0c0aeef7c, type: 3}
   meetingPlacePosition: {x: 0, y: 0, z: 0}
   whoAttackThisUnit: []
-  meetingPlaceReached: 0
 --- !u!1 &8002445831677887966
 GameObject:
   m_ObjectHideFlags: 0

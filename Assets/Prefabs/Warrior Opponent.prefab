@@ -1717,11 +1717,11 @@ MonoBehaviour:
   hp: 2
   isRuninngToCastle: 0
   isRunningToMeetingPlace: 0
-  meetingPlaceReached: 1
+  meetingPlaceReached: 0
   minX: -3
   maxX: 3
-  minZ: -13
-  maxZ: -11.5
+  minZ: 11.3
+  maxZ: 13
   delayToNextHit: 0.3
   currentDelayValue: 0.3
   deathParticles: {fileID: 119968, guid: 01d54b7c52c8f834d8787bb0c0aeef7c, type: 3}

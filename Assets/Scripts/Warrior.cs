@@ -102,8 +102,8 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     //Бег на плац
     private void MeetingPlaceReachedCheck()
     {
-        if (BattleCrowdController.Instance.canRunToCastle)
-            return;
+        // if (BattleCrowdController.Instance.canRunToCastle)
+        //     return;
         if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
         {
             agent.isStopped = true;

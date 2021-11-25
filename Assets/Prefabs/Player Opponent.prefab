@@ -1463,7 +1463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7310775422375394299}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 3.56, y: 1.564876, z: 13.156848}
+  m_LocalPosition: {x: 0, y: 1.564876, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9047320329944803947}
@@ -1487,6 +1487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionCollider: {fileID: 8201943994066367757}
   minerPlatePosition: {fileID: 0}
+  warriorsPlatePosition: {fileID: 0}
+  archersPlatePosition: {fileID: 0}
   rocksHandler: {fileID: 0}
   defaultPosition: {fileID: 0}
   currentState: 0

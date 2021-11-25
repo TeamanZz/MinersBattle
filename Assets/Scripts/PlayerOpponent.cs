@@ -40,7 +40,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     private void FixedUpdate()
     {
-        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null) || currentState == PlayerOpponentState.RunningToMinersPlate || currentState == PlayerOpponentState.RunningToWarriorsPlate || currentState == PlayerOpponentState.RunningToStoragePlate)
+        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null) || currentState == PlayerOpponentState.RunningToMinersPlate || currentState == PlayerOpponentState.RunningToWarriorsPlate || currentState == PlayerOpponentState.RunningToStoragePlate || currentState == PlayerOpponentState.RunningToArchersPlate)
         {
             animator.SetBool("IsRunning", true);
         }
@@ -100,6 +100,12 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         if (newRandomActivityIndex == 1)
         {
             ChangeState(PlayerOpponentState.RunningToWarriorsPlate);
+            return;
+        }
+        if (newRandomActivityIndex == 2)
+        {
+            ChangeState(PlayerOpponentState.RunningToArchersPlate);
+            return;
         }
     }
 
@@ -149,6 +155,15 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             agent.SetDestination(warriorsPlatePosition.position);
             agent.isStopped = false;
             currentState = PlayerOpponentState.RunningToWarriorsPlate;
+        }
+
+        if (newState == PlayerOpponentState.RunningToArchersPlate)
+        {
+            animator.SetBool("IsRunning", true);
+            targetRock = null;
+            agent.SetDestination(archersPlatePosition.position);
+            agent.isStopped = false;
+            currentState = PlayerOpponentState.RunningToArchersPlate;
         }
     }
 
