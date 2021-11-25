@@ -4627,7 +4627,7 @@ MonoBehaviour:
   - {fileID: 8684716597926835419}
   - {fileID: 8684716597093117670}
   - {fileID: 8684716596458653345}
-  maxRocksCount: 5
+  maxRocksCount: 15
   rocksCount: 0
   rocksFlyTarget: {fileID: 0}
   generalRocksHolder: {fileID: 8684716596920708204}

@@ -35,6 +35,9 @@ public class Archer : MonoBehaviour, ICrowdUnit
 
     public Coroutine deathCoroutine;
 
+    public float shootPower = 16;
+    public float shootHigh = 0.2f;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -127,7 +130,7 @@ public class Archer : MonoBehaviour, ICrowdUnit
         var spawnPosition = (opponentTarget.position - transform.position).normalized;
         var randomShootPower = Random.Range(7, 12);
         var randomYDirection = Random.Range(0.1f, 1f);
-        arrowRB.AddForce(new Vector3(spawnPosition.x, spawnPosition.y + 0.2f, spawnPosition.z) * 14, ForceMode.Impulse);
+        arrowRB.AddForce(new Vector3(spawnPosition.x, spawnPosition.y + shootHigh, spawnPosition.z) * shootPower, ForceMode.Impulse);
         arrowRB.AddTorque(transform.right * torque);
         transform.SetParent(null);
         newArrow.GetComponent<MeleeWeaponTrail>()._base = newArrow.transform;
