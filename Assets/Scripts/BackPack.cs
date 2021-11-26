@@ -17,10 +17,10 @@ public class BackPack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            flyCoroutine = StartCoroutine(IERocksStartFlyToTargetPoint());
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     flyCoroutine = StartCoroutine(IERocksStartFlyToTargetPoint());
+        // }
     }
 
     public void StartBackPackUnloading()

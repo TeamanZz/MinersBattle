@@ -74,6 +74,8 @@ public class Storage : MonoBehaviour, IResourceReciever
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         Miner miner;
         if (other.TryGetComponent<Miner>(out miner))
         {
@@ -119,7 +121,8 @@ public class Storage : MonoBehaviour, IResourceReciever
                 storageCover.DOLocalRotate(new Vector3(0, 0, 0), 0.6f).SetEase(Ease.InOutBack);
                 popupImage.DOScale(popupDefaultScale, 0.5f);
             }
-            StopCoroutine(flyToPlayer);
+            if (flyToPlayer != null)
+                StopCoroutine(flyToPlayer);
             playerInStorage = false;
         }
     }

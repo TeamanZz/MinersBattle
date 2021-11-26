@@ -237,7 +237,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &8135772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9500027
+      value: 7.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -631,7 +631,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &31221930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -755,7 +755,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &52509950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 497078, guid: 3a699487877e77b439ff09deb77625e5, type: 3}
@@ -1004,7 +1004,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &61148147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -1060,7 +1060,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &61461689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -1190,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.0499973
+      value: -2.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1349,7 +1349,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &80840103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -1483,7 +1483,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &86871094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -1570,7 +1570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.20000267
+      value: 0.6499996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1647,7 +1647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: -0.31000137
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2167,7 +2167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7999973
+      value: -3.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2244,7 +2244,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &112536433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -2414,7 +2414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.0000057
+      value: 4.4500027
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2569,7 +2569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.0499973
+      value: -3.2999954
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2819,7 +2819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9999943
+      value: -1.5499973
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2992,7 +2992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.810005
+      value: 6.260004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3069,7 +3069,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &187971455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -3125,7 +3125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1500015
+      value: -3.4500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3202,7 +3202,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &192446714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -3480,7 +3480,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &216658982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -3878,7 +3878,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &236925969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -4109,7 +4109,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &253269840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -4227,7 +4227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.6500034
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4545,7 +4545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4000015
+      value: -7.6500015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4632,7 +4632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0000057
+      value: 2.4500027
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5097,6 +5097,7 @@ MonoBehaviour:
   isFight: 0
   pathAgent: {fileID: 1545973923}
   endPoint: {fileID: 1738479296}
+  canBuyUnits: 1
 --- !u!114 &284968820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5111,7 +5112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathChecker: {fileID: 284968819}
   playerCastle: {fileID: 173387743}
-  enemyCastle: {fileID: 1342076101}
+  enemyCastle: {fileID: 1738479296}
   playerCrowdTransforms: []
   enemyCrowdTransforms: []
   canRunToCastle: 0
@@ -5244,7 +5245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.03
+      value: 1.7299957
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5321,7 +5322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7999973
+      value: -1.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5545,7 +5546,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &318201763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -5682,7 +5683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8100033
+      value: 6.26
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5842,7 +5843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8499985
+      value: 6.5499954
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6034,7 +6035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.4000015
+      value: -4.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6111,7 +6112,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &358682413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -6167,7 +6168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9999943
+      value: -3.5499973
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6315,7 +6316,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &365314443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -6371,7 +6372,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &366306066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -6432,7 +6433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3640118
+      value: 1.8140087
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6763,7 +6764,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &390653840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -6949,7 +6950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2000027
+      value: 5.9500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7026,7 +7027,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &409179539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7160,7 +7161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1899967
+      value: -1.7399998
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7375,7 +7376,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &428943849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7512,7 +7513,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &435900367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7568,7 +7569,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &437613887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7624,7 +7625,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &439216886 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7680,7 +7681,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &440084439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7845,7 +7846,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &448421860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -7901,7 +7902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1899967
+      value: -5.74
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7978,7 +7979,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &450515557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -8034,7 +8035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.150002
+      value: -7.4500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8116,7 +8117,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &475155372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -8246,7 +8247,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &476567373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -8302,7 +8303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.7500057
+      value: 5.2000027
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8628,7 +8629,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &487651700 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -8965,7 +8966,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &509412062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -9248,7 +9249,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &516515627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -9459,7 +9460,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &524318151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -9515,7 +9516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8499985
+      value: 4.5499954
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9705,7 +9706,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &533428782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -9933,7 +9934,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &541014163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -10024,7 +10025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7999973
+      value: -1.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10101,7 +10102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9999905
+      value: -7.5499935
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10178,7 +10179,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &545533933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -10675,7 +10676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7500038
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10752,7 +10753,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &574490570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -10808,7 +10809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7999973
+      value: -5.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10946,7 +10947,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &583532579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -11036,7 +11037,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &584315322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -11153,7 +11154,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &588586501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -11209,7 +11210,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &590190101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -11265,7 +11266,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &590265878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -11417,7 +11418,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &594233473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -11473,7 +11474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8399906
+      value: -1.3899937
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11581,7 +11582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.060005
+      value: 5.510004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11978,7 +11979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.7999973
+      value: -7.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12055,7 +12056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.950003
+      value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12132,7 +12133,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &645176759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -12188,7 +12189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7999973
+      value: -3.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12265,7 +12266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5900097
+      value: 7.0400066
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12342,7 +12343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.0000057
+      value: 4.4500027
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12419,7 +12420,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &654616851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -12553,7 +12554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0499973
+      value: -0.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12630,7 +12631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9500027
+      value: 3.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12790,7 +12791,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &690852275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -12846,7 +12847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8399954
+      value: -6.1399994
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12977,7 +12978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.76604444, y: 0, z: 0, w: 0.64278764}
-  m_LocalPosition: {x: 8.640005, y: 0, z: 3.5669785}
+  m_LocalPosition: {x: 9.090002, y: 0, z: 3.5669785}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1616874404}
@@ -13098,7 +13099,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &707146770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -13190,7 +13191,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &711183209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -13328,7 +13329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1500015
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13507,7 +13508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.950003
+      value: 8.700005
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13821,7 +13822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2000027
+      value: 3.9500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14053,7 +14054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9500027
+      value: 5.6500015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14130,7 +14131,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &737464880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -14186,7 +14187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9500027
+      value: 3.6500015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14263,7 +14264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0499973
+      value: -6.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14378,7 +14379,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &743057998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -14434,7 +14435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.950003
+      value: 9.650002
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14511,7 +14512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9500027
+      value: 5.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14657,7 +14658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0499973
+      value: -6.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14880,7 +14881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8400097
+      value: 6.2900066
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15038,7 +15039,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &778288069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -15099,7 +15100,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &783465816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -15189,7 +15190,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &789114253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -15375,7 +15376,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &793140096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -15513,7 +15514,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &799731716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -15569,7 +15570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.200003
+      value: 8.900002
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15657,6 +15658,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 826208714}
+  - component: {fileID: 826208716}
+  - component: {fileID: 826208715}
   m_Layer: 0
   m_Name: Default Opponent Position
   m_TagString: Untagged
@@ -15672,12 +15675,37 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826208713}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.564876, z: 13.156848}
+  m_LocalPosition: {x: 3.25, y: 1.564876, z: 21.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &826208715
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826208713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &826208716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826208713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b19a40f1d3cef45b81300a53f41f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &852283506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15711,7 +15739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4000015
+      value: -0.9500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15902,7 +15930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.7999973
+      value: -7.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16157,7 +16185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1899967
+      value: -3.7399998
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16459,7 +16487,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &871732443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -16649,7 +16677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08000374
+      value: 0.5300007
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16757,7 +16785,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 1620654321}
   plateImage: {fileID: 1703374826}
   costPopupImage: {fileID: 786793938}
-  minersCosts: 0a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
+  minersCosts: 0100000001000000010000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
   lastSpawnedMinerIndex: 0
   minerPrefab: {fileID: 8684716598029737491, guid: d47ba4eb12ca1c34ab48545ded76c60a, type: 3}
   minersSpawnPoint: {fileID: 1738479296}
@@ -16795,7 +16823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.20000267
+      value: 0.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17167,7 +17195,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &905265958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -17387,7 +17415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0499973
+      value: -4.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17618,7 +17646,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &928571727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -17926,7 +17954,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &936423783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -18068,7 +18096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9999943
+      value: -3.5499973
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18150,7 +18178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0499973
+      value: -4.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18396,7 +18424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2000027
+      value: 6.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18821,7 +18849,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &980524568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -19147,7 +19175,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &994652346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -19365,7 +19393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9500027
+      value: 4.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19472,7 +19500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15000153
+      value: 0.29999542
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19711,7 +19739,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1031421239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -19767,7 +19795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2000027
+      value: 4.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19849,7 +19877,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1050792894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -19905,7 +19933,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1053102000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -20078,7 +20106,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1061446134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -20318,7 +20346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0000057
+      value: 6.4500027
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20411,7 +20439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15999603
+      value: 0.29000092
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20645,7 +20673,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1109308953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -20734,7 +20762,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1110897525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -20801,7 +20829,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1121847768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -20922,7 +20950,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1122411833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -20978,7 +21006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0499973
+      value: -0.34999847
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21137,7 +21165,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1128169758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -21193,7 +21221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5999985
+      value: 1.0499954
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21464,7 +21492,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1155951838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -21610,7 +21638,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1167887921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -21748,7 +21776,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1181698407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -22155,7 +22183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2000027
+      value: 2.6499996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22232,7 +22260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1899967
+      value: -5.74
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22375,7 +22403,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1238556397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -22609,7 +22637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0499973
+      value: -1.2999954
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22686,7 +22714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8100052
+      value: 4.260004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22768,7 +22796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7999973
+      value: -1.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23055,7 +23083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.189997
+      value: -7.74
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23163,7 +23191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9999905
+      value: -7.5499935
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23240,7 +23268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8
+      value: -5.350004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23317,7 +23345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.2499905
+      value: -4.7999935
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23477,7 +23505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.8399963
+      value: -4.1399994
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23554,7 +23582,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1297374980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -23881,7 +23909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.200003
+      value: 7.9500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24032,7 +24060,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1318347175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -24336,7 +24364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8100052
+      value: 4.260004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24444,7 +24472,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1349352659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -24747,7 +24775,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1365550598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -25307,7 +25335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1500015
+      value: -4.4000015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25384,7 +25412,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1400518633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -25440,7 +25468,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1402858275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -25496,7 +25524,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1403888147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -25613,7 +25641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.200003
+      value: 8.65
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25690,7 +25718,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1418561104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -25746,7 +25774,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1427174134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -25916,7 +25944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1500015
+      value: -5.4500046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26177,7 +26205,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1448602859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -26233,7 +26261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9999905
+      value: -5.5499935
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26352,7 +26380,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1462141093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -26563,7 +26591,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1467945326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -27007,7 +27035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9500027
+      value: 2.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27157,7 +27185,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1499407092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -27213,7 +27241,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1501749699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -27350,7 +27378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4000015
+      value: -2.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27457,7 +27485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8100052
+      value: 2.2600021
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27550,7 +27578,7 @@ MonoBehaviour:
   rocksRemainingText: {fileID: 479496193}
   plateImage: {fileID: 903701983}
   costPopupImage: {fileID: 1695656356}
-  minersCosts: 0a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
+  minersCosts: 010000000100000001000000010000000100000001000000010000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000
   lastSpawnedMinerIndex: 0
   minerPrefab: {fileID: 8684716598029737491, guid: 71dba3f1222da144f9b3749c4a5598cc, type: 3}
   minersSpawnPoint: {fileID: 173387743}
@@ -27603,7 +27631,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1521514095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -27659,7 +27687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4000015
+      value: -6.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27815,7 +27843,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1539784833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -28316,7 +28344,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1564533532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -28669,7 +28697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.189997
+      value: -7.74
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28781,7 +28809,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1583792321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -28837,7 +28865,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1585187195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -29155,7 +29183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0000057
+      value: 2.4500027
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29232,7 +29260,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1601156497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -29345,7 +29373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.6500053
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29559,7 +29587,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1608200513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -30101,7 +30129,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1626543116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -30337,7 +30365,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1638052901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -30393,7 +30421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0600052
+      value: 3.510004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30470,7 +30498,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1648767835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -30830,7 +30858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1500015
+      value: -1.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30907,7 +30935,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1674619551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -31029,7 +31057,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1679865439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -31197,7 +31225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.150002
+      value: -8.400002
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31390,7 +31418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9500027
+      value: 0.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31501,7 +31529,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1695784402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -31557,7 +31585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.4000015
+      value: -5.6500015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32319,7 +32347,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1717249631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -32375,7 +32403,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1718954210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -32431,7 +32459,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1722374171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -32727,7 +32755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8499985
+      value: 1.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32804,7 +32832,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1731059927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33119,7 +33147,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1742830120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33175,7 +33203,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1746808820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33231,7 +33259,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1750770765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33328,7 +33356,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1770980362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33415,7 +33443,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1772727129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33630,7 +33658,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1776470068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33686,7 +33714,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1777732372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33742,7 +33770,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1777828668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -33798,7 +33826,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1777986920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -34361,7 +34389,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1794668122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -34852,7 +34880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9000034
+      value: 7.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35178,7 +35206,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1835399245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -35316,7 +35344,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1845211545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -35511,7 +35539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9500027
+      value: 7.6500015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35588,7 +35616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9500027
+      value: 1.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35862,7 +35890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7999973
+      value: -5.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35970,7 +35998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2000027
+      value: 6.6499996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36047,7 +36075,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1867899891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -36103,7 +36131,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1869229926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -36159,7 +36187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2000027
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36236,7 +36264,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1871961578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -36615,7 +36643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7999897
+      value: -2.3499928
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36723,7 +36751,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1911060754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -37071,7 +37099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9999905
+      value: -5.5499935
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37328,7 +37356,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1954711584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -37384,7 +37412,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1959034673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -37440,7 +37468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8100052
+      value: 2.2600021
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37517,7 +37545,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1961061805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -37573,7 +37601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1500015
+      value: -2.4000015
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37731,7 +37759,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1971523290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -37787,7 +37815,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1974181745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -38169,7 +38197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9500027
+      value: 6.7000046
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38402,7 +38430,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &1998752795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -38627,7 +38655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2000027
+      value: 4.6499996
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38870,7 +38898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.7999973
+      value: -7.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38947,7 +38975,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2021772680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -39151,7 +39179,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2028695992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -39207,7 +39235,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2028975477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -39335,7 +39363,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2040931819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -39391,7 +39419,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2049722330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -39447,7 +39475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7999973
+      value: -3.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -40118,7 +40146,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2089998360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -40205,7 +40233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.8499985
+      value: 8.549995
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -40829,7 +40857,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2110769756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -41123,7 +41151,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2116669410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -41179,7 +41207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1899967
+      value: -3.7399998
       objectReference: {fileID: 0}
     - target: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41470,7 +41498,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2140029880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -41526,7 +41554,7 @@ NavMeshObstacle:
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.030000001, y: 0.252, z: 0.0050000004}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0
 --- !u!4 &2146740477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444600, guid: 105b83a46d287294bbe7892a1e1f2ea3, type: 3}
@@ -41618,7 +41646,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7310775422375394279, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: maxRocksCount
-      value: 10
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7310775422375394299, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: m_Name
@@ -41634,6 +41662,10 @@ PrefabInstance:
       objectReference: {fileID: 284968817}
     - target: {fileID: 7310775422375394301, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
       propertyPath: defaultPosition
+      value: 
+      objectReference: {fileID: 826208714}
+    - target: {fileID: 7310775422375394301, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
+      propertyPath: endGamePosition
       value: 
       objectReference: {fileID: 826208714}
     - target: {fileID: 7310775422375394301, guid: 2ae530bdf8df66a4c84701b11a8f3736, type: 3}
@@ -48175,6 +48207,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2060d6e63b76a4242bfb642452087667, type: 2}
+    - target: {fileID: 8330157651428807913, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8330157651428807914, guid: fba5c5ce5659b304bb88f740bec1ed0d, type: 3}
       propertyPath: pickaxe
       value: 

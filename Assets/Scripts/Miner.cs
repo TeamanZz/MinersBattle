@@ -21,6 +21,7 @@ public class Miner : MonoBehaviour, IAIMiner
     public BackPack backPack;
 
     public bool isMovingToStorage;
+    public bool isMovingToCastle;
 
     public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
 
@@ -37,6 +38,15 @@ public class Miner : MonoBehaviour, IAIMiner
         rocksHandler = RocksHandler.Instance;
         rocksHandler.minersDetections.Add(detectionCollider);
         InvokeRepeating("SetNewDestination", 0.5f, 1);
+        InvokeRepeating("MoveToCastleRepeatedly", 5f, 1);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // MoveToCastle();
+        }
     }
 
     //Animation event
@@ -47,6 +57,25 @@ public class Miner : MonoBehaviour, IAIMiner
         {
             rocksNearbyCopy[i].HitRock(detectionCollider.pickaxe);
         }
+    }
+
+    public void MoveToCastleRepeatedly()
+    {
+        if (isMovingToCastle)
+            MoveToCastle();
+    }
+
+    public void MoveToCastle()
+    {
+        isMovingToCastle = true;
+        targetRock = null;
+
+        if (teamIndex == 0)
+            agent.SetDestination(BattleCrowdController.Instance.playerCastle.position);
+        else
+            agent.SetDestination(BattleCrowdController.Instance.enemyCastle.position);
+
+        agent.isStopped = false;
     }
 
     public void MoveToStorage()
@@ -67,7 +96,7 @@ public class Miner : MonoBehaviour, IAIMiner
         if (detectionCollider.rocksNearby.Count != 0)
             return;
 
-        if (isMovingToStorage || backPack.isUnloading)
+        if (isMovingToStorage || backPack.isUnloading || isMovingToCastle)
             return;
 
         if (rocksHandler.miningRocks.Count <= 0)

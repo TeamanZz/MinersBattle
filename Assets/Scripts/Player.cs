@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
     public float speed;
     public FloatingJoystick floatingJoystick;
     public Rigidbody rb;
 
-    private Animator animator;
+    [HideInInspector] public Animator animator;
     public BackPack backPack;
     public Detection detectionCollider;
 
     private void Awake()
     {
+        Instance = this;
         animator = GetComponent<Animator>();
         backPack = GetComponent<BackPack>();
     }

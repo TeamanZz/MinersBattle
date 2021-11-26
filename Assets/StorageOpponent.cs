@@ -36,7 +36,6 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
         popupDefaultScale = popupImage.localScale.x;
         plateDefaultScale = plateImage.localScale.x;
         rocksRemainingText.text = currentRocksCount.ToString();
-
     }
 
     public void RecieveResources()
@@ -80,6 +79,8 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         Miner miner;
         if (other.TryGetComponent<Miner>(out miner))
         {

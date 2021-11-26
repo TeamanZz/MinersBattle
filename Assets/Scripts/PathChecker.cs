@@ -24,6 +24,8 @@ public class PathChecker : MonoBehaviour
 
     public Transform endPoint;
 
+    public bool canBuyUnits = true;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -47,30 +49,60 @@ public class PathChecker : MonoBehaviour
         {
             fightAnnouncementText.transform.DOScale(0f, fightAnnouncementFlyDuration).SetEase(Ease.InBack);
         });
-
     }
 
-    public bool CheckPathExist()
+    private IEnumerator IECheckPathExist()
     {
-
-
-        var path = new NavMeshPath();
-        pathAgent.CalculatePath(endPoint.position, path);
-
-        if (path.status != NavMeshPathStatus.PathComplete)
+        int checkTimes = 5;
+        int checksCorrect = 0;
+        while (checkTimes > 0)
         {
-            Debug.Log("Path don't exist");
-            return false;
+            yield return new WaitForSeconds(0.1f);
+            var path = new NavMeshPath();
+            pathAgent.CalculatePath(endPoint.position, path);
+
+            if (path.status == NavMeshPathStatus.PathComplete)
+            {
+                Debug.Log("Path exist");
+                checksCorrect++;
+            }
+
+            checkTimes--;
         }
-        else
+        if (checksCorrect == 5)
         {
-            Debug.Log("Path exist");
-
-            if (!isFight)
-                ShowFightAnnouncement();
-
-            // pathAgent.SetDestination(endPoint.position);
-            return true;
+            OnTruePathExist();
         }
+    }
+
+    public void OnTruePathExist()
+    {
+        PlayerOpponent.Instance.ChangeState(PlayerOpponentState.RunToEndPoint);
+        for (int i = 0; i < RocksHandler.Instance.minersDetections.Count; i++)
+        {
+            Miner miner;
+            if (RocksHandler.Instance.minersDetections[i].transform.parent.TryGetComponent<Miner>(out miner))
+            {
+                miner.MoveToCastle();
+            }
+        }
+
+        canBuyUnits = false;
+
+        if (!isFight)
+            ShowFightAnnouncement();
+
+        BattleCrowdController.Instance.canRunToCastle = true;
+        BattleCrowdController.Instance.SendPlayerUnitsToEnemyCastle();
+        BattleCrowdController.Instance.SendEnemyUnitsToPlayerCastle();
+
+        Player.Instance.detectionCollider.rocksNearby.Clear();
+        Player.Instance.animator.SetBool("IsAttacking", false);
+        Destroy(Player.Instance.detectionCollider);
+    }
+
+    public void CheckPathExist()
+    {
+        StartCoroutine(IECheckPathExist());
     }
 }

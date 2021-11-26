@@ -57,6 +57,8 @@ public class MinerPlateOpponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         PlayerOpponent player;
         if (other.TryGetComponent<PlayerOpponent>(out player) && player.currentState == PlayerOpponentState.RunningToMinersPlate)
         {
