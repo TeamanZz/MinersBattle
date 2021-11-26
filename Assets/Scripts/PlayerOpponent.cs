@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class PlayerOpponent : MonoBehaviour, IAIMiner
 {
+    public static PlayerOpponent Instance;
     private NavMeshAgent agent;
     public Detection detectionCollider;
     public Transform minerPlatePosition;
@@ -13,7 +14,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     public Transform archersPlatePosition;
 
     public RocksHandler rocksHandler;
-    public Transform defaultPosition;
+    public Transform endGamePosition;
 
     public PlayerOpponentState currentState = PlayerOpponentState.Idle;
     [HideInInspector] public MiningRock targetRock;
@@ -25,6 +26,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     private void Awake()
     {
+        Instance = this;
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         backPack = GetComponent<BackPack>();
@@ -38,9 +40,22 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         InvokeRepeating("SetNewMiningRockDestination", 0.5f, 1);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // ChangeState(PlayerOpponentState.RunToEndPoint);
+        }
+    }
+
     private void FixedUpdate()
     {
-        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null) || currentState == PlayerOpponentState.RunningToMinersPlate || currentState == PlayerOpponentState.RunningToWarriorsPlate || currentState == PlayerOpponentState.RunningToStoragePlate || currentState == PlayerOpponentState.RunningToArchersPlate)
+        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null)
+        || currentState == PlayerOpponentState.RunningToMinersPlate
+        || currentState == PlayerOpponentState.RunningToWarriorsPlate
+        || currentState == PlayerOpponentState.RunningToStoragePlate
+        || currentState == PlayerOpponentState.RunningToArchersPlate
+        || currentState == PlayerOpponentState.RunToEndPoint)
         {
             animator.SetBool("IsRunning", true);
         }
@@ -58,6 +73,15 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             if (miningRock == targetRock)
                 agent.isStopped = true;
         }
+    }
+
+    public void MoveToCastle()
+    {
+        Debug.Log("MOVED");
+        targetRock = null;
+        agent.SetDestination(endGamePosition.position);
+        agent.isStopped = false;
+        animator.SetBool("IsRunning", true);
     }
 
     public void OnRocksFull()
@@ -165,24 +189,29 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             agent.isStopped = false;
             currentState = PlayerOpponentState.RunningToArchersPlate;
         }
-    }
 
-    private IEnumerator IEStartRunningAnimationAfterDelay()
-    {
-        yield return new WaitForSeconds(0.75f);
-        animator.SetBool("IsRunning", true);
+        if (newState == PlayerOpponentState.RunToEndPoint)
+        {
+            detectionCollider.enabled = false;
+            animator.SetBool("IsRunning", true);
+            targetRock = null;
+            agent.SetDestination(endGamePosition.position);
+            agent.isStopped = false;
+            currentState = PlayerOpponentState.RunToEndPoint;
+            Destroy(this);
+        }
+        if (newState == PlayerOpponentState.StayAtEndPoint)
+        {
+            animator.SetBool("IsRunning", false);
+            agent.isStopped = true;
+            currentState = PlayerOpponentState.StayAtEndPoint;
+        }
     }
 
     private void SetNewMiningRockDestination()
     {
         if (currentState != PlayerOpponentState.Mining)
             return;
-
-        // if (detectionCollider.rocksNearby.Count != 0)
-        //     return;
-
-        // if (currentState == PlayerOpponentState.RunningToStoragePlate || backPack.isUnloading)
-        //     return;
 
         if (rocksHandler.miningRocks.Count <= 0)
             return;
@@ -216,4 +245,6 @@ public enum PlayerOpponentState
     RunningToStoragePlate,
     RunningToWarriorsPlate,
     RunningToArchersPlate,
+    RunToEndPoint,
+    StayAtEndPoint
 }

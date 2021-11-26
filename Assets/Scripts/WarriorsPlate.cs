@@ -40,7 +40,7 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            var newWarrior = Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
+            // var newWarrior = Instantiate(unitPrefab, unitsSpawnPoint.position, Quaternion.identity);
         }
     }
 
@@ -64,6 +64,8 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         Player player;
         if (other.TryGetComponent<Player>(out player))
         {

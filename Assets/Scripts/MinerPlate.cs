@@ -57,6 +57,8 @@ public class MinerPlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         Player player;
         if (other.TryGetComponent<Player>(out player))
         {

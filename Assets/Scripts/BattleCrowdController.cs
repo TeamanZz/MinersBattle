@@ -74,12 +74,7 @@ public class BattleCrowdController : MonoBehaviour
         if (!canRunToCastle)
         {
             yield return new WaitForSeconds(0.1f);
-            if (PathChecker.Instance.CheckPathExist())
-            {
-                canRunToCastle = true;
-                SendPlayerUnitsToEnemyCastle();
-                SendEnemyUnitsToPlayerCastle();
-            }
+            PathChecker.Instance.CheckPathExist();
         }
     }
 
