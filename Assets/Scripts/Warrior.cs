@@ -73,7 +73,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     private void MoveToEnemyCastle()
     {
-        if (opponentTarget == null && !isRuninngToCastle)
+        if (opponentTarget == null)
         {
             SendToOpponentCastle();
         }
