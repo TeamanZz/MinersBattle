@@ -4543,7 +4543,7 @@ Animator:
   m_GameObject: {fileID: 8684716598029737491}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fb20b0424c33f4f12895edc43e756479, type: 3}
-  m_Controller: {fileID: 9100000, guid: 991b0a91db98cc24689b0f8ccc5b77f8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4da5f7f88c709f348a524a890ddbc703, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4654,6 +4654,7 @@ MonoBehaviour:
   rocksHandler: {fileID: 0}
   backPack: {fileID: 0}
   isMovingToStorage: 0
+  isMovingToCastle: 0
   teamIndex: 1
 --- !u!195 &8684716598029737488
 NavMeshAgent:
