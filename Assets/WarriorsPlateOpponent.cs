@@ -67,7 +67,7 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
             plateImage.DOScale(newScale, 0.5f);
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
             other.GetComponent<BackPack>().StartBackPackUnloading();
-            player.ChangeState(PlayerOpponentState.Unloading);
+            player.ChangeState(PlayerOpponentState.UnloadingOnWarriors);
         }
     }
 

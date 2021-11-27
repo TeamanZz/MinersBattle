@@ -127,24 +127,25 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             return;
 
         int newRandomActivityIndex = Random.Range(0, 3);
+        Debug.Log("prev activity" + currentState);
         Debug.Log("newRandomActivityIndex " + newRandomActivityIndex);
         if (newRandomActivityIndex == 0)
         {
-            if (currentState == PlayerOpponentState.RunningToMinersPlate)
+            if (currentState == PlayerOpponentState.UnloadingOnMiners)
                 return;
             ChangeState(PlayerOpponentState.RunningToMinersPlate);
             return;
         }
         if (newRandomActivityIndex == 1)
         {
-            if (currentState == PlayerOpponentState.RunningToWarriorsPlate)
+            if (currentState == PlayerOpponentState.UnloadingOnWarriors)
                 return;
             ChangeState(PlayerOpponentState.RunningToWarriorsPlate);
             return;
         }
         if (newRandomActivityIndex == 2)
         {
-            if (currentState == PlayerOpponentState.RunningToArchersPlate)
+            if (currentState == PlayerOpponentState.UnloadingOnArchers)
                 return;
             ChangeState(PlayerOpponentState.RunningToArchersPlate);
             return;
@@ -174,11 +175,29 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             currentState = PlayerOpponentState.RunningToStoragePlate;
         }
 
-        if (newState == PlayerOpponentState.Unloading)
+        if (newState == PlayerOpponentState.UnloadingOnArchers)
         {
             animator.SetBool("IsRunning", false);
             agent.isStopped = true;
-            currentState = PlayerOpponentState.Unloading;
+            currentState = PlayerOpponentState.UnloadingOnArchers;
+        }
+        if (newState == PlayerOpponentState.UnloadingOnWarriors)
+        {
+            animator.SetBool("IsRunning", false);
+            agent.isStopped = true;
+            currentState = PlayerOpponentState.UnloadingOnWarriors;
+        }
+        if (newState == PlayerOpponentState.UnloadingOnStorage)
+        {
+            animator.SetBool("IsRunning", false);
+            agent.isStopped = true;
+            currentState = PlayerOpponentState.UnloadingOnStorage;
+        }
+        if (newState == PlayerOpponentState.UnloadingOnMiners)
+        {
+            animator.SetBool("IsRunning", false);
+            agent.isStopped = true;
+            currentState = PlayerOpponentState.UnloadingOnMiners;
         }
 
         if (newState == PlayerOpponentState.RunningToMinersPlate)
@@ -258,7 +277,10 @@ public enum PlayerOpponentState
 {
     Idle,
     Mining,
-    Unloading,
+    UnloadingOnMiners,
+    UnloadingOnStorage,
+    UnloadingOnWarriors,
+    UnloadingOnArchers,
     RunningToMinersPlate,
     RunningToStoragePlate,
     RunningToWarriorsPlate,

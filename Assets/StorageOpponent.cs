@@ -101,7 +101,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
             playerInStorage = true;
-            player.ChangeState(PlayerOpponentState.Unloading);
+            player.ChangeState(PlayerOpponentState.UnloadingOnStorage);
             flyToPlayer = StartCoroutine(StartFlyToPlayer(player));
         }
     }
