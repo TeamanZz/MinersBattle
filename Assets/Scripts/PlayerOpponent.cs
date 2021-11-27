@@ -24,6 +24,8 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
 
+    public bool rocksRandomActivityWasInvoked;
+
     private void Awake()
     {
         Instance = this;
@@ -102,6 +104,12 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     //После того как помайнил, рандомится место, в которое он побежит. После того как он прибежал в Plate и сбросил ресы, рандомится, побежит он майнить или к хранилищу
     public void SetNewRandomActivityAfterUnloading()
     {
+        if (rocksRandomActivityWasInvoked)
+        {
+            rocksRandomActivityWasInvoked = false;
+            return;
+        }
+
         int newRandomActivityIndex = Random.Range(0, 1);
         if (newRandomActivityIndex == 0 && StorageOpponent.Instance.currentRocksCount != 0)
         {
@@ -115,19 +123,29 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void SetNewRandomActivityAfterLoading()
     {
+        if (currentState == PlayerOpponentState.RunToEndPoint)
+            return;
+
         int newRandomActivityIndex = Random.Range(0, 3);
+        Debug.Log("newRandomActivityIndex " + newRandomActivityIndex);
         if (newRandomActivityIndex == 0)
         {
+            if (currentState == PlayerOpponentState.RunningToMinersPlate)
+                return;
             ChangeState(PlayerOpponentState.RunningToMinersPlate);
             return;
         }
         if (newRandomActivityIndex == 1)
         {
+            if (currentState == PlayerOpponentState.RunningToWarriorsPlate)
+                return;
             ChangeState(PlayerOpponentState.RunningToWarriorsPlate);
             return;
         }
         if (newRandomActivityIndex == 2)
         {
+            if (currentState == PlayerOpponentState.RunningToArchersPlate)
+                return;
             ChangeState(PlayerOpponentState.RunningToArchersPlate);
             return;
         }

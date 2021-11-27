@@ -81,6 +81,9 @@ public class PathChecker : MonoBehaviour
         for (int i = 0; i < RocksHandler.Instance.minersDetections.Count; i++)
         {
             Miner miner;
+            if (RocksHandler.Instance.minersDetections[i] == null)
+                return;
+
             if (RocksHandler.Instance.minersDetections[i].transform.parent.TryGetComponent<Miner>(out miner))
             {
                 miner.MoveToCastle();

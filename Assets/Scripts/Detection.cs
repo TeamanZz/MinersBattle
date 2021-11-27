@@ -47,6 +47,8 @@ public class Detection : MonoBehaviour
         rocksNearby.Remove(rock);
         if (rocksNearby.Count == 0)
         {
+            if (this == null)
+                return;
             transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
             doOneScale.Kill();
             doZeroScale.Kill();

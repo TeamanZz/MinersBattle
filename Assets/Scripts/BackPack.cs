@@ -56,6 +56,9 @@ public class BackPack : MonoBehaviour
     public IEnumerator IERocksStartFlyToTargetPoint()
     {
         int lastRockIndex = rocksCount - 1;
+        PlayerOpponent playerOpponent;
+        TryGetComponent<PlayerOpponent>(out playerOpponent);
+
         while (true)
         {
             if (IsHaveRocksInBackpack(lastRockIndex))
@@ -66,6 +69,19 @@ public class BackPack : MonoBehaviour
                 rock.GetComponent<SpineRock>().isFlyingToBuild = true;
                 lastRockIndex--;
                 rocksCount--;
+
+                if (playerOpponent != null)
+                {
+
+                    int randomChance = Random.Range(0, 25);
+                    if (randomChance == 0)
+                    {
+                        // Debug.Log("OGOGOOGOGOG");
+                        playerOpponent.rocksRandomActivityWasInvoked = true;
+                        playerOpponent.SetNewRandomActivityAfterLoading();
+                    }
+                }
+
             }
             else
             {
