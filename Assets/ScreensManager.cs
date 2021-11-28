@@ -10,6 +10,8 @@ public class ScreensManager : MonoBehaviour
     public GameObject loseScreen;
     public GameObject successScreen;
 
+    public AudioSource audioSource;
+
     private void Awake()
     {
         Instance = this;
@@ -18,8 +20,10 @@ public class ScreensManager : MonoBehaviour
 
     public void ShowLoseScreen()
     {
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
+        SoundsManager.Instance.DisableBattleMusic();
         loseScreen.SetActive(true);
+        audioSource.PlayOneShot(SoundsManager.Instance.endGameSounds[1]);
     }
 
     public void ShowSuccessScreen()
@@ -30,8 +34,10 @@ public class ScreensManager : MonoBehaviour
     private IEnumerator IEShowSuccessScreen()
     {
         yield return new WaitForSecondsRealtime(2);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
+        SoundsManager.Instance.DisableBattleMusic();
         successScreen.SetActive(true);
+        audioSource.PlayOneShot(SoundsManager.Instance.endGameSounds[0]);
     }
 
     public void RestartLevel()

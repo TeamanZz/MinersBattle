@@ -9,12 +9,20 @@ public class SoundsManager : MonoBehaviour
     public List<AudioClip> pickaxeHitSounds = new List<AudioClip>();
     public List<AudioClip> swordHitSounds = new List<AudioClip>();
     public List<AudioClip> arrowHitSounds = new List<AudioClip>();
+    public List<AudioClip> endGameSounds = new List<AudioClip>();
 
     public AudioClip stackingSound;
+
+    public GameObject battleMusic;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    public void DisableBattleMusic()
+    {
+        battleMusic.SetActive(false);
     }
 
     public void PlaySwordHitSound()
