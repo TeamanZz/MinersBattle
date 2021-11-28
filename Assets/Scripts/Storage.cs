@@ -30,6 +30,7 @@ public class Storage : MonoBehaviour, IResourceReciever
     public Coroutine flyToPlayer;
 
     public GameObject flyingRockPrefab;
+    public AudioSource source;
 
     private void Start()
     {
@@ -40,6 +41,7 @@ public class Storage : MonoBehaviour, IResourceReciever
     public void RecieveResources()
     {
         currentRocksCount++;
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         rocksRemainingText.text = currentRocksCount.ToString();
     }
@@ -47,6 +49,7 @@ public class Storage : MonoBehaviour, IResourceReciever
     public void GiveResources()
     {
         currentRocksCount--;
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         rocksRemainingText.text = currentRocksCount.ToString();
     }

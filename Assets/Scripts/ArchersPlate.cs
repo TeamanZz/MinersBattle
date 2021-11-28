@@ -24,6 +24,7 @@ public class ArchersPlate : MonoBehaviour, IResourceReciever
     public GameObject unitPrefab;
     public Transform unitsSpawnPoint;
     public Transform rocksFlyTarget;
+    public AudioSource source;
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class ArchersPlate : MonoBehaviour, IResourceReciever
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         if (rocksRemaining <= 0)
         {

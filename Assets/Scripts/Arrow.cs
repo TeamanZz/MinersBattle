@@ -14,6 +14,11 @@ public class Arrow : MonoBehaviour
         arrowTrail = GetComponent<MeleeWeaponTrail>();
         Destroy(gameObject, 10);
     }
+
+    private void Start()
+    {
+        SoundsManager.Instance.PlayArrowHitSound();
+    }
     private void OnTriggerEnter(Collider other)
     {
         ICrowdUnit enemyUnit;

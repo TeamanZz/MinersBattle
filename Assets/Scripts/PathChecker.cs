@@ -26,6 +26,10 @@ public class PathChecker : MonoBehaviour
 
     public bool canBuyUnits = true;
 
+    public GameObject environmentMusic;
+    public GameObject startBattleSound;
+    public GameObject battleSound;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -39,6 +43,11 @@ public class PathChecker : MonoBehaviour
         isFight = true;
         fightAnnouncementText.SetActive(true);
 
+        environmentMusic.SetActive(false);
+        startBattleSound.SetActive(true);
+        StartCoroutine(StartPlayBattleMusic());
+
+
         Sequence sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
         {
@@ -49,6 +58,12 @@ public class PathChecker : MonoBehaviour
         {
             fightAnnouncementText.transform.DOScale(0f, fightAnnouncementFlyDuration).SetEase(Ease.InBack);
         });
+    }
+
+    private IEnumerator StartPlayBattleMusic()
+    {
+        yield return new WaitForSeconds(2.5f);
+        battleSound.SetActive(true);
     }
 
     private IEnumerator IECheckPathExist()

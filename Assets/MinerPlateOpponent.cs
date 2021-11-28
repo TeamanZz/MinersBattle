@@ -24,6 +24,7 @@ public class MinerPlateOpponent : MonoBehaviour
     public GameObject minerPrefab;
     public Transform minersSpawnPoint;
     public Transform rocksFlyTarget;
+    public AudioSource source;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class MinerPlateOpponent : MonoBehaviour
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         if (rocksRemaining <= 0)
         {

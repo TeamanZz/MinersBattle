@@ -21,6 +21,13 @@ public class MiningRock : MonoBehaviour
 
     public BackPack lastHitFromBackpack;
 
+    public AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public bool CanSetMiner(Miner miner)
     {
         if (currentMiner == null)
@@ -46,6 +53,8 @@ public class MiningRock : MonoBehaviour
     {
         if (currentDelayValue > 0)
             return;
+        Debug.Log(audioSource);
+        audioSource.PlayOneShot(SoundsManager.Instance.pickaxeHitSounds[Random.Range(0, SoundsManager.Instance.pickaxeHitSounds.Count)]);
 
         lastHitFromBackpack = pickaxe.backPack;
         transform.DOPunchRotation(punchVector, punchDuration, vibrato, elastic);

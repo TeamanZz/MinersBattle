@@ -34,9 +34,11 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     public List<Transform> whoAttackThisUnit = new List<Transform>();
     private Coroutine deathCoroutine;
 
+    public AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
@@ -118,7 +120,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         if (currentDelayValue > 0 || opponentTarget == null)
             return;
         opponentTarget.GetComponent<ICrowdUnit>().DecreaseHP(1);
-
+        SoundsManager.Instance.PlaySwordHitSound();
         currentDelayValue = delayToNextHit;
     }
 

@@ -25,6 +25,8 @@ public class MinerPlate : MonoBehaviour
     public Transform minersSpawnPoint;
     public Transform rocksFlyTarget;
 
+    public AudioSource source;
+
     private void Awake()
     {
         defaultScale = plateImage.localScale.x;
@@ -40,7 +42,7 @@ public class MinerPlate : MonoBehaviour
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
-
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
         if (rocksRemaining <= 0)
         {
             lastSpawnedMinerIndex++;

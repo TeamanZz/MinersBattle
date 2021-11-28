@@ -24,6 +24,7 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
     public GameObject unitPrefab;
     public Transform unitsSpawnPoint;
     public Transform rocksFlyTarget;
+    public AudioSource source;
 
     public BattleCrowdController crowdController;
 
@@ -47,6 +48,7 @@ public class WarriorsPlate : MonoBehaviour, IResourceReciever
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         if (rocksRemaining <= 0)
         {

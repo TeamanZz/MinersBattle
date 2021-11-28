@@ -79,7 +79,6 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void MoveToCastle()
     {
-        Debug.Log("MOVED");
         targetRock = null;
         agent.SetDestination(endGamePosition.position);
         agent.isStopped = false;
@@ -104,6 +103,7 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     //После того как помайнил, рандомится место, в которое он побежит. После того как он прибежал в Plate и сбросил ресы, рандомится, побежит он майнить или к хранилищу
     public void SetNewRandomActivityAfterUnloading()
     {
+        Debug.Log(rocksRandomActivityWasInvoked);
         if (rocksRandomActivityWasInvoked)
         {
             rocksRandomActivityWasInvoked = false;
@@ -123,30 +123,45 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void SetNewRandomActivityAfterLoading()
     {
+        Debug.Log(currentState);
         if (currentState == PlayerOpponentState.RunToEndPoint)
             return;
+        int newRandomActivityIndex = -1;
+        if (currentState == PlayerOpponentState.UnloadingOnMiners)
+        {
+            while (newRandomActivityIndex == -1 || newRandomActivityIndex == 0)
+                newRandomActivityIndex = Random.Range(1, 3);
+        }
+        if (currentState == PlayerOpponentState.UnloadingOnWarriors)
+        {
+            while (newRandomActivityIndex == -1 || newRandomActivityIndex == 1)
+                newRandomActivityIndex = Random.Range(0, 3);
+        }
+        if (currentState == PlayerOpponentState.UnloadingOnArchers)
+        {
+            while (newRandomActivityIndex == -1 || newRandomActivityIndex == 2)
+                newRandomActivityIndex = Random.Range(0, 3);
+        }
+        Debug.Log(newRandomActivityIndex);
 
-        int newRandomActivityIndex = Random.Range(0, 3);
-        Debug.Log("prev activity" + currentState);
-        Debug.Log("newRandomActivityIndex " + newRandomActivityIndex);
         if (newRandomActivityIndex == 0)
         {
-            if (currentState == PlayerOpponentState.UnloadingOnMiners)
-                return;
+            // if (currentState == PlayerOpponentState.UnloadingOnMiners)
+            //     return;
             ChangeState(PlayerOpponentState.RunningToMinersPlate);
             return;
         }
         if (newRandomActivityIndex == 1)
         {
-            if (currentState == PlayerOpponentState.UnloadingOnWarriors)
-                return;
+            // if (currentState == PlayerOpponentState.UnloadingOnWarriors)
+            //     return;
             ChangeState(PlayerOpponentState.RunningToWarriorsPlate);
             return;
         }
         if (newRandomActivityIndex == 2)
         {
-            if (currentState == PlayerOpponentState.UnloadingOnArchers)
-                return;
+            // if (currentState == PlayerOpponentState.UnloadingOnArchers)
+            //     return;
             ChangeState(PlayerOpponentState.RunningToArchersPlate);
             return;
         }

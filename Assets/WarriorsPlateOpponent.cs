@@ -26,6 +26,7 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
     public Transform rocksFlyTarget;
 
     public BattleCrowdController crowdController;
+    public AudioSource source;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
+        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         if (rocksRemaining <= 0)
         {
