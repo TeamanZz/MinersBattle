@@ -17,7 +17,6 @@ public class BackPack : MonoBehaviour
 
     public bool canRockRandomActivity = true;
 
-    public Coroutine allowCoroutine;
     private void Update()
     {
         // if (Input.GetKeyDown(KeyCode.Space))
@@ -73,12 +72,14 @@ public class BackPack : MonoBehaviour
                 lastRockIndex--;
                 rocksCount--;
 
-                if (playerOpponent != null)
+                if (playerOpponent != null && canRockRandomActivity)
                 {
                     int randomChance = Random.Range(0, 25);
                     if (randomChance == 0)
                     {
-                        playerOpponent.rocksRandomActivityWasInvoked = true;
+                        canRockRandomActivity = false;
+                        playerOpponent.activityOverrided = true;
+                        isUnloading = false;
                         playerOpponent.SetNewRandomActivityAfterLoading();
                     }
                 }

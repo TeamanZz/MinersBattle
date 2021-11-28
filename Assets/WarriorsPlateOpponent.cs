@@ -66,10 +66,14 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
         {
             BackPack backPack = other.GetComponent<BackPack>();
             backPack.rocksFlyTarget = rocksFlyTarget;
+            player.backPack.canRockRandomActivity = true;
             plateImage.DOScale(newScale, 0.5f);
+            player.currentUnloadingPlate = "Warriors";
+            if (player.backPack.rocksCount == 0)
+                player.SetNewRandomActivityAfterUnloading();
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
             other.GetComponent<BackPack>().StartBackPackUnloading();
-            player.ChangeState(PlayerOpponentState.UnloadingOnWarriors);
+            player.ChangeState(PlayerOpponentState.Unloading);
         }
     }
 
@@ -78,6 +82,8 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
         PlayerOpponent player;
         if (other.TryGetComponent<PlayerOpponent>(out player))
         {
+            player.currentUnloadingPlate = "";
+
             plateImage.DOScale(plateDefaultScale, 0.5f);
             costPopupImage.DOScale(costPopupDefaultScale, 0.5f);
             other.GetComponent<BackPack>().StopBackPackUnload();

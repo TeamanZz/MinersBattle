@@ -63,10 +63,15 @@ public class ArchersOpponentPlate : MonoBehaviour, IResourceReciever
         {
             BackPack backPack = other.GetComponent<BackPack>();
             backPack.rocksFlyTarget = rocksFlyTarget;
+            Debug.Log(player.backPack.canRockRandomActivity + "OnARCHERS");
+            player.backPack.canRockRandomActivity = true;
+            player.currentUnloadingPlate = "Archers";
+            if (player.backPack.rocksCount == 0)
+                player.SetNewRandomActivityAfterUnloading();
             plateImage.DOScale(plateNewScale, 0.5f);
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
             other.GetComponent<BackPack>().StartBackPackUnloading();
-            player.ChangeState(PlayerOpponentState.UnloadingOnArchers);
+            player.ChangeState(PlayerOpponentState.Unloading);
         }
     }
 
@@ -75,6 +80,8 @@ public class ArchersOpponentPlate : MonoBehaviour, IResourceReciever
         PlayerOpponent player;
         if (other.TryGetComponent<PlayerOpponent>(out player))
         {
+            player.currentUnloadingPlate = "";
+
             plateImage.DOScale(plateDefaultScale, 0.5f);
             costPopupImage.DOScale(costPopupDefaultScale, 0.5f);
             other.GetComponent<BackPack>().StopBackPackUnload();

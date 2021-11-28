@@ -107,7 +107,6 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         //     return;
         if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
         {
-            Debug.Log("MeetengPlaceReached");
             agent.isStopped = true;
             animator.SetBool("IsRunning", false);
             meetingPlaceReached = true;

@@ -98,7 +98,6 @@ public class Archer : MonoBehaviour, ICrowdUnit
     {
         if (isRunningToMeetingPlace || meetingPlaceReached)
             return;
-        Debug.Log("AASAS");
         isRunningToMeetingPlace = true;
         var destinationPosition = new Vector3(Random.Range(minX, maxX), 1.5f, Random.Range(minZ, maxZ));
         meetingPlacePosition = destinationPosition;

@@ -67,9 +67,13 @@ public class MinerPlateOpponent : MonoBehaviour
             BackPack backPack = other.GetComponent<BackPack>();
             backPack.rocksFlyTarget = rocksFlyTarget;
             plateImage.DOScale(newScale, 0.5f);
+            player.currentUnloadingPlate = "Miners";
+            player.backPack.canRockRandomActivity = true;
+            if (player.backPack.rocksCount == 0)
+                player.SetNewRandomActivityAfterUnloading();
             costPopupImage.DOScale(costPopupNewScale, 0.5f);
             other.GetComponent<BackPack>().StartBackPackUnloading();
-            player.ChangeState(PlayerOpponentState.UnloadingOnMiners);
+            player.ChangeState(PlayerOpponentState.Unloading);
         }
     }
 
@@ -78,6 +82,8 @@ public class MinerPlateOpponent : MonoBehaviour
         PlayerOpponent player;
         if (other.TryGetComponent<PlayerOpponent>(out player))
         {
+            player.currentUnloadingPlate = "";
+
             plateImage.DOScale(defaultScale, 0.5f);
             costPopupImage.DOScale(costPopupDefaultScale, 0.5f);
             other.GetComponent<BackPack>().StopBackPackUnload();

@@ -90,6 +90,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             minersNearby.Add(miner.transform);
             BackPack backPack = miner.GetComponent<BackPack>();
             backPack.rocksFlyTarget = chest;
+
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
             backPack.StartBackPackUnloading();
@@ -104,7 +105,10 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
             playerInStorage = true;
-            player.ChangeState(PlayerOpponentState.UnloadingOnStorage);
+            player.currentUnloadingPlate = "Storage";
+
+            player.backPack.canRockRandomActivity = true;
+            player.ChangeState(PlayerOpponentState.Unloading);
             flyToPlayer = StartCoroutine(StartFlyToPlayer(player));
         }
     }
@@ -130,6 +134,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
                 storageCover.DOLocalRotate(new Vector3(0, 0, 0), 0.6f).SetEase(Ease.InOutBack);
                 popupImage.DOScale(popupDefaultScale, 0.5f);
             }
+            player.currentUnloadingPlate = "";
             StopCoroutine(flyToPlayer);
             playerInStorage = false;
         }

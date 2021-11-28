@@ -24,7 +24,9 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public MiningRock TargetRock { get => targetRock; set => targetRock = value; }
 
-    public bool rocksRandomActivityWasInvoked;
+    public bool activityOverrided;
+
+    public string currentUnloadingPlate;
 
     private void Awake()
     {
@@ -40,6 +42,16 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         rocksHandler.minersDetections.Add(detectionCollider);
         ChangeState(PlayerOpponentState.Mining);
         InvokeRepeating("SetNewMiningRockDestination", 0.5f, 1);
+        InvokeRepeating("CheckOnFreeze", 5f, 3);
+    }
+
+    private void CheckOnFreeze()
+    {
+        if (currentUnloadingPlate != "" && (currentState != PlayerOpponentState.RunToEndPoint || currentState != PlayerOpponentState.StayAtEndPoint) && backPack.isUnloading == false && currentState == PlayerOpponentState.Unloading)
+        {
+            Debug.Log("freezed");
+            SetNewRandomActivityAfterUnloading();
+        }
     }
 
     private void Update()
@@ -52,12 +64,12 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     private void FixedUpdate()
     {
-        if ((detectionCollider.rocksNearby.Count == 0 && targetRock != null)
-        || currentState == PlayerOpponentState.RunningToMinersPlate
+        if ((detectionCollider.rocksNearby.Count == 0) && (
+         currentState == PlayerOpponentState.RunningToMinersPlate
         || currentState == PlayerOpponentState.RunningToWarriorsPlate
         || currentState == PlayerOpponentState.RunningToStoragePlate
         || currentState == PlayerOpponentState.RunningToArchersPlate
-        || currentState == PlayerOpponentState.RunToEndPoint)
+        || currentState == PlayerOpponentState.RunToEndPoint || currentState == PlayerOpponentState.Mining))
         {
             animator.SetBool("IsRunning", true);
         }
@@ -100,16 +112,13 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         }
     }
 
-    //После того как помайнил, рандомится место, в которое он побежит. После того как он прибежал в Plate и сбросил ресы, рандомится, побежит он майнить или к хранилищу
     public void SetNewRandomActivityAfterUnloading()
     {
-        Debug.Log(rocksRandomActivityWasInvoked);
-        if (rocksRandomActivityWasInvoked)
+        if (activityOverrided)
         {
-            rocksRandomActivityWasInvoked = false;
+            activityOverrided = false;
             return;
         }
-
         int newRandomActivityIndex = Random.Range(0, 1);
         if (newRandomActivityIndex == 0 && StorageOpponent.Instance.currentRocksCount != 0)
         {
@@ -123,48 +132,29 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
 
     public void SetNewRandomActivityAfterLoading()
     {
-        Debug.Log(currentState);
         if (currentState == PlayerOpponentState.RunToEndPoint)
             return;
-        int newRandomActivityIndex = -1;
-        if (currentState == PlayerOpponentState.UnloadingOnMiners)
-        {
-            while (newRandomActivityIndex == -1 || newRandomActivityIndex == 0)
-                newRandomActivityIndex = Random.Range(1, 3);
-        }
-        if (currentState == PlayerOpponentState.UnloadingOnWarriors)
-        {
-            while (newRandomActivityIndex == -1 || newRandomActivityIndex == 1)
-                newRandomActivityIndex = Random.Range(0, 3);
-        }
-        if (currentState == PlayerOpponentState.UnloadingOnArchers)
-        {
-            while (newRandomActivityIndex == -1 || newRandomActivityIndex == 2)
-                newRandomActivityIndex = Random.Range(0, 3);
-        }
-        Debug.Log(newRandomActivityIndex);
 
-        if (newRandomActivityIndex == 0)
+        int newRandomActivityIndex = 0;
+        newRandomActivityIndex = Random.Range(0, 3);
+
+        if (newRandomActivityIndex == 0 && currentUnloadingPlate != "Miners")
         {
-            // if (currentState == PlayerOpponentState.UnloadingOnMiners)
-            //     return;
             ChangeState(PlayerOpponentState.RunningToMinersPlate);
             return;
         }
-        if (newRandomActivityIndex == 1)
+        if (newRandomActivityIndex == 1 && currentUnloadingPlate != "Warriors")
         {
-            // if (currentState == PlayerOpponentState.UnloadingOnWarriors)
-            //     return;
             ChangeState(PlayerOpponentState.RunningToWarriorsPlate);
             return;
         }
-        if (newRandomActivityIndex == 2)
+        if (newRandomActivityIndex == 2 && currentUnloadingPlate != "Archers")
         {
-            // if (currentState == PlayerOpponentState.UnloadingOnArchers)
-            //     return;
             ChangeState(PlayerOpponentState.RunningToArchersPlate);
             return;
         }
+        Debug.Log("NOTHING CHOOSED");
+        ChangeState(PlayerOpponentState.Mining);
     }
 
     public void ChangeState(PlayerOpponentState newState)
@@ -190,31 +180,12 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             currentState = PlayerOpponentState.RunningToStoragePlate;
         }
 
-        if (newState == PlayerOpponentState.UnloadingOnArchers)
+        if (newState == PlayerOpponentState.Unloading)
         {
             animator.SetBool("IsRunning", false);
             agent.isStopped = true;
-            currentState = PlayerOpponentState.UnloadingOnArchers;
+            currentState = PlayerOpponentState.Unloading;
         }
-        if (newState == PlayerOpponentState.UnloadingOnWarriors)
-        {
-            animator.SetBool("IsRunning", false);
-            agent.isStopped = true;
-            currentState = PlayerOpponentState.UnloadingOnWarriors;
-        }
-        if (newState == PlayerOpponentState.UnloadingOnStorage)
-        {
-            animator.SetBool("IsRunning", false);
-            agent.isStopped = true;
-            currentState = PlayerOpponentState.UnloadingOnStorage;
-        }
-        if (newState == PlayerOpponentState.UnloadingOnMiners)
-        {
-            animator.SetBool("IsRunning", false);
-            agent.isStopped = true;
-            currentState = PlayerOpponentState.UnloadingOnMiners;
-        }
-
         if (newState == PlayerOpponentState.RunningToMinersPlate)
         {
             animator.SetBool("IsRunning", true);
@@ -292,10 +263,7 @@ public enum PlayerOpponentState
 {
     Idle,
     Mining,
-    UnloadingOnMiners,
-    UnloadingOnStorage,
-    UnloadingOnWarriors,
-    UnloadingOnArchers,
+    Unloading,
     RunningToMinersPlate,
     RunningToStoragePlate,
     RunningToWarriorsPlate,
