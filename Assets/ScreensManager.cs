@@ -11,6 +11,7 @@ public class ScreensManager : MonoBehaviour
     public GameObject successScreen;
 
     public AudioSource audioSource;
+    public bool endScreenWasInvoked;
 
     private void Awake()
     {
@@ -20,6 +21,9 @@ public class ScreensManager : MonoBehaviour
 
     public void ShowLoseScreen()
     {
+        if (endScreenWasInvoked)
+            return;
+        endScreenWasInvoked = true;
         // Time.timeScale = 0;
         SoundsManager.Instance.DisableBattleMusic();
         loseScreen.SetActive(true);
@@ -28,6 +32,9 @@ public class ScreensManager : MonoBehaviour
 
     public void ShowSuccessScreen()
     {
+        if (endScreenWasInvoked)
+            return;
+        endScreenWasInvoked = true;
         StartCoroutine(IEShowSuccessScreen());
     }
 

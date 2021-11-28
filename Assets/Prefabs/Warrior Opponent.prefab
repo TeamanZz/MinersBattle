@@ -1715,7 +1715,7 @@ MonoBehaviour:
   enemyDetection: {fileID: 1945882931291591435}
   enemyAttackDetection: {fileID: 1945882931820599145}
   teamIndex: 1
-  hp: 2
+  hp: 25
   isRuninngToCastle: 0
   isRunningToMeetingPlace: 0
   meetingPlaceReached: 0

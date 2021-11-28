@@ -260,9 +260,11 @@ MonoBehaviour:
   maxZ: 16.3
   deathParticles: {fileID: 119968, guid: 01d54b7c52c8f834d8787bb0c0aeef7c, type: 3}
   meetingPlacePosition: {x: 0, y: 0, z: 0}
-  hp: 2
+  hp: 10
   whoAttackThisUnit: []
   teamIndex: 1
+  shootPower: 16
+  shootHigh: 0.2
 --- !u!195 &4876786604254497588
 NavMeshAgent:
   m_ObjectHideFlags: 0

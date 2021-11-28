@@ -41,7 +41,7 @@ public class Storage : MonoBehaviour, IResourceReciever
     public void RecieveResources()
     {
         currentRocksCount++;
-        source.PlayOneShot(SoundsManager.Instance.stackingSound);
+        // source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         rocksRemainingText.text = currentRocksCount.ToString();
     }

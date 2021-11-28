@@ -41,7 +41,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
 
     public void RecieveResources()
     {
-        source.PlayOneShot(SoundsManager.Instance.stackingSound);
+        // source.PlayOneShot(SoundsManager.Instance.stackingSound);
         currentRocksCount++;
 
         rocksRemainingText.text = currentRocksCount.ToString();
@@ -50,7 +50,7 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
     public void GiveResources()
     {
         currentRocksCount--;
-        source.PlayOneShot(SoundsManager.Instance.stackingSound);
+        // source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         rocksRemainingText.text = currentRocksCount.ToString();
     }

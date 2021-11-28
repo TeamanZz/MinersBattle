@@ -153,7 +153,6 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
             ChangeState(PlayerOpponentState.RunningToArchersPlate);
             return;
         }
-        Debug.Log("NOTHING CHOOSED");
         ChangeState(PlayerOpponentState.Mining);
     }
 
