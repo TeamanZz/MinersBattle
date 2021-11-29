@@ -9,7 +9,7 @@ public class ScreensManager : MonoBehaviour
 
     public GameObject loseScreen;
     public GameObject successScreen;
-
+    public GameObject joystickCanvas;
     public AudioSource audioSource;
     public bool endScreenWasInvoked;
 
@@ -23,6 +23,7 @@ public class ScreensManager : MonoBehaviour
     {
         if (endScreenWasInvoked)
             return;
+        joystickCanvas.SetActive(false);
         endScreenWasInvoked = true;
         // Time.timeScale = 0;
         SoundsManager.Instance.DisableBattleMusic();
@@ -42,6 +43,7 @@ public class ScreensManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(2);
         // Time.timeScale = 0;
+        joystickCanvas.SetActive(false);
         SoundsManager.Instance.DisableBattleMusic();
         successScreen.SetActive(true);
         audioSource.PlayOneShot(SoundsManager.Instance.endGameSounds[0]);

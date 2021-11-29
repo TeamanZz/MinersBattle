@@ -1490,10 +1490,12 @@ MonoBehaviour:
   warriorsPlatePosition: {fileID: 0}
   archersPlatePosition: {fileID: 0}
   rocksHandler: {fileID: 0}
-  defaultPosition: {fileID: 0}
+  endGamePosition: {fileID: 0}
   currentState: 0
   targetRock: {fileID: 0}
   backPack: {fileID: 0}
+  activityOverrided: 0
+  currentUnloadingPlate: 
 --- !u!114 &7310775422375394279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,6 +1546,7 @@ MonoBehaviour:
   rocksFlyTarget: {fileID: 0}
   generalRocksHolder: {fileID: 8201943993788943088}
   isUnloading: 0
+  canRockRandomActivity: 1
 --- !u!195 &7310775422375394298
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1554,7 +1557,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 500
