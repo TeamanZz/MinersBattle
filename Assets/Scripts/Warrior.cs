@@ -88,7 +88,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
             agent.SetDestination(opponentTarget.position);
             Vector3 targetDir = opponentTarget.position - transform.position;
             targetDir.y = 0.0f;
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDir), Time.time * 1);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetDir), Time.time / 5);
         }
     }
 

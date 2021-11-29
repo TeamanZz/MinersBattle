@@ -12,9 +12,9 @@ public class StorageOpponent : MonoBehaviour, IResourceReciever
 
     public TextMeshPro rocksRemainingText;
     public Transform popupImage;
+    public Transform storageCover;
     public float popupNewScale;
     public float popupDefaultScale;
-    public Transform storageCover;
     public float newStorageCoverRotation;
 
     public Transform plateImage;

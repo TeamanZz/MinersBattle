@@ -4627,7 +4627,7 @@ MonoBehaviour:
   - {fileID: 8684716597926835419}
   - {fileID: 8684716597093117670}
   - {fileID: 8684716596458653345}
-  maxRocksCount: 8
+  maxRocksCount: 20
   rocksCount: 0
   rocksFlyTarget: {fileID: 0}
   generalRocksHolder: {fileID: 8684716596920708204}
@@ -5111,6 +5111,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9853556c4fc4d44087cd153918f7305, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a9853556c4fc4d44087cd153918f7305, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a9853556c4fc4d44087cd153918f7305, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: a9853556c4fc4d44087cd153918f7305, type: 3}

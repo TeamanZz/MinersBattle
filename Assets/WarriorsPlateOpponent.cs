@@ -40,7 +40,6 @@ public class WarriorsPlateOpponent : MonoBehaviour, IResourceReciever
     public void DecreaseRemainingRocks()
     {
         rocksRemaining--;
-        source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
         if (rocksRemaining <= 0)
         {
