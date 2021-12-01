@@ -12,7 +12,7 @@ public class Arrow : MonoBehaviour
     {
         arrowRB = GetComponent<Rigidbody>();
         arrowTrail = GetComponent<MeleeWeaponTrail>();
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 5);
     }
 
     private void Start()
@@ -37,7 +37,7 @@ public class Arrow : MonoBehaviour
         if (other != null)
         {
             enemyUnit.DecreaseHP(1);
-            transform.SetParent(other.transform);
+            // transform.SetParent(other.transform);
             Destroy(arrowRB);
             Destroy(arrowTrail);
         }
