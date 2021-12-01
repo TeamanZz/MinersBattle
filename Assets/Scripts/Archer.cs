@@ -170,6 +170,10 @@ public class Archer : MonoBehaviour, ICrowdUnit
         {
             whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
         }
+        if (Player.Instance.detectionCollider.enemiesNearby.Contains(this))
+        {
+            Player.Instance.detectionCollider.RemoveEnemyFromNearbyArray(this);
+        }
         whoAttackThisUnit.Clear();
         Destroy(gameObject);
     }

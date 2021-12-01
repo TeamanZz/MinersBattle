@@ -116,11 +116,10 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public void GiveDamageToEnemy()
     {
-        if (currentDelayValue > 0 || opponentTarget == null)
+        if (opponentTarget == null)
             return;
         opponentTarget.GetComponent<ICrowdUnit>().DecreaseHP(1);
         SoundsManager.Instance.PlaySwordHitSound();
-        currentDelayValue = delayToNextHit;
     }
 
     public void MoveToMeetingPlace()
@@ -150,8 +149,14 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public void DecreaseHP(int value)
     {
+        if (currentDelayValue > 0)
+            return;
+
         if (deathCoroutine != null)
             return;
+
+        currentDelayValue = delayToNextHit;
+
         hp -= value;
         if (hp <= 0)
         {
@@ -169,6 +174,10 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         {
             if (whoAttackThisUnit[i] != null)
                 whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
+        }
+        if (Player.Instance.detectionCollider.enemiesNearby.Contains(this))
+        {
+            Player.Instance.detectionCollider.RemoveEnemyFromNearbyArray(this);
         }
         whoAttackThisUnit.Clear();
         Destroy(gameObject);

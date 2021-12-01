@@ -73,7 +73,7 @@ public class PathChecker : MonoBehaviour
         int checksCorrect = 0;
         while (checkTimes > 0)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.13f);
             var path = new NavMeshPath();
             pathAgent.CalculatePath(endPoint.position, path);
 
@@ -118,7 +118,7 @@ public class PathChecker : MonoBehaviour
 
         Player.Instance.detectionCollider.rocksNearby.Clear();
         Player.Instance.animator.SetBool("IsAttacking", false);
-        Destroy(Player.Instance.detectionCollider);
+        Player.Instance.detectionCollider.canMining = false;
     }
 
     public void CheckPathExist()

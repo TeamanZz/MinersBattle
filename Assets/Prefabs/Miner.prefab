@@ -2718,6 +2718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axeTransform: {fileID: 8684716596245701978}
   pickaxe: {fileID: 8684716596245701979}
+  canMining: 1
   rocksNearby: []
 --- !u!136 &8684716597218947619
 CapsuleCollider:
