@@ -27,7 +27,6 @@ public class ArcherEnemyDetection : MonoBehaviour
             archer.animator.SetBool("HaveTarget", true);
             archer.animator.SetBool("IsRunning", false);
             archer.agent.isStopped = true;
-            archer.isRuninngToCastle = false;
         }
     }
 

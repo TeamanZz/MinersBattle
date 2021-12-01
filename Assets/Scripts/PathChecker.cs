@@ -68,7 +68,8 @@ public class PathChecker : MonoBehaviour
 
     private IEnumerator IECheckPathExist()
     {
-        int checkTimes = 5;
+        int allChecksTimes = 10;
+        int checkTimes = allChecksTimes;
         int checksCorrect = 0;
         while (checkTimes > 0)
         {
@@ -78,13 +79,14 @@ public class PathChecker : MonoBehaviour
 
             if (path.status == NavMeshPathStatus.PathComplete)
             {
+                // pathAgent.SetDestination(endPoint.position);
                 Debug.Log("Path exist");
                 checksCorrect++;
             }
 
             checkTimes--;
         }
-        if (checksCorrect == 5)
+        if (checksCorrect == allChecksTimes)
         {
             OnTruePathExist();
         }

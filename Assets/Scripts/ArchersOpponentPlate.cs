@@ -62,7 +62,6 @@ public class ArchersOpponentPlate : MonoBehaviour, IResourceReciever
         {
             BackPack backPack = other.GetComponent<BackPack>();
             backPack.rocksFlyTarget = rocksFlyTarget;
-            Debug.Log(player.backPack.canRockRandomActivity + "OnARCHERS");
             player.backPack.canRockRandomActivity = true;
             player.currentUnloadingPlate = "Archers";
             if (player.backPack.rocksCount == 0)

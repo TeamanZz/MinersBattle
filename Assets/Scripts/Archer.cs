@@ -74,7 +74,7 @@ public class Archer : MonoBehaviour, ICrowdUnit
     //НУЖНО УДАЛИТЬ ПОСЛЕ ТОГО КАК ОТДЕБАЖИШЬ и использовать метод BattleCrowdController'a
     private void MoveToEnemyCastle()
     {
-        if (opponentTarget == null && !isRuninngToCastle)
+        if (opponentTarget == null)
         {
             SendToOpponentCastle();
         }
@@ -142,11 +142,11 @@ public class Archer : MonoBehaviour, ICrowdUnit
 
         var opponentCastle = BattleCrowdController.Instance.GetOpponentCastleTransform(teamIndex);
         GetComponent<NavMeshAgent>().isStopped = false;
+        isRuninngToCastle = true;
         GetComponent<NavMeshAgent>().SetDestination(opponentCastle.position);
         animator.SetBool("IsRunning", true);
         animator.SetBool("HaveTarget", false);
 
-        isRuninngToCastle = true;
     }
 
     public void DecreaseHP(int value)
