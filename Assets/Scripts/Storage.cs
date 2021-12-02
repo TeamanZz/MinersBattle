@@ -40,6 +40,8 @@ public class Storage : MonoBehaviour, IResourceReciever
 
     public void RecieveResources()
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         currentRocksCount++;
         // source.PlayOneShot(SoundsManager.Instance.stackingSound);
 
@@ -48,6 +50,8 @@ public class Storage : MonoBehaviour, IResourceReciever
 
     public void GiveResources()
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         currentRocksCount--;
         source.PlayOneShot(SoundsManager.Instance.stackingSound);
 

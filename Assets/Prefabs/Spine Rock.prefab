@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 127259335407068576}
   - component: {fileID: 127259335408264964}
   - component: {fileID: 4653183237260847927}
-  - component: {fileID: 3553597179491639927}
   m_Layer: 0
   m_Name: Spine Rock
   m_TagString: Untagged
@@ -100,16 +99,3 @@ MonoBehaviour:
   flySpeed: 12
   hasNoParent: 1
   scaleRestored: 0
---- !u!65 &3553597179491639927
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127259335410140144}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.6895578, y: 1.8855692, z: 2.6228256}
-  m_Center: {x: -0.062401112, y: 0.6453329, z: 0.23742114}

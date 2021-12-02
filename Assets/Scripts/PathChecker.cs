@@ -22,13 +22,13 @@ public class PathChecker : MonoBehaviour
 
     public NavMeshAgent pathAgent;
 
-    public Transform endPoint;
 
     public bool canBuyUnits = true;
 
     public GameObject environmentMusic;
     public GameObject startBattleSound;
     public GameObject battleSound;
+    public Transform pathCheckerTo;
 
     private void Update()
     {
@@ -68,32 +68,21 @@ public class PathChecker : MonoBehaviour
 
     private IEnumerator IECheckPathExist()
     {
-        int allChecksTimes = 10;
-        int checkTimes = allChecksTimes;
-        int checksCorrect = 0;
-        while (checkTimes > 0)
-        {
-            yield return new WaitForSeconds(0.13f);
-            var path = new NavMeshPath();
-            pathAgent.CalculatePath(endPoint.position, path);
-
-            if (path.status == NavMeshPathStatus.PathComplete)
-            {
-                // pathAgent.SetDestination(endPoint.position);
-                Debug.Log("Path exist");
-                checksCorrect++;
-            }
-
-            checkTimes--;
-        }
-        if (checksCorrect == allChecksTimes)
-        {
-            OnTruePathExist();
-        }
+        yield return new WaitForSeconds(0.1f);
+        // var path = new NavMeshPath();
+        // pathAgent.transform.position = pathCheckerFrom.position;
+        // pathAgent.CalculatePath(pathCheckerTo.position, path);
+        pathAgent.SetDestination(pathCheckerTo.position);
+        // if (path.status == NavMeshPathStatus.PathComplete)
+        // {
+        //     Debug.Log("Path exist");
+        // }
+        // OnTruePathExist();
     }
 
     public void OnTruePathExist()
     {
+        Destroy(pathAgent);
         PlayerOpponent.Instance.ChangeState(PlayerOpponentState.RunToEndPoint);
         for (int i = 0; i < RocksHandler.Instance.minersDetections.Count; i++)
         {

@@ -13,6 +13,7 @@ public class Pickaxe : MonoBehaviour
         {
             if (crowdUnit.TeamIndex != 0)
             {
+                SoundsManager.Instance.PlaySwordHitSound();
                 crowdUnit.DecreaseHP(1);
             }
         }

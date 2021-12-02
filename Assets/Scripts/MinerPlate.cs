@@ -41,6 +41,8 @@ public class MinerPlate : MonoBehaviour
 
     public void DecreaseRemainingRocks()
     {
+        if (!PathChecker.Instance.canBuyUnits)
+            return;
         rocksRemaining--;
         source.PlayOneShot(SoundsManager.Instance.stackingSound);
         if (rocksRemaining <= 0)
