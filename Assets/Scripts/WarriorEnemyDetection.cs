@@ -18,9 +18,10 @@ public class WarriorEnemyDetection : MonoBehaviour
 
         var newTarget = BattleCrowdController.Instance.GetNearestOpponent(warrior, warrior.transform.position, 3);
 
-        if (newTarget != null)
+        if (newTarget != null && newTarget.GetComponent<ICrowdUnit>().IsDeath == false)
         {
             warrior.opponentTarget = newTarget;
+            Debug.Log("finded by other");
             newTarget.GetComponent<ICrowdUnit>().AddAttackerUnit(warrior.transform);
             warrior.isRuninngToCastle = false;
         }

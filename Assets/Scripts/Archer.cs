@@ -16,7 +16,8 @@ public class Archer : MonoBehaviour, ICrowdUnit
     public bool isRunningToMeetingPlace;
     public bool isRuninngToCastle;
     public bool isFighting;
-
+    public bool IsDeath { get => isDeath; set => isDeath = value; }
+    public bool isDeath;
     [Header("Meeting place range")]
     public float minX;
     public float maxX;
@@ -162,12 +163,14 @@ public class Archer : MonoBehaviour, ICrowdUnit
 
     private IEnumerator IEDeath()
     {
-        yield return new WaitForSeconds(0.2f);
+        isDeath = true;
+        yield return new WaitForSeconds(0f);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         BattleCrowdController.Instance.playerCrowdTransforms.Remove(this.transform);
         BattleCrowdController.Instance.enemyCrowdTransforms.Remove(this.transform);
         for (int i = 0; i < whoAttackThisUnit.Count; i++)
         {
+            Debug.Log("Removed");
             whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
         }
         if (Player.Instance.detectionCollider.enemiesNearby.Contains(this))
@@ -175,11 +178,14 @@ public class Archer : MonoBehaviour, ICrowdUnit
             Player.Instance.detectionCollider.RemoveEnemyFromNearbyArray(this);
         }
         whoAttackThisUnit.Clear();
-        Destroy(gameObject);
+        Destroy(GetComponent<CapsuleCollider>());
+        agent.enabled = false;
+        animator.enabled = false;
+        Destroy(this);
     }
 
     public void AddAttackerUnit(Transform unit)
     {
-        // throw new System.NotImplementedException();
+        whoAttackThisUnit.Add(unit);
     }
 }

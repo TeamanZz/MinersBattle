@@ -22,7 +22,7 @@ public class ArcherEnemyDetection : MonoBehaviour
         if (newTarget != null)
         {
             archer.opponentTarget = newTarget;
-            // newTarget.GetComponent<ICrowdUnit>().AddAttackerUnit(archer.transform);
+            newTarget.GetComponent<ICrowdUnit>().AddAttackerUnit(archer.transform);
             archer.isRuninngToCastle = false;
             archer.animator.SetBool("HaveTarget", true);
             archer.animator.SetBool("IsRunning", false);

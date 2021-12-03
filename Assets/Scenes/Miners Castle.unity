@@ -4156,7 +4156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173387742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5437317, z: -27.8}
+  m_LocalPosition: {x: 0, y: 2.12, z: -27.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1466982866}
@@ -31173,6 +31173,10 @@ PrefabInstance:
       value: terrain-world-plain (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1000014259533324, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014259533324, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -31230,7 +31234,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8480ba1f27c259a4c8d62d1b84b6d8f8, type: 2}
     - target: {fileID: 5285377210620167812, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5285377210620167812, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
       propertyPath: m_Enabled
@@ -32525,6 +32529,10 @@ PrefabInstance:
       value: terrain-world-plain
       objectReference: {fileID: 0}
     - target: {fileID: 1000014259533324, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014259533324, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -32582,7 +32590,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8480ba1f27c259a4c8d62d1b84b6d8f8, type: 2}
     - target: {fileID: 5285377210620167812, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5285377210620167812, guid: f3717ec476d85431cb3b0f6be1a9ce13, type: 3}
       propertyPath: m_Enabled
@@ -40593,7 +40601,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1545973922}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
+  m_Radius: 0.6
   m_Speed: 20
   m_Acceleration: 8
   avoidancePriority: 50

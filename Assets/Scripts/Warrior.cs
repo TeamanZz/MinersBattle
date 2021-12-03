@@ -16,6 +16,9 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     public int TeamIndex { get => teamIndex; set => teamIndex = value; }
     public int hp;
     public Transform OpponentTarget { get => opponentTarget; set => opponentTarget = value; }
+    public bool IsDeath { get => isDeath; set => isDeath = value; }
+    public bool isDeath;
+
     public bool isRuninngToCastle;
     public bool isRunningToMeetingPlace;
     public bool meetingPlaceReached;
@@ -59,6 +62,14 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         else
         {
             BattleCrowdController.Instance.enemyCrowdTransforms.Add(transform);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            deathCoroutine = StartCoroutine(IEDeath());
         }
     }
 
@@ -149,13 +160,14 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     public void DecreaseHP(int value)
     {
-        if (currentDelayValue > 0)
-            return;
-
-        if (deathCoroutine != null)
-            return;
-
-        currentDelayValue = delayToNextHit;
+        if (teamIndex == 1)
+            if (currentDelayValue > 0)
+                return;
+        if (teamIndex == 1)
+            if (deathCoroutine != null)
+                return;
+        if (teamIndex == 1)
+            currentDelayValue = delayToNextHit;
 
         hp -= value;
         if (hp <= 0)
@@ -166,7 +178,8 @@ public class Warrior : MonoBehaviour, ICrowdUnit
 
     private IEnumerator IEDeath()
     {
-        yield return new WaitForSeconds(0.2f);
+        isDeath = true;
+        yield return new WaitForSeconds(0f);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         BattleCrowdController.Instance.enemyCrowdTransforms.Remove(this.transform);
         BattleCrowdController.Instance.playerCrowdTransforms.Remove(this.transform);
@@ -180,7 +193,12 @@ public class Warrior : MonoBehaviour, ICrowdUnit
             Player.Instance.detectionCollider.RemoveEnemyFromNearbyArray(this);
         }
         whoAttackThisUnit.Clear();
-        Destroy(gameObject);
+        Destroy(GetComponent<CapsuleCollider>());
+        agent.enabled = false;
+        animator.enabled = false;
+        Destroy(enemyDetection);
+        Destroy(enemyAttackDetection);
+        Destroy(this);
     }
 
     public void AddAttackerUnit(Transform unit)
@@ -196,4 +214,5 @@ public interface ICrowdUnit
     Transform OpponentTarget { get; set; }
     void AddAttackerUnit(Transform unit);
     int TeamIndex { get; set; }
+    bool IsDeath { get; set; }
 }

@@ -48,7 +48,6 @@ public class Detection : MonoBehaviour
             rocksNearby.Remove(miningRock);
             if (rocksNearby.Count == 0)
             {
-                Debug.Log("Exus2");
                 transform.parent.GetComponent<Animator>().SetBool("IsAttacking", false);
                 doOneScale.Kill();
                 doZeroScale.Kill();
