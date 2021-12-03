@@ -49,7 +49,6 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
     {
         if (currentUnloadingPlate != "" && (currentState != PlayerOpponentState.RunToEndPoint || currentState != PlayerOpponentState.StayAtEndPoint) && backPack.isUnloading == false && currentState == PlayerOpponentState.Unloading)
         {
-            Debug.Log("freezed");
             SetNewRandomActivityAfterUnloading();
         }
     }

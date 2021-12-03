@@ -15,7 +15,6 @@ public class WarriorAttackDetection : MonoBehaviour
             if (crowdUnit.TeamIndex != warrior.teamIndex && crowdUnit.IsDeath == false)
             {
                 warrior.opponentTarget = other.transform;
-                Debug.Log("finded by collider");
 
                 crowdUnit.AddAttackerUnit(warrior.transform);
                 warrior.agent.isStopped = true;

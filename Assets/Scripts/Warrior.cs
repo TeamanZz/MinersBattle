@@ -185,7 +185,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         BattleCrowdController.Instance.playerCrowdTransforms.Remove(this.transform);
         for (int i = 0; i < whoAttackThisUnit.Count; i++)
         {
-            if (whoAttackThisUnit[i] != null)
+            if (whoAttackThisUnit[i] != null && whoAttackThisUnit[i].GetComponent<ICrowdUnit>() != null)
                 whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
         }
         if (Player.Instance.detectionCollider.enemiesNearby.Contains(this))

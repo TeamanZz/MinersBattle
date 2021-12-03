@@ -21,7 +21,6 @@ public class WarriorEnemyDetection : MonoBehaviour
         if (newTarget != null && newTarget.GetComponent<ICrowdUnit>().IsDeath == false)
         {
             warrior.opponentTarget = newTarget;
-            Debug.Log("finded by other");
             newTarget.GetComponent<ICrowdUnit>().AddAttackerUnit(warrior.transform);
             warrior.isRuninngToCastle = false;
         }

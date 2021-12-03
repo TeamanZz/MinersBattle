@@ -69,13 +69,18 @@ public class Miner : MonoBehaviour, IAIMiner
     {
         isMovingToCastle = true;
         targetRock = null;
-
+        Vector3 destination;
         if (teamIndex == 0)
-            agent.SetDestination(BattleCrowdController.Instance.playerCastle.position);
+            destination = BattleCrowdController.Instance.playerCastle.position;
         else
-            agent.SetDestination(BattleCrowdController.Instance.enemyCastle.position);
+            destination = BattleCrowdController.Instance.enemyCastle.position;
 
+        agent.SetDestination(destination);
         agent.isStopped = false;
+        if (Vector3.Distance(transform.position, destination) <= 1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void MoveToStorage()
