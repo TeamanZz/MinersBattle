@@ -27,6 +27,8 @@ public class Miner : MonoBehaviour, IAIMiner
 
     public int teamIndex;
 
+    public Vector3 rockDestination;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -109,10 +111,10 @@ public class Miner : MonoBehaviour, IAIMiner
 
         var newTarget = rocksHandler.miningRocks.Find(x => Vector3.Distance(x.transform.position, transform.position) <= rocksHandler.miningRocks.Min(x => Vector3.Distance(x.transform.position, transform.position)));
         // newTarget.gameObject.SetActive(true);
-        var newDestination = newTarget.transform.position;
+        rockDestination = newTarget.transform.position;
         targetRock = newTarget.GetComponent<MiningRock>();
         targetRock.currentMiner = this;
-        agent.SetDestination(newDestination);
+        agent.SetDestination(rockDestination);
         agent.isStopped = false;
     }
 

@@ -68,7 +68,8 @@ public class PlayerOpponent : MonoBehaviour, IAIMiner
         || currentState == PlayerOpponentState.RunningToWarriorsPlate
         || currentState == PlayerOpponentState.RunningToStoragePlate
         || currentState == PlayerOpponentState.RunningToArchersPlate
-        || currentState == PlayerOpponentState.RunToEndPoint || currentState == PlayerOpponentState.Mining))
+        || currentState == PlayerOpponentState.RunToEndPoint
+        || currentState == PlayerOpponentState.Mining))
         {
             animator.SetBool("IsRunning", true);
         }

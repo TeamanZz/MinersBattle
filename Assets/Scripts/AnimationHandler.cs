@@ -15,7 +15,7 @@ public class AnimationHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((detection.rocksNearby.Count == 0 && miner.targetRock != null) || miner.isMovingToStorage == true || miner.isMovingToCastle == true)
+        if ((detection.rocksNearby.Count == 0 && miner.targetRock != null) || miner.isMovingToStorage == true || miner.isMovingToCastle == true || miner.rockDestination != default)
         {
             animator.SetBool("IsRunning", true);
         }

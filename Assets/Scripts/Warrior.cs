@@ -116,7 +116,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     {
         // if (BattleCrowdController.Instance.canRunToCastle)
         //     return;
-        if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.3f)
+        if (meetingPlaceReached == false && Vector3.Distance(transform.position, meetingPlacePosition) <= 0.5f)
         {
             agent.isStopped = true;
             animator.SetBool("IsRunning", false);
