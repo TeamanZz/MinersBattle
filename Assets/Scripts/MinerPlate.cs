@@ -44,7 +44,7 @@ public class MinerPlate : MonoBehaviour
         if (!PathChecker.Instance.canBuyUnits)
             return;
         rocksRemaining--;
-        source.PlayOneShot(SoundsManager.Instance.stackingSound);
+        source.PlayOneShot(SoundsManager.Instance.stackingSound[Random.Range(0, SoundsManager.Instance.stackingSound.Count)]);
         if (rocksRemaining <= 0)
         {
             lastSpawnedMinerIndex++;

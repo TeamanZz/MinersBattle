@@ -38,6 +38,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     private Coroutine deathCoroutine;
 
     public AudioSource audioSource;
+    public GameObject playerCollisionCollider;
 
     private void Awake()
     {
@@ -130,7 +131,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         if (opponentTarget == null)
             return;
         opponentTarget.GetComponent<ICrowdUnit>().DecreaseHP(1);
-        SoundsManager.Instance.PlaySwordHitSound();
+        audioSource.PlayOneShot(SoundsManager.Instance.swordHitSounds[Random.Range(0, SoundsManager.Instance.swordHitSounds.Count)]);
     }
 
     public void MoveToMeetingPlace()
@@ -179,6 +180,7 @@ public class Warrior : MonoBehaviour, ICrowdUnit
     private IEnumerator IEDeath()
     {
         isDeath = true;
+        SoundsManager.Instance.PlayUnitDeathSound();
         yield return new WaitForSeconds(0f);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         BattleCrowdController.Instance.enemyCrowdTransforms.Remove(this.transform);
@@ -198,6 +200,8 @@ public class Warrior : MonoBehaviour, ICrowdUnit
         animator.enabled = false;
         Destroy(enemyDetection);
         Destroy(enemyAttackDetection);
+        if (playerCollisionCollider != null)
+            Destroy(playerCollisionCollider);
         Destroy(this);
     }
 

@@ -29,6 +29,9 @@ public class Miner : MonoBehaviour, IAIMiner
 
     public Vector3 rockDestination;
 
+    public float distanceToTargetRock;
+    public Vector3 lastStuckPosition = Vector3.zero;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -41,6 +44,21 @@ public class Miner : MonoBehaviour, IAIMiner
         rocksHandler.minersDetections.Add(detectionCollider);
         InvokeRepeating("SetNewDestination", 0.5f, 1);
         InvokeRepeating("MoveToCastleRepeatedly", 5f, 1);
+        InvokeRepeating("CheckOnFreeze", 5f, 1);
+    }
+
+    private void CheckOnFreeze()
+    {
+        if (targetRock != null && detectionCollider.rocksNearby.Count == 0)
+        {
+            if (Vector3.Distance(transform.position, lastStuckPosition) <= 2)
+            {
+                Debug.Log("NEW DEST");
+                agent.isStopped = false;
+                // SetNewDestination();
+            }
+        }
+        lastStuckPosition = transform.position;
     }
 
     private void Update()
@@ -94,7 +112,7 @@ public class Miner : MonoBehaviour, IAIMiner
             agent.SetDestination(Storage.Instance.transform.position);
         else
             agent.SetDestination(StorageOpponent.Instance.transform.position);
-
+        rockDestination = default;
         agent.isStopped = false;
     }
 
@@ -109,11 +127,21 @@ public class Miner : MonoBehaviour, IAIMiner
         if (rocksHandler.miningRocks.Count <= 0)
             return;
 
+        distanceToTargetRock = Vector3.Distance(transform.position, rockDestination);
+        if (targetRock != null)
+        {
+            if (distanceToTargetRock < 2 || distanceToTargetRock > 5)
+                return;
+        }
+
         var newTarget = rocksHandler.miningRocks.Find(x => Vector3.Distance(x.transform.position, transform.position) <= rocksHandler.miningRocks.Min(x => Vector3.Distance(x.transform.position, transform.position)));
         // newTarget.gameObject.SetActive(true);
         rockDestination = newTarget.transform.position;
         targetRock = newTarget.GetComponent<MiningRock>();
         targetRock.currentMiner = this;
+        // NavMeshPath path = new NavMeshPath();
+        // NavMesh.CalculatePath(transform.position, rockDestination, NavMesh.AllAreas, path);
+        // agent.SetPath(path);
         agent.SetDestination(rockDestination);
         agent.isStopped = false;
     }

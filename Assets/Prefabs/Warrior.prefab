@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8773184070256282111}
   - component: {fileID: 8773184070256282108}
   - component: {fileID: 1907481217129527930}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830431899921}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: heel.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830454235410}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thumb.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830475985591}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thumb.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830494125549}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830507533052}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: General Rocks Transforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 8002445830562921080}
   - component: {fileID: 8002445830562921079}
   - component: {fileID: 8002445830562921078}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 5684638419037813410}
   - component: {fileID: 8799461063829246049}
   - component: {fileID: 2160121152744636361}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thigh.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830654103225}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 8002445830655147013}
   - component: {fileID: 8002445830655147008}
   - component: {fileID: 8002445830655147011}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830740345014}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thumb.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 8002445830774805928}
   - component: {fileID: 8002445830774805927}
   - component: {fileID: 8002445830774805926}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 8002445830786462019}
   - component: {fileID: 8002445830786462046}
   - component: {fileID: 8002445830786462017}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830874029071}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thumb.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830874069867}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830913074726}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830918918956}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 5194725242866954542}
   - component: {fileID: 3005863512083190520}
   - component: {fileID: 3718779473342307046}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445830953011384}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Spine Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1177,7 +1177,7 @@ GameObject:
   - component: {fileID: 8002445830971887914}
   - component: {fileID: 8002445830971887913}
   - component: {fileID: 8002445830971887912}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1391,7 @@ GameObject:
   - component: {fileID: 8969515952762553177}
   - component: {fileID: 7420535817622482449}
   - component: {fileID: 61932590608013909}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thigh.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,7 +1500,7 @@ GameObject:
   - component: {fileID: 8002445831038558815}
   - component: {fileID: 8002445831038558810}
   - component: {fileID: 8002445831038558813}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1579,7 +1579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831089730208}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thumb.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 3710307757057910458}
   - component: {fileID: 7592768954251487899}
   - component: {fileID: 7290299263151654756}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: upper_arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   - component: {fileID: 8002445831100397617}
   - component: {fileID: 8002445831100397580}
   - component: {fileID: 8002445831100397583}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,7 +1802,7 @@ GameObject:
   - component: {fileID: 8002445831109563136}
   - component: {fileID: 8002445831109563167}
   - component: {fileID: 8002445831109563166}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ GameObject:
   - component: {fileID: 8002445831166415155}
   - component: {fileID: 8002445831166415118}
   - component: {fileID: 8002445831166415153}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,7 +1964,7 @@ GameObject:
   - component: {fileID: 8002445831190403999}
   - component: {fileID: 8002445831190403994}
   - component: {fileID: 8002445831190403997}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2043,7 +2043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831196619290}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: palm.04.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,7 +2077,7 @@ GameObject:
   - component: {fileID: 4632942289563679767}
   - component: {fileID: 5601402476666882644}
   - component: {fileID: 2111447327409158866}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: forearm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2187,7 +2187,7 @@ GameObject:
   - component: {fileID: 7542212769810066469}
   - component: {fileID: 8871341301699319239}
   - component: {fileID: 7748191721344602752}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2293,7 +2293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831243831777}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ GameObject:
   - component: {fileID: 8002445831251334717}
   - component: {fileID: 8002445831251334712}
   - component: {fileID: 8002445831251334715}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2405,7 +2405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831289221435}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_index.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2435,7 +2435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831297671622}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2465,7 +2465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831352275801}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_pinky.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2495,7 +2495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831399618962}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2527,7 +2527,7 @@ GameObject:
   - component: {fileID: 8002445831409403347}
   - component: {fileID: 8002445831409403310}
   - component: {fileID: 8002445831409403345}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2606,7 +2606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831422567474}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_index.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7365,7 +7365,7 @@ GameObject:
   - component: {fileID: 8002445831451872733}
   - component: {fileID: 8002445831451872728}
   - component: {fileID: 8002445831451872731}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7446,7 +7446,7 @@ GameObject:
   - component: {fileID: 8002445831454143357}
   - component: {fileID: 8002445831454143352}
   - component: {fileID: 8002445831454143355}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7558,7 +7558,7 @@ GameObject:
   - component: {fileID: 8002445831473054147}
   - component: {fileID: 8002445831473054174}
   - component: {fileID: 8002445831473054145}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7637,7 +7637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831478579078}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7671,7 +7671,7 @@ GameObject:
   - component: {fileID: 8002445831511657035}
   - component: {fileID: 8002445831511657030}
   - component: {fileID: 8002445831511657033}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7752,7 +7752,7 @@ GameObject:
   - component: {fileID: 8002445831526560347}
   - component: {fileID: 8002445831526560342}
   - component: {fileID: 8002445831526560345}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7833,7 +7833,7 @@ GameObject:
   - component: {fileID: 8002445831561838264}
   - component: {fileID: 8002445831561838263}
   - component: {fileID: 8002445831561838262}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7914,7 +7914,7 @@ GameObject:
   - component: {fileID: 8002445831564574919}
   - component: {fileID: 8002445831564574914}
   - component: {fileID: 8002445831564574917}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7993,7 +7993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831592499490}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_index.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8025,7 +8025,7 @@ GameObject:
   - component: {fileID: 8002445831597377185}
   - component: {fileID: 8002445831597377212}
   - component: {fileID: 8002445831597377215}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8104,7 +8104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831606161908}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_index.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8273,6 +8273,7 @@ MonoBehaviour:
   enemyAttackDetection: {fileID: 8773184068757472839}
   teamIndex: 0
   hp: 15
+  isDeath: 0
   isRuninngToCastle: 0
   isRunningToMeetingPlace: 0
   meetingPlaceReached: 0
@@ -8391,7 +8392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831677887967}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_pinky.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8424,7 +8425,7 @@ GameObject:
   - component: {fileID: 8002445831746540032}
   - component: {fileID: 8002445831746540063}
   - component: {fileID: 8002445831746540062}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8503,7 +8504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831750425425}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_pinky.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8536,7 +8537,7 @@ GameObject:
   - component: {fileID: 8002445831756834548}
   - component: {fileID: 8002445831756834547}
   - component: {fileID: 8002445831756834546}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8615,7 +8616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831762594239}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: palm.04.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8646,7 +8647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831841586273}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: pelvis.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8676,7 +8677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831868872446}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_pinky.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8707,7 +8708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831874074269}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8742,7 +8743,7 @@ GameObject:
   - component: {fileID: 5915655651679254236}
   - component: {fileID: 4890706524913760384}
   - component: {fileID: 661749138986647546}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8852,7 +8853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831890185562}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8883,7 +8884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445831947542478}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_pinky.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8916,7 +8917,7 @@ GameObject:
   - component: {fileID: 8002445831982618989}
   - component: {fileID: 8002445831982618984}
   - component: {fileID: 8002445831982618987}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8997,7 +8998,7 @@ GameObject:
   - component: {fileID: 8002445832005311982}
   - component: {fileID: 53370078906799400}
   - component: {fileID: 1928863215633351223}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9063,7 +9064,7 @@ GameObject:
   - component: {fileID: 8002445832014263188}
   - component: {fileID: 8002445832014263187}
   - component: {fileID: 8002445832014263186}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9142,7 +9143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832039486060}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9176,7 +9177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832049139483}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: palm.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9209,7 +9210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832058667149}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_pinky.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9241,7 +9242,7 @@ GameObject:
   - component: {fileID: 8002445832145364997}
   - component: {fileID: 8002445832145364992}
   - component: {fileID: 8002445832145364995}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9323,7 +9324,7 @@ GameObject:
   - component: {fileID: 7229488076663689326}
   - component: {fileID: 6502555707669576521}
   - component: {fileID: 697991095720036111}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: upper_arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9432,7 +9433,7 @@ GameObject:
   - component: {fileID: 8002445832187441098}
   - component: {fileID: 8002445832187441097}
   - component: {fileID: 8002445832187441096}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9511,7 +9512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832221157845}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: pelvis.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9543,7 +9544,7 @@ GameObject:
   - component: {fileID: 8002445832230180457}
   - component: {fileID: 8002445832230180452}
   - component: {fileID: 8002445832230180455}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9624,7 +9625,7 @@ GameObject:
   - component: {fileID: 8002445832245945184}
   - component: {fileID: 8002445832245945215}
   - component: {fileID: 8002445832245945214}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9703,7 +9704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832285824766}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: heel.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9735,7 +9736,7 @@ GameObject:
   - component: {fileID: 8002445832307551688}
   - component: {fileID: 8002445832307551687}
   - component: {fileID: 8002445832307551686}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9816,7 +9817,7 @@ GameObject:
   - component: {fileID: 8002445832349306998}
   - component: {fileID: 8002445832349306997}
   - component: {fileID: 8002445832349306996}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9895,7 +9896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832352661098}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: palm.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9929,7 +9930,7 @@ GameObject:
   - component: {fileID: 8002445832375468549}
   - component: {fileID: 8002445832375468544}
   - component: {fileID: 8002445832375468547}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10010,7 +10011,7 @@ GameObject:
   - component: {fileID: 8002445832451340316}
   - component: {fileID: 8002445832451340315}
   - component: {fileID: 8002445832451340314}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Cube (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10089,7 +10090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832497564900}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_index.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10120,7 +10121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832501272985}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: f_index.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10151,7 +10152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002445832507056043}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: thumb.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10184,7 +10185,7 @@ GameObject:
   - component: {fileID: 2554315484184574066}
   - component: {fileID: 3483575846764671997}
   - component: {fileID: 3120257571066205897}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: forearm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10294,7 +10295,7 @@ GameObject:
   - component: {fileID: 5845802794851015032}
   - component: {fileID: 473603644037792244}
   - component: {fileID: 1581804259369694728}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10401,7 +10402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8773184068619765529}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10569,7 +10570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 598a1f45fefa08846b93be35e98f166e, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 598a1f45fefa08846b93be35e98f166e, type: 3}
       propertyPath: m_IsActive
@@ -10651,7 +10652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 06c4131835f65024586454416f6b1f66, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 06c4131835f65024586454416f6b1f66, type: 3}
       propertyPath: m_IsActive
@@ -10733,7 +10734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a20ea7771cebbda4696ef82ef45481a0, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a20ea7771cebbda4696ef82ef45481a0, type: 3}
       propertyPath: m_IsActive
@@ -10815,7 +10816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a9853556c4fc4d44087cd153918f7305, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a9853556c4fc4d44087cd153918f7305, type: 3}
       propertyPath: m_IsActive
@@ -10897,7 +10898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a0dfaf0497ab5334a99165f16b697e6e, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a0dfaf0497ab5334a99165f16b697e6e, type: 3}
       propertyPath: m_IsActive

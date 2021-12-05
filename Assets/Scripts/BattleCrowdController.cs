@@ -22,6 +22,20 @@ public class BattleCrowdController : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        InvokeRepeating("CheckOnDraw", 1, 3);
+    }
+
+    public void CheckOnDraw()
+    {
+        if (!canRunToCastle)
+            return;
+
+        if (playerCrowdTransforms.Count == 0 && enemyCrowdTransforms.Count == 0)
+            ScreensManager.Instance.ShowSuccessScreen();
+    }
+
     public Transform GetOpponentCastleTransform(int teamIndex)
     {
         if (teamIndex == 0)

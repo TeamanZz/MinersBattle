@@ -2707,6 +2707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8330157651168307991}
+  - component: {fileID: 3970621469047544814}
   m_Layer: 7
   m_Name: General Rocks Transforms
   m_TagString: Untagged
@@ -2778,6 +2779,18 @@ Transform:
   m_Father: {fileID: 8330157650823362741}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3970621469047544814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330157651168307988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b62dab20526d7544873568eeab6206d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8330157651240129810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +2988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axeTransform: {fileID: 4418763590420077466}
   pickaxe: {fileID: 4418763590420170687}
+  canMining: 1
   rocksNearby: []
 --- !u!136 &8330157651428807915
 CapsuleCollider:

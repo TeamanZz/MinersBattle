@@ -35,12 +35,15 @@ public class Archer : MonoBehaviour, ICrowdUnit
     public Transform OpponentTarget { get => opponentTarget; set => opponentTarget = value; }
 
     public Coroutine deathCoroutine;
+    public AudioSource audioSource;
 
     public float shootPower = 16;
     public float shootHigh = 0.2f;
+    public GameObject playerCollisionCollider;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
@@ -147,7 +150,6 @@ public class Archer : MonoBehaviour, ICrowdUnit
         GetComponent<NavMeshAgent>().SetDestination(opponentCastle.position);
         animator.SetBool("IsRunning", true);
         animator.SetBool("HaveTarget", false);
-
     }
 
     public void DecreaseHP(int value)
@@ -164,6 +166,7 @@ public class Archer : MonoBehaviour, ICrowdUnit
     private IEnumerator IEDeath()
     {
         isDeath = true;
+        SoundsManager.Instance.PlayUnitDeathSound();
         yield return new WaitForSeconds(0f);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         BattleCrowdController.Instance.playerCrowdTransforms.Remove(this.transform);
@@ -180,6 +183,8 @@ public class Archer : MonoBehaviour, ICrowdUnit
         Destroy(GetComponent<CapsuleCollider>());
         agent.enabled = false;
         animator.enabled = false;
+        if (playerCollisionCollider != null)
+            Destroy(playerCollisionCollider);
         Destroy(this);
     }
 

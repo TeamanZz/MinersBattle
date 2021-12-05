@@ -11,6 +11,24 @@ public class SpineRock : MonoBehaviour
 
     public bool hasNoParent = true;
     public bool scaleRestored;
+    public AudioSource source;
+
+    // public Transform TargetTransform
+    // {
+    //     get => targetTransform;
+    //     set
+    //     {
+
+    //         targetTransform = value;
+
+    //     }
+
+    // }
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -34,21 +52,36 @@ public class SpineRock : MonoBehaviour
         if (targetTransform != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetTransform.position, Time.deltaTime * flySpeed);
-            if (Vector3.Distance(transform.position, targetTransform.position) < 0.5f)
+            if (Vector3.Distance(transform.position, targetTransform.position) < 0.1f)
             {
                 transform.parent = targetTransform;
-
                 if (isFlyingToBuild)
                 {
+                    Debug.Log("builded");
                     transform.parent.GetComponent<IResourceReciever>().RecieveResources();
                     isFlyingToBuild = false;
                     Destroy(gameObject, 3);
+                }
+                else
+                {
+                    // targetTransform = null;
+                    // Debug.Log(transform.parent);
                 }
             }
             if (!scaleRestored)
             {
                 hasNoParent = false;
                 RestoreScale();
+                // Debug.Log(targetTransform);
+
+            }
+
+            if (Vector3.Distance(transform.position, targetTransform.position) < 0.001f)
+            {
+                GeneralRocksTransforms transforms;
+                if (targetTransform.parent.TryGetComponent<GeneralRocksTransforms>(out transforms) == true)
+                    source.PlayOneShot(SoundsManager.Instance.rockInBackpackSounds[Random.Range(0, SoundsManager.Instance.rockInBackpackSounds.Count)]);
+                targetTransform = null;
             }
         }
     }

@@ -28,6 +28,12 @@ public class MiningRock : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Start()
+    {
+        if (currentStateID != -1)
+            audioSource.PlayOneShot(SoundsManager.Instance.rockDestroySounds[Random.Range(0, SoundsManager.Instance.rockDestroySounds.Count)]);
+    }
+
     public bool CanSetMiner(Miner miner)
     {
         if (currentMiner == null)
@@ -53,6 +59,7 @@ public class MiningRock : MonoBehaviour
     {
         if (currentDelayValue > 0)
             return;
+        // audioSource.PlayOneShot(SoundsManager.Instance.chunkBreak[Random.Range(0, SoundsManager.Instance.chunkBreak.Count)]);
         audioSource.PlayOneShot(SoundsManager.Instance.pickaxeHitSounds[Random.Range(0, SoundsManager.Instance.pickaxeHitSounds.Count)]);
 
         lastHitFromBackpack = pickaxe.backPack;

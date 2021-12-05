@@ -32,6 +32,8 @@ public class Storage : MonoBehaviour, IResourceReciever
     public GameObject flyingRockPrefab;
     public AudioSource source;
 
+    public List<AudioClip> storageSounds = new List<AudioClip>();
+
     private void Start()
     {
         popupDefaultScale = popupImage.localScale.x;
@@ -53,7 +55,7 @@ public class Storage : MonoBehaviour, IResourceReciever
         if (!PathChecker.Instance.canBuyUnits)
             return;
         currentRocksCount--;
-        source.PlayOneShot(SoundsManager.Instance.stackingSound);
+        source.PlayOneShot(SoundsManager.Instance.stackingSound[Random.Range(0, SoundsManager.Instance.stackingSound.Count)]);
 
         rocksRemainingText.text = currentRocksCount.ToString();
     }
@@ -98,6 +100,7 @@ public class Storage : MonoBehaviour, IResourceReciever
 
         if (other.TryGetComponent<Player>(out player))
         {
+            source.PlayOneShot(storageSounds[0]);
             plateImage.DOScale(plateNewScale, 0.5f);
             storageCover.DOLocalRotate(new Vector3(newStorageCoverRotation, 0, 0), 0.6f).SetEase(Ease.InOutBack);
             popupImage.DOScale(popupNewScale, 0.5f);
@@ -122,6 +125,8 @@ public class Storage : MonoBehaviour, IResourceReciever
         Player player;
         if (other.TryGetComponent<Player>(out player))
         {
+            source.PlayOneShot(storageSounds[1]);
+
             plateImage.DOScale(plateDefaultScale, 0.5f);
             if (minersNearby.Count == 0)
             {
