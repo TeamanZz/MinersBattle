@@ -173,7 +173,8 @@ public class Archer : MonoBehaviour, ICrowdUnit
         BattleCrowdController.Instance.enemyCrowdTransforms.Remove(this.transform);
         for (int i = 0; i < whoAttackThisUnit.Count; i++)
         {
-            whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
+            if (whoAttackThisUnit[i] != null && whoAttackThisUnit[i].GetComponent<ICrowdUnit>() != null)
+                whoAttackThisUnit[i].GetComponent<ICrowdUnit>().OpponentTarget = null;
         }
         if (Player.Instance.detectionCollider.enemiesNearby.Contains(this))
         {

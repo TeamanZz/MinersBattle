@@ -16,6 +16,8 @@ public class ArcherEnemyDetection : MonoBehaviour
         if (archer.opponentTarget != null)
             return;
 
+        if (archer == null)
+            return;
         ICrowdUnit crowdComponent = archer.GetComponent<ICrowdUnit>();
         var newTarget = BattleCrowdController.Instance.GetNearestOpponent(crowdComponent, archer.transform.position, 8);
 
